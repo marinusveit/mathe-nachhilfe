@@ -7,6 +7,7 @@ Materialien zur Abiturvorbereitung im Fach Mathematik, Schwerpunkt Analysis.
 | Ordner | Inhalt |
 |--------|--------|
 | `sitzung_01/` | Diagnose + Ableitungen |
+| `sitzung_02/` | Kurvendiskussion komplett |
 | `stundenplan.md` | Gesamtplan (8 Sitzungen, 4 Wochen) |
 
 Weitere Sitzungen werden nach und nach ergänzt.
