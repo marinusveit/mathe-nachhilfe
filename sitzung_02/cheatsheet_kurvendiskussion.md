@@ -18,11 +18,14 @@
 f(x) = 0 lösen.
 - Ausklammern, Substitution (x² = z), p-q-Formel, Polynomdivision
 
-### 4. Ableitungen
+### 4. y-Achsenabschnitt
+f(0) berechnen → Punkt (0 | f(0)) eintragen.
+
+### 5. Ableitungen
 - f'(x) berechnen (Potenz-, Ketten-, Produktregel)
 - f''(x) berechnen
 
-### 5. Extremstellen
+### 6. Extremstellen
 
 **Notwendige Bedingung:** f'(x) = 0
 
@@ -42,7 +45,7 @@ f(x) = 0 lösen.
 
 y-Wert nicht vergessen: Punkt = (xₑ | f(xₑ))
 
-### 6. Wendepunkte
+### 7. Wendepunkte
 
 **Notwendige Bedingung:** f''(x) = 0
 
@@ -52,7 +55,7 @@ Punkt = (xw | f(xw))
 
 Wendetangente: t(x) = f'(xw) · (x − xw) + f(xw)
 
-### 7. Monotonie
+### 8. Monotonie
 | Bedingung | Verhalten |
 |-----------|-----------|
 | f'(x) > 0 | f steigt ↗ |
@@ -60,18 +63,18 @@ Wendetangente: t(x) = f'(xw) · (x − xw) + f(xw)
 
 Intervalle aus Nullstellen von f' ablesen, Vorzeichen prüfen.
 
-### 8. Krümmung
+### 9. Krümmung
 | Bedingung | Verhalten |
 |-----------|-----------|
 | f''(x) > 0 | linksgekrümmt (Tal) |
 | f''(x) < 0 | rechtsgekrümmt (Berg) |
 
-### 9. Verhalten für x → ±∞
+### 10. Verhalten für x → ±∞
 Höchste Potenz entscheidet:
 - Gerader Grad, positiv: f → +∞ für x → ±∞
 - Gerader Grad, negativ: f → −∞ für x → ±∞
 - Ungerader Grad, positiv: f → −∞ (links), f → +∞ (rechts)
 - Ungerader Grad, negativ: f → +∞ (links), f → −∞ (rechts)
 
-### 10. Graph skizzieren
+### 11. Graph skizzieren
 Alle Punkte eintragen, Verhalten beachten, verbinden!

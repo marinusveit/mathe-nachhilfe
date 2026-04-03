@@ -213,3 +213,139 @@ class KurvendiskussionAnimation(Scene):
 
         self.play(FadeIn(sum_bg), Write(all_summary))
         self.wait(4)
+
+
+class WandernderPunkt(Scene):
+    """
+    Ein Punkt wandert entlang f(x) = x³ - 3x.
+    Korrespondierende Punkte auf f'(x) und f''(x) bewegen sich synchron
+    in separaten Achsensystemen darunter.
+
+    Rendern mit:
+        manim -pql kurvendiskussion.py WandernderPunkt
+        manim -pqh kurvendiskussion.py WandernderPunkt   # 1080p
+    """
+
+    def construct(self):
+        # --- Funktionen ---
+        def f(x):
+            return x ** 3 - 3 * x
+
+        def f_prime(x):
+            return 3 * x ** 2 - 3
+
+        def f_double_prime(x):
+            return 6 * x
+
+        # --- Drei Achsensysteme untereinander ---
+        axes_config = {
+            "x_range": [-2.5, 2.5, 1],
+            "x_length": 5,
+            "axis_config": {
+                "include_numbers": True,
+                "font_size": 18,
+                "color": GREY_3B1B,
+                "stroke_width": 1.5,
+                "tick_size": 0.04,
+            },
+            "tips": True,
+        }
+
+        axes_f = Axes(y_range=[-4, 4, 2], y_length=2.2, **axes_config)
+        axes_fp = Axes(y_range=[-4, 10, 2], y_length=2.2, **axes_config)
+        axes_fpp = Axes(y_range=[-16, 16, 8], y_length=2.2, **axes_config)
+
+        all_axes = VGroup(axes_f, axes_fp, axes_fpp).arrange(DOWN, buff=0.4).shift(LEFT * 0.3)
+
+        # --- Labels links ---
+        f_label = MathTex(r"f(x)", font_size=26, color=BLUE_3B1B).next_to(axes_f, LEFT, buff=0.3)
+        fp_label = MathTex(r"f'(x)", font_size=26, color=RED_3B1B).next_to(axes_fp, LEFT, buff=0.3)
+        fpp_label = MathTex(r"f''(x)", font_size=26, color=ORANGE_3B1B).next_to(axes_fpp, LEFT, buff=0.3)
+
+        # --- Funktionsname oben rechts ---
+        func_name = MathTex(
+            r"f(x) = x^3 - 3x", font_size=28, color=WHITE,
+        ).to_corner(UR, buff=0.4)
+        func_bg = BackgroundRectangle(func_name, fill_opacity=0.7, buff=0.15)
+
+        # --- Graphen zeichnen ---
+        graph_f = axes_f.plot(f, x_range=[-2.3, 2.3], color=BLUE_3B1B, stroke_width=3)
+        graph_fp = axes_fp.plot(f_prime, x_range=[-2.3, 2.3], color=RED_3B1B, stroke_width=3)
+        graph_fpp = axes_fpp.plot(f_double_prime, x_range=[-2.3, 2.3], color=ORANGE_3B1B, stroke_width=3)
+
+        # Achsen und Labels einblenden
+        self.play(
+            Create(axes_f), Create(axes_fp), Create(axes_fpp),
+            Write(f_label), Write(fp_label), Write(fpp_label),
+            FadeIn(func_bg), Write(func_name),
+        )
+
+        # Graphen zeichnen
+        self.play(
+            Create(graph_f), Create(graph_fp), Create(graph_fpp),
+            run_time=2,
+        )
+        self.wait(0.5)
+
+        # --- Erklärungstext ---
+        erkl = MathTex(
+            r"\text{Punkt wandert: gleicher } x\text{-Wert auf } f,\, f',\, f''",
+            font_size=22, color=WHITE,
+        ).to_corner(UL, buff=0.4)
+        erkl_bg = BackgroundRectangle(erkl, fill_opacity=0.7, buff=0.1)
+
+        self.play(FadeIn(erkl_bg), Write(erkl))
+        self.wait(0.5)
+
+        # --- ValueTracker und wandernde Punkte ---
+        tracker = ValueTracker(-2.2)
+
+        dot_f = always_redraw(
+            lambda: Dot(
+                axes_f.c2p(tracker.get_value(), f(tracker.get_value())),
+                color=YELLOW_3B1B, radius=0.08, z_index=5,
+            )
+        )
+        dot_fp = always_redraw(
+            lambda: Dot(
+                axes_fp.c2p(tracker.get_value(), f_prime(tracker.get_value())),
+                color=RED_3B1B, radius=0.08, z_index=5,
+            )
+        )
+        dot_fpp = always_redraw(
+            lambda: Dot(
+                axes_fpp.c2p(tracker.get_value(), f_double_prime(tracker.get_value())),
+                color=ORANGE_3B1B, radius=0.08, z_index=5,
+            )
+        )
+
+        # --- Vertikale gestrichelte Verbindungslinien ---
+        vline_f_fp = always_redraw(
+            lambda: DashedLine(
+                axes_f.c2p(tracker.get_value(), f(tracker.get_value())),
+                axes_fp.c2p(tracker.get_value(), f_prime(tracker.get_value())),
+                color=GREY_3B1B, stroke_width=1.5, dash_length=0.06,
+            )
+        )
+        vline_fp_fpp = always_redraw(
+            lambda: DashedLine(
+                axes_fp.c2p(tracker.get_value(), f_prime(tracker.get_value())),
+                axes_fpp.c2p(tracker.get_value(), f_double_prime(tracker.get_value())),
+                color=GREY_3B1B, stroke_width=1.5, dash_length=0.06,
+            )
+        )
+
+        # Dots und Linien einblenden
+        self.play(
+            FadeIn(dot_f), FadeIn(dot_fp), FadeIn(dot_fpp),
+            Create(vline_f_fp), Create(vline_fp_fpp),
+        )
+
+        # --- Animation: Punkt wandert von x = -2.2 bis x = 2.2 ---
+        self.play(
+            tracker.animate.set_value(2.2),
+            run_time=10,
+            rate_func=linear,
+        )
+
+        self.wait(2)

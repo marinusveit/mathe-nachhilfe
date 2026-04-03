@@ -18,7 +18,7 @@ Alle Schritte einer Kurvendiskussion verstehen und den Zusammenhang f ↔ f' ↔
 |-------|-------------|
 | `cheatsheet_kurvendiskussion.md` | Alle Schritte mit Formeln (ausdrucken!) |
 | `kurvendiskussion_interaktiv.ipynb` | f/f'/f''-Vergleich, automatische Kurvendiskussion, Zuordnungsquiz, Monotonie+Krümmung interaktiv |
-| `manim/kurvendiskussion.py` | Animation: f, f', f'' in drei Graphen mit Verbindungslinien |
+| `manim/kurvendiskussion.py` | Animation: f, f', f'' in drei Graphen mit Verbindungslinien (`KurvendiskussionAnimation` + `WandernderPunkt`) |
 
 ## Ausführen
 
@@ -30,7 +30,9 @@ jupyter lab kurvendiskussion_interaktiv.ipynb
 
 # Animation rendern (Vorschau)
 cd manim && manim -pql kurvendiskussion.py KurvendiskussionAnimation
+cd manim && manim -pql kurvendiskussion.py WandernderPunkt
 
 # Animation rendern (1080p)
 cd manim && manim -pqh kurvendiskussion.py KurvendiskussionAnimation
+cd manim && manim -pqh kurvendiskussion.py WandernderPunkt
 ```
