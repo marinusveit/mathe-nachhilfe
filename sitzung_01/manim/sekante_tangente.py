@@ -182,7 +182,7 @@ class SekanteTangente(Scene):
 
         # --- Frage (weit unter der x-Achse, eigener Bereich) ---
         title = MathTex(
-            r"\text{Was passiert, wenn } Q \text{ immer näher an } P \text{ rückt?}",
+            r"\text{Was passiert, wenn } x_1 \text{ immer näher an } x_0 \text{ rückt?}",
             font_size=28,
         ).to_edge(DOWN, buff=0.3)
         title_bg = BackgroundRectangle(title, fill_opacity=0.85, buff=0.15)
