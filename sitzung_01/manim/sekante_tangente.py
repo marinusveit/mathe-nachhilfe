@@ -80,7 +80,7 @@ class SekanteTangente(Scene):
         label_Q = always_redraw(
             lambda: MathTex(r"f(x_1)", font_size=22, color=GREEN_3B1B).next_to(
                 axes.c2p(x1_tracker.get_value(), func(x1_tracker.get_value())),
-                UR, buff=0.15,
+                UP, buff=0.15,
             )
         )
 
