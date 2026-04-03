@@ -23,11 +23,12 @@ GREY_3B1B = "#888888"
 class SekanteTangente(Scene):
     def construct(self):
         # --- Koordinatensystem (3b1b-Style) ---
+        # Achsen weiter nach oben, damit unten Platz für Text bleibt
         axes = Axes(
             x_range=[-0.5, 5.5, 1],
             y_range=[-0.5, 11, 2],
             x_length=9,
-            y_length=6,
+            y_length=5.5,
             axis_config={
                 "include_numbers": True,
                 "font_size": 22,
@@ -37,7 +38,7 @@ class SekanteTangente(Scene):
                 "tick_size": 0.05,
             },
             tips=True,
-        ).shift(DOWN * 0.5 + LEFT * 0.5)
+        ).shift(UP * 0.5 + LEFT * 0.5)
 
         # Dezente Achsen-Labels in LaTeX
         x_label = MathTex("x", font_size=28, color=WHITE).next_to(axes.x_axis, RIGHT, buff=0.15)
@@ -93,16 +94,12 @@ class SekanteTangente(Scene):
                 slope = func_prime(x0)
             else:
                 slope = (y1 - y0) / (x1 - x0)
-            x_left = -0.3
-            x_right = 5.3
-            y_left = y0 + slope * (x_left - x0)
-            y_right = y0 + slope * (x_right - x0)
-            # Clipping
-            y_left = max(-0.5, min(11, y_left))
-            y_right = max(-0.5, min(11, y_right))
+            # Linie weit genug verlängern, KEIN y-Clipping (das verfälscht die Richtung)
+            x_left = -0.5
+            x_right = 5.5
             return Line(
-                axes.c2p(x_left, y_left),
-                axes.c2p(x_right, y_right),
+                axes.c2p(x_left, y0 + slope * (x_left - x0)),
+                axes.c2p(x_right, y0 + slope * (x_right - x0)),
                 color=RED_3B1B, stroke_width=2.5,
             )
 
@@ -139,7 +136,7 @@ class SekanteTangente(Scene):
 
         triangle = always_redraw(get_slope_triangle)
 
-        # --- Steigungsformel (unter dem Graphen, nicht über Achsen) ---
+        # --- Steigungsformel ---
         def get_slope_display():
             x1 = x1_tracker.get_value()
             y1 = func(x1)
@@ -162,12 +159,11 @@ class SekanteTangente(Scene):
         self.play(Create(secant), Create(triangle), Write(slope_text), Write(sekante_label))
         self.wait(1.5)
 
-        # --- Frage ---
+        # --- Frage (weit unter der x-Achse, eigener Bereich) ---
         title = MathTex(
             r"\text{Was passiert, wenn } Q \text{ immer näher an } P \text{ rückt?}",
             font_size=28,
-        ).to_edge(DOWN, buff=0.15)
-        # Hintergrund für Lesbarkeit
+        ).to_edge(DOWN, buff=0.3)
         title_bg = BackgroundRectangle(title, fill_opacity=0.85, buff=0.15)
 
         self.play(FadeIn(title_bg), Write(title))
@@ -192,7 +188,7 @@ class SekanteTangente(Scene):
         tangente_title = MathTex(
             r"\text{Die Sekante wird zur Tangente!}",
             font_size=30, color=YELLOW_3B1B,
-        ).to_edge(DOWN, buff=0.15)
+        ).to_edge(DOWN, buff=0.3)
         tangente_bg = BackgroundRectangle(tangente_title, fill_opacity=0.85, buff=0.15)
         self.play(FadeIn(tangente_bg), Write(tangente_title))
 
@@ -239,7 +235,7 @@ class SekanteTangente(Scene):
         summary = MathTex(
             r"\text{Die Ableitung } f'(x_0) \text{ ist die Steigung der Tangente an } x_0.",
             font_size=28,
-        ).to_edge(DOWN, buff=0.15)
+        ).to_edge(DOWN, buff=0.3)
         summary_bg = BackgroundRectangle(summary, fill_opacity=0.85, buff=0.15)
 
         self.play(FadeIn(summary_bg), Write(summary))
