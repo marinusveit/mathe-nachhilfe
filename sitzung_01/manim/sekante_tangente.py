@@ -60,15 +60,15 @@ class SekanteTangente(Scene):
         self.play(Create(graph), Write(graph_label), run_time=1.5)
         self.wait(0.5)
 
-        # --- Fester Punkt P ---
+        # --- Fester Punkt bei x0 ---
         x0 = 1.5
         y0 = func(x0)
         dot_P = Dot(axes.c2p(x0, y0), color=YELLOW_3B1B, radius=0.07, z_index=5)
-        label_P = MathTex("P", font_size=26, color=YELLOW_3B1B).next_to(dot_P, LEFT, buff=0.15)
+        label_P = MathTex(r"f(x_0)", font_size=22, color=YELLOW_3B1B).next_to(dot_P, LEFT, buff=0.15)
 
         self.play(FadeIn(dot_P, scale=1.5), Write(label_P))
 
-        # --- Beweglicher Punkt Q ---
+        # --- Beweglicher Punkt bei x1 ---
         x1_tracker = ValueTracker(4.0)
 
         dot_Q = always_redraw(
@@ -78,7 +78,7 @@ class SekanteTangente(Scene):
             )
         )
         label_Q = always_redraw(
-            lambda: MathTex("Q", font_size=26, color=GREEN_3B1B).next_to(
+            lambda: MathTex(r"f(x_1)", font_size=22, color=GREEN_3B1B).next_to(
                 axes.c2p(x1_tracker.get_value(), func(x1_tracker.get_value())),
                 UR, buff=0.15,
             )
@@ -105,25 +105,43 @@ class SekanteTangente(Scene):
 
         secant = always_redraw(get_secant_line)
 
-        # --- Steigungsdreieck (Δx und Δy) ---
+        # --- Steigungsdreieck (Δx und Δy) + Lotlinien zur x-Achse ---
         def get_slope_triangle():
             x1 = x1_tracker.get_value()
             y1 = func(x1)
             if abs(x1 - x0) < 0.05:
                 return VGroup()  # Zu klein, nicht zeigen
 
-            # Horizontale Linie: P → (x1, y0)
+            # Horizontale Linie: P → (x1, y0) (Δx-Strecke)
             h_line = DashedLine(
                 axes.c2p(x0, y0), axes.c2p(x1, y0),
                 color=PINK_3B1B, stroke_width=2, dash_length=0.08,
             )
-            # Vertikale Linie: (x1, y0) → Q
+            # Vertikale Linie: (x1, y0) → Q (Δy-Strecke)
             v_line = DashedLine(
                 axes.c2p(x1, y0), axes.c2p(x1, y1),
                 color=YELLOW_3B1B, stroke_width=2, dash_length=0.08,
             )
 
-            # Labels
+            # Lotlinien von Punkten zur x-Achse
+            lot_x0 = DashedLine(
+                axes.c2p(x0, 0), axes.c2p(x0, y0),
+                color=GREY_3B1B, stroke_width=1.5, dash_length=0.06,
+            )
+            lot_x1 = DashedLine(
+                axes.c2p(x1, 0), axes.c2p(x1, y1),
+                color=GREY_3B1B, stroke_width=1.5, dash_length=0.06,
+            )
+
+            # x₀ und x₁ Labels auf der x-Achse
+            x0_label = MathTex(
+                r"x_0", font_size=20, color=YELLOW_3B1B,
+            ).next_to(axes.c2p(x0, 0), DOWN, buff=0.15)
+            x1_label = MathTex(
+                r"x_1", font_size=20, color=GREEN_3B1B,
+            ).next_to(axes.c2p(x1, 0), DOWN, buff=0.15)
+
+            # Δx und Δy Labels
             dx_label = MathTex(
                 r"x_1 - x_0", font_size=22, color=PINK_3B1B,
             ).next_to(h_line, DOWN, buff=0.12)
@@ -132,7 +150,10 @@ class SekanteTangente(Scene):
                 r"f(x_1) - f(x_0)", font_size=22, color=YELLOW_3B1B,
             ).next_to(v_line, RIGHT, buff=0.12)
 
-            return VGroup(h_line, v_line, dx_label, dy_label)
+            return VGroup(
+                h_line, v_line, lot_x0, lot_x1,
+                x0_label, x1_label, dx_label, dy_label,
+            )
 
         triangle = always_redraw(get_slope_triangle)
 
