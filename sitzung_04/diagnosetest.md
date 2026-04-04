@@ -3,6 +3,8 @@
 
 > Ziel: Du übst, Sachprobleme in mathematische Optimierung zu übersetzen und Funktionen aus vorgegebenen Bedingungen zu rekonstruieren — beides Abitur-Klassiker.
 
+> Hinweis: Die Lösungen stehen separat in `loesungen.md`.
+
 ---
 
 ## Teil A: Extremwertprobleme
@@ -77,25 +79,9 @@ Bestimme f(x). *(Tipp: Achsensymmetrie → welche Koeffizienten fallen weg?)*
 
 ---
 
-**B4)** Ein Kurvenstück soll durch eine ganzrationale Funktion dritten Grades beschrieben werden. Der Graph geht durch den Ursprung, hat dort die Steigung 3 und besitzt bei x = 2 einen Wendepunkt mit dem Funktionswert 6.
+**B4)** Ein Kurvenstück soll durch eine ganzrationale Funktion **höchstens** dritten Grades beschrieben werden. Der Graph geht durch den Ursprung, hat dort die Steigung 3 und besitzt bei x = 2 einen Wendepunkt mit dem Funktionswert 6.
 
 Bestimme f(x).
-
----
-
-## Lösungen (Kurzfassung)
-
-| Aufgabe | Ergebnis |
-|---------|----------|
-| A1b | x = 15 cm (Quadrat: 15 × 15) |
-| A2b | r = ∛(250/π) ≈ 4,30 cm |
-| A2c | h ≈ 8,60 cm, h/d = 1 |
-| A3b | x = 10 m, Fläche = 200 m² |
-| A4b | x = 10/3 cm, V_max ≈ 592,6 cm³ |
-| B1 | f(x) = 2 − 3x² + x³ *(äquivalent: ½x³ − 3/2 x² + ... — prüfe dein LGS)* |
-| B2 | f(x) = −x² + 2x + 3 |
-| B3 | f(x) = x⁴/4 − x² + 1 *(prüfe mit deinen Werten)* |
-| B4 | f(x) = −¾x³ + 9/2 x² − ... *(LGS lösen)* |
 
 ---
 

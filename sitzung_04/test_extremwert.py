@@ -251,6 +251,17 @@ class TestSteckbrief:
         assert abs(np.polyval(koeffs, 0) - 0) < 1e-10
         assert abs(np.polyval(koeffs, 1) - 1) < 1e-10
 
+    def test_B4_hoechstens_kubisch(self):
+        """B4: f(0)=0, f'(0)=3, f''(2)=0, f(2)=6 → f(x) = 3x (degeneriert)."""
+        koeffs = steckbrief_loesen(3, [
+            (0, 0, 0),    # f(0) = 0
+            (1, 0, 3),    # f'(0) = 3
+            (2, 2, 0),    # f''(2) = 0
+            (0, 2, 6),    # f(2) = 6
+        ])
+        # Bedingungen erzwingen a=b=0 → f(x) = 3x
+        np.testing.assert_allclose(koeffs, [0, 0, 3, 0], atol=1e-10)
+
 
 # ============================================================
 # Tests — Sympy-basierte symbolische Verifikation
