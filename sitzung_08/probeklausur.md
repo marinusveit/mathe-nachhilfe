@@ -8,7 +8,7 @@
 
 ## Teil A — Hilfsmittelfrei
 
-### Aufgabe A1 (4 BE)
+### Aufgabe A1 (4 BE) — *ca. 6 Min*
 
 Bestimme die Ableitung der folgenden Funktionen:
 
@@ -20,7 +20,7 @@ c) $h(x) = x^2 \cdot e^x$ **(2 BE)**
 
 ---
 
-### Aufgabe A2 (5 BE)
+### Aufgabe A2 (5 BE) — *ca. 8 Min*
 
 Gegeben ist die Funktion $f$ mit $f(x) = x^3 - 3x$.
 
@@ -30,33 +30,21 @@ b) Zeige, dass $f$ an der Stelle $x = 1$ ein lokales Minimum hat. **(3 BE)**
 
 ---
 
-### Aufgabe A3 (5 BE)
+### Aufgabe A3 (5 BE) — *ca. 8 Min*
 
-Die Abbildung zeigt den Graphen einer Funktion $f$.
+Die Abbildung zeigt den Graphen einer Funktion $f$ *(Graph siehe Notebook)*.
 
-```
-      y
-   3  |       .
-      |      / \
-   2  |     /   \
-      |    /     \
-   1  |   /       \         .
-      |  /         \       / 
-   0  +-/-----+-----\----/---+---→ x
-      | /    1    2   \  / 3    4
-  -1  |/               \/
-      |
-```
+Der Graph hat ein lokales Maximum bei ca. $x \approx 1$ und ein lokales Minimum bei ca. $x \approx 3$. Zwischen diesen Stellen fällt der Graph.
 
 Ordne begründet zu, welcher der folgenden Graphen zu $f'$ gehören könnte:
 
-- **Graph I**: Parabel, die bei x ≈ 0,5 und x ≈ 2,5 Nullstellen hat und dazwischen negativ ist.
-- **Graph II**: Parabel, die bei x ≈ 0,5 und x ≈ 2,5 Nullstellen hat und dazwischen positiv ist.
+- **Graph I**: Nach oben geöffnete Parabel mit Nullstellen bei $x = 1$ und $x = 3$, dazwischen negativ.
+- **Graph II**: Nach unten geöffnete Parabel mit Nullstellen bei $x = 1$ und $x = 3$, dazwischen positiv.
 - **Graph III**: Gerade durch den Ursprung mit negativer Steigung.
 
 ---
 
-### Aufgabe A4 (3 BE)
+### Aufgabe A4 (3 BE) — *ca. 4 Min*
 
 Berechne das Integral:
 
@@ -64,7 +52,7 @@ $$\int_0^2 (3x^2 - 4x + 1)\, dx$$
 
 ---
 
-### Aufgabe A5 (3 BE)
+### Aufgabe A5 (3 BE) — *ca. 4 Min*
 
 Entscheide, ob folgende Aussagen wahr oder falsch sind. Begründe jeweils kurz.
 
@@ -84,19 +72,19 @@ Gegeben ist die Funktion $f$ mit
 
 $$f(x) = (2x - x^2) \cdot e^x, \quad x \in \mathbb{R}.$$
 
-**a)** Untersuche das Verhalten von $f$ für $x \to +\infty$ und $x \to -\infty$. Bestimme die Nullstellen von $f$. **(4 BE)**
+**a)** Untersuche das Verhalten von $f$ für $x \to +\infty$ und $x \to -\infty$. Bestimme die Nullstellen von $f$. **(4 BE)** — *ca. 7 Min*
 
-**b)** Berechne die Koordinaten der Extrempunkte von $f$ und bestimme deren Art. **(7 BE)**
+**b)** Berechne die Koordinaten der Extrempunkte von $f$ und bestimme deren Art. **(7 BE)** — *ca. 12 Min*
 
-**c)** Bestimme die Gleichung der Tangente $t$ an den Graphen von $f$ im Punkt $P(0 \mid f(0))$. Für welchen Wert von $x$ schneidet die Tangente die x-Achse? **(5 BE)**
+**c)** Bestimme die Gleichung der Tangente $t$ an den Graphen von $f$ im Punkt $P(-1 \mid f(-1))$. Für welchen Wert von $x$ schneidet die Tangente die x-Achse? **(5 BE)** — *ca. 8 Min*
 
-**d)** Der Graph von $f$, die x-Achse und die Gerade $x = 0$ begrenzen im Intervall $[0; 2]$ eine Fläche. Berechne deren Inhalt. **(6 BE)**
+**d)** Der Graph von $f$, die x-Achse und die Gerade $x = 0$ begrenzen im Intervall $[0; 2]$ eine Fläche. Berechne deren Inhalt. **(6 BE)** — *ca. 10 Min*
 
 **e)** Gegeben ist die Funktionenschar $f_a$ mit
 
 $$f_a(x) = (ax - x^2) \cdot e^x, \quad a \in \mathbb{R}, \; a > 0.$$
 
-Zeige, dass alle Funktionen der Schar eine gemeinsame Nullstelle haben. Bestimme die Ortskurve der Hochpunkte von $f_a$ in Abhängigkeit von $a$. **(8 BE)**
+Zeige, dass alle Funktionen der Schar eine gemeinsame Nullstelle haben. Bestimme die Ortskurve der Hochpunkte von $f_a$ in Abhängigkeit von $a$. **(8 BE)** — *ca. 13 Min*
 
 ---
 

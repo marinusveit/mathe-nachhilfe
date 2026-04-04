@@ -20,6 +20,7 @@ f_A1a = 3 * x**4 - 2 * x**2 + 5 * x - 1
 g_A1b = (2 * x + 1) ** 5
 h_A1c = x**2 * sp.exp(x)
 f_A2 = x**3 - 3 * x
+f_A3 = x**3 - 6 * x**2 + 9 * x - 1
 integrand_A4 = 3 * x**2 - 4 * x + 1
 
 # Teil B
@@ -71,6 +72,32 @@ class TestKurvendiskussionA2:
 
     def test_minimum_wert(self):
         assert f_A2.subs(x, 1) == -2
+
+
+# ============================================================
+# Teil A — Graphen zuordnen (A3)
+# ============================================================
+
+class TestGraphenZuordnen:
+    """A3: f(x) = x^3 - 6x^2 + 9x - 1 — Ableitung ist nach oben offene Parabel."""
+
+    def test_extremstellen(self):
+        f_prime = sp.diff(f_A3, x)
+        kritische = sp.solve(f_prime, x)
+        assert set(kritische) == {1, 3}
+
+    def test_maximum_bei_1(self):
+        f_double_prime = sp.diff(f_A3, x, 2)
+        assert f_double_prime.subs(x, 1) < 0  # Maximum
+
+    def test_minimum_bei_3(self):
+        f_double_prime = sp.diff(f_A3, x, 2)
+        assert f_double_prime.subs(x, 3) > 0  # Minimum
+
+    def test_ableitung_negativ_zwischen_extrema(self):
+        """f'(x) < 0 für x in (1, 3) — Graph I ist korrekt."""
+        f_prime = sp.diff(f_A3, x)
+        assert f_prime.subs(x, 2) < 0
 
 
 # ============================================================
@@ -129,18 +156,18 @@ class TestTeilB:
         f_double_prime = sp.diff(f_B, x, 2)
         assert f_double_prime.subs(x, -sp.sqrt(2)) > 0
 
-    def test_tangente_nullpunkt(self):
-        """B1c: Tangente im Ursprung."""
+    def test_tangente_punkt_minus_1(self):
+        """B1c: Tangente im Punkt P(-1|f(-1))."""
         f_prime = sp.diff(f_B, x)
-        m = f_prime.subs(x, 0)
-        y0 = f_B.subs(x, 0)
-        # Tangente: t(x) = m*x + y0
-        assert m == 2
-        assert y0 == 0
-        # t(x) = 2x, Nullstelle bei x = 0
-        tangente = m * x + y0
-        tangente_nst = sp.solve(tangente, x)
-        assert tangente_nst == [0]
+        m = sp.simplify(f_prime.subs(x, -1))
+        y0 = sp.simplify(f_B.subs(x, -1))
+        assert y0 == -3 / sp.E
+        assert m == 1 / sp.E
+        tangente = sp.expand(m * (x + 1) + y0)
+        tangente_simplified = sp.expand(tangente)
+        assert sp.simplify(tangente_simplified - (x - 2) / sp.E) == 0
+        tangente_nst = sp.solve(tangente_simplified, x)
+        assert tangente_nst == [2]
 
     def test_flaeche_0_bis_2(self):
         """B1d: Fläche zwischen f und x-Achse auf [0, 2]."""
@@ -182,3 +209,10 @@ class TestZusaetzlich:
         nst = sp.solve(f_B_schar, x)
         assert 0 in nst
         assert a in nst
+
+    def test_partielle_integration_B1d(self):
+        """Stammfunktion von (2x - x^2)*e^x durch partielle Integration."""
+        # F(x) = (-x^2 + 4x - 4) * e^x  (per Hand herleitbar)
+        F_hand = (-x**2 + 4*x - 4) * sp.exp(x)
+        # Ableitung muss f_B ergeben
+        assert sp.simplify(sp.diff(F_hand, x) - f_B) == 0
