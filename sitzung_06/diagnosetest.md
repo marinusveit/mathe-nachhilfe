@@ -93,6 +93,8 @@ wobei t in Stunden ab Mitternacht gemessen wird.
 
 a) Berechne die **Durchschnittstemperatur** über den gesamten Tag.
 
+*Hinweis: Benutze den Taschenrechner für das Integral.*
+
 b) Interpretiere das Ergebnis: Entspricht der Mittelwert dem „gefühlten Durchschnitt"?
 
 ---
