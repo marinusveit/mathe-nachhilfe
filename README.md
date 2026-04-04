@@ -8,9 +8,13 @@ Materialien zur Abiturvorbereitung im Fach Mathematik, Schwerpunkt Analysis.
 |--------|--------|
 | `sitzung_01/` | Diagnose + Ableitungen |
 | `sitzung_02/` | Kurvendiskussion komplett |
+| `sitzung_03/` | Tangente, Normale & Funktionsscharen |
+| `sitzung_04/` | Extremwertprobleme & Steckbriefaufgaben |
+| `sitzung_05/` | Stammfunktionen & bestimmtes Integral |
+| `sitzung_06/` | Flächen zwischen Kurven & Anwendungen |
+| `sitzung_07/` | Hilfsmittelfreier Teil üben |
+| `sitzung_08/` | Probeklausur & Auswertung |
 | `stundenplan.md` | Gesamtplan (8 Sitzungen, 4 Wochen) |
-
-Weitere Sitzungen werden nach und nach ergänzt.
 
 ## Setup
 
