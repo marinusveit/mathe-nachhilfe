@@ -22,9 +22,9 @@ def bestimmtes_integral(f_expr, a, b):
 
 
 def riemann_summe(f_callable, a, b, n):
-    """Berechnet die Riemann-Summe (rechte Rechtecke) für f auf [a, b] mit n Rechtecken."""
+    """Berechnet die Riemann-Summe (linke Rechtecke) für f auf [a, b] mit n Rechtecken."""
     dx = (b - a) / n
-    return sum(f_callable(a + i * dx) * dx for i in range(1, n + 1))
+    return sum(f_callable(a + i * dx) * dx for i in range(n))
 
 
 def flaecheninhalt_mit_vorzeichenwechsel(f_expr, a, b):
