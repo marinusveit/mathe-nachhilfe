@@ -54,19 +54,11 @@ d) ∫₋₁¹ x³ dx
 
 Gegeben sind drei Graphen A, B und C.
 
-```
-Graph A:                    Graph B:                    Graph C:
-  y|   _____                  y|                          y|  \      /
-   |  /     \                  |  \    /                   |   \    /
-   | /       \                 |   \  /                    |    \  /
----+/----2----\4----→ x   -----+----\/------→ x       -----+-----\/-----→ x
-   |           \               |    2                      |     2
-   |            \_             |                           |
-```
+![Graphen A, B und C](graphen_aufgabe4.png)
 
-- Graph A zeigt eine Funktion mit Maximum bei x = 2 und Nullstellen bei x = 0 und x = 4.
-- Graph B zeigt eine Funktion mit Vorzeichenwechsel bei x = 2 (von − nach +).
-- Graph C zeigt eine Funktion mit Minimum bei x = 2.
+- Graph A zeigt eine nach oben geöffnete Parabel mit Minimum bei x = 2.
+- Graph B zeigt eine Funktion mit Maximum bei x = 2 und Nullstellen bei x = 0 und x = 4.
+- Graph C zeigt eine Funktion mit Nullstellen bei x = 0, x = 2 und x = 4.
 
 Ordne zu: Welcher Graph gehört zu f, welcher zu f' und welcher zu f''? Begründe kurz.
 
