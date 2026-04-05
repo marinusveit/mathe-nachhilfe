@@ -217,9 +217,9 @@ class KurvendiskussionAnimation(Scene):
 
 class WandernderPunkt(Scene):
     """
-    Ein Punkt wandert entlang f(x) = x³ - 3x.
-    Korrespondierende Punkte auf f'(x) und f''(x) bewegen sich synchron
-    in separaten Achsensystemen darunter.
+    Ein Punkt wandert entlang f(x) = x³ - 3x mit Tangente.
+    Korrespondierende Punkte auf f'(x) und f''(x) bewegen sich synchron.
+    Bei besonderen Punkten (Extrema, WP) werden Regeln links eingeblendet.
 
     Rendern mit:
         manim -pql kurvendiskussion.py WandernderPunkt
@@ -236,6 +236,17 @@ class WandernderPunkt(Scene):
 
         def f_double_prime(x):
             return 6 * x
+
+        # --- Hilfsfunktion: Tangente an f bei x0 ---
+        def make_tangent(x0, dx=0.6):
+            slope = f_prime(x0)
+            x1, x2 = x0 - dx, x0 + dx
+            y1 = f(x0) + slope * (x1 - x0)
+            y2 = f(x0) + slope * (x2 - x0)
+            return Line(
+                axes_f.c2p(x1, y1), axes_f.c2p(x2, y2),
+                color=YELLOW_3B1B, stroke_width=2.5,
+            )
 
         # --- Drei Achsensysteme untereinander ---
         axes_config = {
@@ -255,46 +266,33 @@ class WandernderPunkt(Scene):
         axes_fp = Axes(y_range=[-4, 10, 2], y_length=2.2, **axes_config)
         axes_fpp = Axes(y_range=[-16, 16, 8], y_length=2.2, **axes_config)
 
-        all_axes = VGroup(axes_f, axes_fp, axes_fpp).arrange(DOWN, buff=0.4).shift(LEFT * 0.3)
+        all_axes = VGroup(axes_f, axes_fp, axes_fpp).arrange(DOWN, buff=0.4)
 
-        # --- Labels links ---
-        f_label = MathTex(r"f(x)", font_size=26, color=BLUE_3B1B).next_to(axes_f, LEFT, buff=0.3)
-        fp_label = MathTex(r"f'(x)", font_size=26, color=RED_3B1B).next_to(axes_fp, LEFT, buff=0.3)
-        fpp_label = MathTex(r"f''(x)", font_size=26, color=ORANGE_3B1B).next_to(axes_fpp, LEFT, buff=0.3)
+        # --- Labels RECHTS mit vollen Formeln ---
+        f_label = MathTex(
+            r"f(x) = x^3 - 3x", font_size=22, color=BLUE_3B1B,
+        ).next_to(axes_f, RIGHT, buff=0.3)
+        fp_label = MathTex(
+            r"f'(x) = 3x^2 - 3", font_size=22, color=RED_3B1B,
+        ).next_to(axes_fp, RIGHT, buff=0.3)
+        fpp_label = MathTex(
+            r"f''(x) = 6x", font_size=22, color=ORANGE_3B1B,
+        ).next_to(axes_fpp, RIGHT, buff=0.3)
 
-        # --- Funktionsname oben rechts ---
-        func_name = MathTex(
-            r"f(x) = x^3 - 3x", font_size=28, color=WHITE,
-        ).to_corner(UR, buff=0.4)
-        func_bg = BackgroundRectangle(func_name, fill_opacity=0.7, buff=0.15)
-
-        # --- Graphen zeichnen ---
+        # --- Graphen ---
         graph_f = axes_f.plot(f, x_range=[-2.3, 2.3], color=BLUE_3B1B, stroke_width=3)
         graph_fp = axes_fp.plot(f_prime, x_range=[-2.3, 2.3], color=RED_3B1B, stroke_width=3)
         graph_fpp = axes_fpp.plot(f_double_prime, x_range=[-2.3, 2.3], color=ORANGE_3B1B, stroke_width=3)
 
-        # Achsen und Labels einblenden
+        # Alles einblenden
         self.play(
             Create(axes_f), Create(axes_fp), Create(axes_fpp),
             Write(f_label), Write(fp_label), Write(fpp_label),
-            FadeIn(func_bg), Write(func_name),
         )
-
-        # Graphen zeichnen
         self.play(
             Create(graph_f), Create(graph_fp), Create(graph_fpp),
             run_time=2,
         )
-        self.wait(0.5)
-
-        # --- Erklärungstext ---
-        erkl = MathTex(
-            r"\text{Punkt wandert: gleicher } x\text{-Wert auf } f,\, f',\, f''",
-            font_size=22, color=WHITE,
-        ).to_corner(UL, buff=0.4)
-        erkl_bg = BackgroundRectangle(erkl, fill_opacity=0.7, buff=0.1)
-
-        self.play(FadeIn(erkl_bg), Write(erkl))
         self.wait(0.5)
 
         # --- ValueTracker und wandernde Punkte ---
@@ -309,15 +307,18 @@ class WandernderPunkt(Scene):
         dot_fp = always_redraw(
             lambda: Dot(
                 axes_fp.c2p(tracker.get_value(), f_prime(tracker.get_value())),
-                color=RED_3B1B, radius=0.08, z_index=5,
+                color=YELLOW_3B1B, radius=0.08, z_index=5,
             )
         )
         dot_fpp = always_redraw(
             lambda: Dot(
                 axes_fpp.c2p(tracker.get_value(), f_double_prime(tracker.get_value())),
-                color=ORANGE_3B1B, radius=0.08, z_index=5,
+                color=YELLOW_3B1B, radius=0.08, z_index=5,
             )
         )
+
+        # --- Tangente an f(x) ---
+        tangent = always_redraw(lambda: make_tangent(tracker.get_value()))
 
         # --- Vertikale gestrichelte Verbindungslinien ---
         vline_f_fp = always_redraw(
@@ -335,17 +336,155 @@ class WandernderPunkt(Scene):
             )
         )
 
-        # Dots und Linien einblenden
+        # Dots, Tangente und Linien einblenden
         self.play(
             FadeIn(dot_f), FadeIn(dot_fp), FadeIn(dot_fpp),
+            Create(tangent),
             Create(vline_f_fp), Create(vline_fp_fpp),
         )
+        self.wait(0.5)
 
-        # --- Animation: Punkt wandert von x = -2.2 bis x = 2.2 ---
+        # ============================================================
+        # Phase 1: x = -2.2 → -1 (f steigt, f' > 0)
+        # ============================================================
+        rule_steigt = MathTex(
+            r"f'(x) > 0 \;\Rightarrow\; f \text{ steigt}",
+            font_size=22, color=GREEN_3B1B,
+        ).to_corner(UL, buff=0.4)
+        rule_steigt_bg = BackgroundRectangle(rule_steigt, fill_opacity=0.8, buff=0.1)
+
+        self.play(FadeIn(rule_steigt_bg), Write(rule_steigt))
+        self.play(tracker.animate.set_value(-1), run_time=3, rate_func=linear)
+        self.play(FadeOut(rule_steigt_bg), FadeOut(rule_steigt))
+
+        # ============================================================
+        # Halt bei x = -1: Hochpunkt (HOP)
+        # ============================================================
+        hop_dot = Dot(axes_f.c2p(-1, f(-1)), color=GREEN_3B1B, radius=0.07, z_index=6)
+        hop_label = MathTex(r"\text{HOP}", font_size=20, color=GREEN_3B1B).next_to(hop_dot, UP, buff=0.12)
+
+        rule_hop = VGroup(
+            MathTex(r"f'(-1) = 0", font_size=22, color=GREEN_3B1B),
+            MathTex(r"\Rightarrow\;\text{Extremstelle}", font_size=22, color=GREEN_3B1B),
+        ).arrange(RIGHT, buff=0.1).to_corner(UL, buff=0.4)
+        rule_hop_2 = MathTex(
+            r"f''(-1) = -6 < 0 \;\Rightarrow\; \text{Maximum}",
+            font_size=22, color=YELLOW_3B1B,
+        ).next_to(rule_hop, DOWN, buff=0.15, aligned_edge=LEFT)
+        rule_hop_group = VGroup(rule_hop, rule_hop_2)
+        rule_hop_bg = BackgroundRectangle(rule_hop_group, fill_opacity=0.8, buff=0.12)
+
         self.play(
-            tracker.animate.set_value(2.2),
-            run_time=10,
-            rate_func=linear,
+            FadeIn(hop_dot), Write(hop_label),
+            FadeIn(rule_hop_bg), Write(rule_hop_group),
         )
+        self.wait(2.5)
+        self.play(FadeOut(rule_hop_bg), FadeOut(rule_hop_group))
 
-        self.wait(2)
+        # ============================================================
+        # Phase 2: x = -1 → 0 (f fällt, f' < 0)
+        # ============================================================
+        rule_faellt = MathTex(
+            r"f'(x) < 0 \;\Rightarrow\; f \text{ fällt}",
+            font_size=22, color=RED_3B1B,
+        ).to_corner(UL, buff=0.4)
+        rule_faellt_bg = BackgroundRectangle(rule_faellt, fill_opacity=0.8, buff=0.1)
+
+        self.play(FadeIn(rule_faellt_bg), Write(rule_faellt))
+        self.play(tracker.animate.set_value(0), run_time=2.5, rate_func=linear)
+        self.play(FadeOut(rule_faellt_bg), FadeOut(rule_faellt))
+
+        # ============================================================
+        # Halt bei x = 0: Wendepunkt (WP)
+        # ============================================================
+        wp_dot = Dot(axes_f.c2p(0, f(0)), color=ORANGE_3B1B, radius=0.07, z_index=6)
+        wp_label = MathTex(r"\text{WP}", font_size=20, color=ORANGE_3B1B).next_to(wp_dot, UR, buff=0.12)
+
+        rule_wp = VGroup(
+            MathTex(r"f''(0) = 0", font_size=22, color=ORANGE_3B1B),
+            MathTex(r"\Rightarrow\;\text{Wendepunkt}", font_size=22, color=ORANGE_3B1B),
+        ).arrange(RIGHT, buff=0.1).to_corner(UL, buff=0.4)
+        rule_wp_2 = MathTex(
+            r"\text{Krümmung wechselt hier das Vorzeichen}",
+            font_size=20, color=ORANGE_3B1B,
+        ).next_to(rule_wp, DOWN, buff=0.15, aligned_edge=LEFT)
+        rule_wp_group = VGroup(rule_wp, rule_wp_2)
+        rule_wp_bg = BackgroundRectangle(rule_wp_group, fill_opacity=0.8, buff=0.12)
+
+        self.play(
+            FadeIn(wp_dot), Write(wp_label),
+            FadeIn(rule_wp_bg), Write(rule_wp_group),
+        )
+        self.wait(2.5)
+        self.play(FadeOut(rule_wp_bg), FadeOut(rule_wp_group))
+
+        # ============================================================
+        # Phase 3: x = 0 → 1 (f fällt weiter, f' < 0)
+        # ============================================================
+        rule_faellt2 = MathTex(
+            r"f'(x) < 0 \;\Rightarrow\; f \text{ fällt}",
+            font_size=22, color=RED_3B1B,
+        ).to_corner(UL, buff=0.4)
+        rule_faellt2_bg = BackgroundRectangle(rule_faellt2, fill_opacity=0.8, buff=0.1)
+
+        self.play(FadeIn(rule_faellt2_bg), Write(rule_faellt2))
+        self.play(tracker.animate.set_value(1), run_time=2.5, rate_func=linear)
+        self.play(FadeOut(rule_faellt2_bg), FadeOut(rule_faellt2))
+
+        # ============================================================
+        # Halt bei x = 1: Tiefpunkt (TIP)
+        # ============================================================
+        tip_dot = Dot(axes_f.c2p(1, f(1)), color=GREEN_3B1B, radius=0.07, z_index=6)
+        tip_label = MathTex(r"\text{TIP}", font_size=20, color=GREEN_3B1B).next_to(tip_dot, DOWN, buff=0.12)
+
+        rule_tip = VGroup(
+            MathTex(r"f'(1) = 0", font_size=22, color=GREEN_3B1B),
+            MathTex(r"\Rightarrow\;\text{Extremstelle}", font_size=22, color=GREEN_3B1B),
+        ).arrange(RIGHT, buff=0.1).to_corner(UL, buff=0.4)
+        rule_tip_2 = MathTex(
+            r"f''(1) = 6 > 0 \;\Rightarrow\; \text{Minimum}",
+            font_size=22, color=PINK_3B1B,
+        ).next_to(rule_tip, DOWN, buff=0.15, aligned_edge=LEFT)
+        rule_tip_group = VGroup(rule_tip, rule_tip_2)
+        rule_tip_bg = BackgroundRectangle(rule_tip_group, fill_opacity=0.8, buff=0.12)
+
+        self.play(
+            FadeIn(tip_dot), Write(tip_label),
+            FadeIn(rule_tip_bg), Write(rule_tip_group),
+        )
+        self.wait(2.5)
+        self.play(FadeOut(rule_tip_bg), FadeOut(rule_tip_group))
+
+        # ============================================================
+        # Phase 4: x = 1 → 2.2 (f steigt, f' > 0)
+        # ============================================================
+        rule_steigt2 = MathTex(
+            r"f'(x) > 0 \;\Rightarrow\; f \text{ steigt}",
+            font_size=22, color=GREEN_3B1B,
+        ).to_corner(UL, buff=0.4)
+        rule_steigt2_bg = BackgroundRectangle(rule_steigt2, fill_opacity=0.8, buff=0.1)
+
+        self.play(FadeIn(rule_steigt2_bg), Write(rule_steigt2))
+        self.play(tracker.animate.set_value(2.2), run_time=3, rate_func=linear)
+        self.play(FadeOut(rule_steigt2_bg), FadeOut(rule_steigt2))
+
+        # ============================================================
+        # Zusammenfassung
+        # ============================================================
+        summary_title = Text(
+            "Kurvendiskussion auf einen Blick",
+            font_size=22, color=WHITE, weight=BOLD,
+        )
+        summary_rules = VGroup(
+            MathTex(r"f'(x) = 0 \;\Rightarrow\; \text{Extremstelle}", font_size=22, color=GREEN_3B1B),
+            MathTex(r"f''(x_E) < 0 \;\Rightarrow\; \text{Maximum}", font_size=22, color=YELLOW_3B1B),
+            MathTex(r"f''(x_E) > 0 \;\Rightarrow\; \text{Minimum}", font_size=22, color=PINK_3B1B),
+            MathTex(r"f''(x) = 0 \;\Rightarrow\; \text{Wendepunkt}", font_size=22, color=ORANGE_3B1B),
+        ).arrange(DOWN, buff=0.15, aligned_edge=LEFT)
+        summary = VGroup(summary_title, summary_rules).arrange(
+            DOWN, buff=0.25, aligned_edge=LEFT,
+        ).to_corner(UL, buff=0.4)
+        sum_bg = BackgroundRectangle(summary, fill_opacity=0.85, buff=0.15)
+
+        self.play(FadeIn(sum_bg), Write(summary))
+        self.wait(4)
