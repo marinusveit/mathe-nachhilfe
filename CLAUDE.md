@@ -1,4 +1,4 @@
-# Mathe-Nachhilfe Abitur (Bayern GK, Analysis)
+# Mathe-Nachhilfe Abitur (Bayern eA, Analysis)
 
 ## Projektstruktur
 ```
