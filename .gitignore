@@ -23,3 +23,7 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+
+# Private tutoring notes / filled worksheets
+sitzung_01/diagnosetest_ausgefuellt.md
+sitzung_01/notizen_schuelerin.md
