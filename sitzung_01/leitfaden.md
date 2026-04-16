@@ -8,13 +8,42 @@
 
 | Phase | Dauer | Inhalt | Material |
 |-------|-------|--------|----------|
-| 1. Diagnosetest | ~20 Min | 11 Aufgaben (A1–C2), hilfsmittelfrei | `diagnosetest.md` |
-| 2. Auswertung & Lücken identifizieren | ~10 Min | Auswertungsraster ausfüllen, Schwerpunkte setzen | `diagnosetest.md` (Raster) |
+| 0. Organisatorisches & Kennenlernen | ~5 Min | Rahmenbedingungen klären (siehe unten) | — |
+| 1. Diagnosetest | ~20 Min | 13 Aufgaben (A1–C2), hilfsmittelfrei | `diagnosetest.md` |
+| 2. Auswertung & Lücken identifizieren | ~15 Min | Auswertungsraster ausfüllen, Schwerpunkte setzen | `diagnosetest.md` (Raster) |
 | 3. Sekante → Tangente (Manim) | ~10 Min | Animation: geometrische Bedeutung der Ableitung | Manim `SekanteTangente` |
 | 4. Tangente interaktiv erkunden | ~10 Min | Slider-Exploration am Notebook | Notebook Abschnitt 1 |
 | 5. f und f' im Vergleich | ~10 Min | Zusammenhang Funktion ↔ Ableitung | Notebook Abschnitt 2 |
 | 6. Ableitungsregeln üben | ~20 Min | Potenzregel, Ketten-, Produkt-, Quotientenregel, e/ln | Notebook Abschnitte 3–4 |
 | 7. Freies Experimentieren & Ausblick | ~10 Min | Eigene Funktionen eingeben, Desmos-Tipp | Notebook Abschnitt 5 |
+
+---
+
+## Phase 0: Organisatorisches & Kennenlernen (~5 Min)
+
+Bevor der Test beginnt, kurz **Rahmenbedingungen klären** — das beeinflusst, wie du die restlichen 7 Sitzungen und Teil B ausrichtest. Locker im Gespräch abfragen, nicht wie ein Interview.
+
+**Fragen an die Schülerin:**
+
+1. **Schriftlich oder Kolloquium?**
+   Im G9 kann sie Deutsch **oder** Mathe schriftlich wählen; wer Mathe nicht schriftlich schreibt, hat ein mündliches Kolloquium (ebenfalls eA, 18.–22. Mai oder 8.–12. Juni 2026). → Schriftlich = Fokus auf Rechensicherheit + Formeldokument. Kolloquium = Fokus auf Erklärenkönnen + Begründungen.
+
+2. **Taschenrechner-Variante: WTR oder MMS (CAS)?**
+   Entscheidet die Schule. Macht einen großen Unterschied für Teil B: Mit MMS sind viele Rechnungen symbolisch lösbar, mit WTR muss mehr per Hand. → Unbedingt notieren, damit du bei Sitzung 5/6 die richtigen Lösungswege übst.
+
+3. **IQB-Formeldokument schon bekannt?**
+   Ersetzt die alte bayerische „Merkhilfe". Andere Notation. → Falls nein: sie soll es sich bis Sitzung 2 ausdrucken und mitbringen. Link in `abitur_info.md`.
+
+4. **Aktueller Notenstand + Selbsteinschätzung**
+   „Wie lief das letzte Halbjahr in Mathe? In welchen Themen fühlst du dich sicher, wo hast du Bauchschmerzen?" — informiert die Schwerpunktsetzung.
+
+5. **Stochastik und Geometrie?**
+   Unser Plan ist Analysis-fokussiert. In der Prüfung sind aber 5 BE (Teil A) + 20 BE (Teil B) je Stochastik/Geometrie. → Klären: Wird das in der Schule oder woanders abgedeckt, oder sollen wir später umplanen?
+
+6. **Prüfungstermin-Realität: 6. Mai 2026.**
+   Heute ist der 16. April — das sind **knapp 3 Wochen** bis zur schriftlichen Prüfung. Unser 4-Wochen-Plan läuft länger. → Entweder verdichten (Sitzung 7/8 vor der Prüfung) oder Sitzung 8 wird Nachbereitung/Kolloquiumsvorbereitung.
+
+**Notiere die Antworten** in `sitzung_01/notizen_schuelerin.md` (neu anlegen) — brauchst du für die Plananpassung nach der Stunde.
 
 ---
 
@@ -28,7 +57,7 @@
 - Die Schülerin soll so weit kommen wie sie kann; nicht bei einzelnen Aufgaben hängenbleiben.
 
 **Aufgabenüberblick:**
-- **Teil A (Ableitungen):** A1 Grundableitungen (Potenz, Wurzel, 1/x²), A2 Kettenregel, A3 Produktregel, A4 ln-Ableitung, A5 höhere Ableitungen, A6 geometrische Bedeutung
+- **Teil A (Ableitungen):** A1 Grundableitungen (Potenz, Wurzel, 1/x²), A2 Kettenregel (Polynom, e-Funktion, **sin(2x)**), A3 Produkt- und **Quotientenregel**, A4 ln-Ableitung, A5 höhere Ableitungen, A6 geometrische Bedeutung
 - **Teil B (Kurvendiskussion):** B1 Nullstellen/Extrema/Wendepunkt von x³−3x, B2 Skizze aus f'/f''-Bedingungen, B3 Graph von f' lesen
 - **Teil C (Integralrechnung):** C1 Stammfunktionen, C2 bestimmtes Integral
 
@@ -131,7 +160,9 @@ jupyter lab sitzung_01/ableitungen_interaktiv.ipynb
 |-------|-------------------|-----------|
 | Potenzregel | `x^4 - 2*x^2` | 4x³ − 4x |
 | Kettenregel | `(2*x + 3)^5` | 10(2x+3)⁴ |
+| sin/cos (mit Kette) | `sin(2*x)` | 2·cos(2x) |
 | Produktregel | `x^2 * exp(x)` | (2x + x²)·eˣ |
+| Quotientenregel | `x / (x^2 + 1)` | (1 − x²) / (x² + 1)² |
 | e-Funktion | `exp(-2*x)` | −2·e^(−2x) |
 | ln-Funktion | `ln(3*x)` | 1/x |
 | Kombination | `x * ln(x)` | ln(x) + 1 |
@@ -141,7 +172,7 @@ jupyter lab sitzung_01/ableitungen_interaktiv.ipynb
 2. Dann tippt sie die Funktion ins Notebook ein und vergleicht.
 3. Bei Fehlern: Gemeinsam die Regel nochmal durchgehen, visuell am Plot prüfen.
 
-**Quotientenregel:** Nicht direkt im Notebook als eigener Abschnitt, aber über das Eingabefeld testbar (z.B. `x / (x^2 + 1)`). Falls im Diagnosetest Lücken: kurz die Formel aufschreiben und ein Beispiel am Eingabefeld prüfen.
+**Quotientenregel:** Im Diagnosetest (A3b) jetzt direkt geprüft. Bei Unsicherheit: Formel `(u/v)' = (u'v − uv') / v²` an Tafel/Papier, dann `x / (x^2 + 1)` ins Eingabefeld eintippen und mit dem Handrechenweg vergleichen.
 
 ---
 
