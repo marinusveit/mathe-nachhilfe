@@ -126,12 +126,16 @@ Ausgewertet wurden alle verfügbaren Prüfungen: Bayern-Abitur 2020--2025 (je Te
 **Teil A (hilfsmittelfrei, 30 BE):**
 - Ableitungen per Hand (e, ln, sin/cos, Wurzel, Ketten-/Produktregel)
 - Graphen zuordnen (f ↔ f' ↔ f'' ↔ F)
+- Aus Graph von f' ablesen: Monotonie, Extrema, Wendepunkte von f
 - Tangentengleichung aufstellen
+- Sekanten- und Tangentensteigungen vergleichen / geometrisch argumentieren
 - Symmetrie begründen
 - Einfache Integrale berechnen
-- Graphentransformationen beschreiben
+- Graphentransformationen: beschreiben UND Koordinaten besonderer Punkte unter Transformation berechnen
+- Verkettung und Definitionsbereich zusammengesetzter Funktionen (z.B. ln(f(x)), √(f(x)))
 - Umkehrfunktion bestimmen
 - Gebrochen-rationale Funktionen: Asymptoten, Definitionsbereich
+- Grenzwerte berechnen und im Kontext deuten
 
 **Teil B (mit Hilfsmitteln, 30 BE Analysis):**
 - Vollständige Kurvendiskussion (oft e-Funktion oder gebrochen-rational)
@@ -141,10 +145,10 @@ Ausgewertet wurden alle verfügbaren Prüfungen: Bayern-Abitur 2020--2025 (je Te
 - Fläche zwischen Kurven
 - Ortskurve der Extrempunkte einer Schar
 - Modellierung (Wachstum, Abklingprozesse, physikalische Kontexte)
+- Ableitungsnachweis: gegebenen Term als f'(x) verifizieren (Produktregel, Vereinfachung)
+- Grenzwertberechnung und Sachkontextdeutung (z.B. Randverhalten einer Flugbahn)
 
-### Aufschlüsselung nach Quelle
-
-**ISB Musterabitur 2026 (IlluPA) -- Analysis-Aufgaben:**
+### ISB Musterabitur 2026 (IlluPA) -- Analysis-Aufgaben im Detail
 
 | Aufgabe | Teil | BE | Themen |
 |---|---|---|---|
@@ -155,56 +159,57 @@ Ausgewertet wurden alle verfügbaren Prüfungen: Bayern-Abitur 2020--2025 (je Te
 | B1 | B | 30 | Ganzrational, Krümmung, mittl./lok. Änderungsrate, e-Funktion, Funktionenschar, Ortskurve, Sachkontext (Modellierung), Integral als Gesamtänderung |
 | B2 | B | 30 | Ganzrational, Fläche, Tangente, **Sinusfunktion**, Graphentransformation, exponentielles Wachstum, durchschnittl. Funktionswert |
 
-**Bayern-Abitur 2020--2025 -- häufigste Analysis-Themen pro Jahr:**
+## G9 vs. G8 -- Was ändert sich?
 
-| Jahr | Teil A Schwerpunkte | Teil B Schwerpunkte |
+### Strukturelle Änderungen
+
+| Merkmal | G8 (bis 2025) | G9 (ab 2026) |
 |---|---|---|
-| 2020 | ln-Funktion, Umkehrfunktion, gebr.-rat. Fkt., Integralfunktion | Gebr.-rat. Fkt. (Symmetrie, Tangente, Extremwertproblem), e-Funktion (Sachkontext Algenteppich) |
-| 2021 | e-Funktion, Umkehrfunktion, Wurzelfunktion, Stammfunktion | Gebr.-rat. Fkt. (Asymptoten, Monotonie, Schar), e-Funktion (Nullstellen, Schar, Ortskurve) |
-| 2022 | Gebr.-rat. Fkt., ln-Funktion, Kettenregel, e-Fkt.-Schar, Integralfunktion | Wurzelfunktion (Symmetrie, Tangente, Sachkontext), e-Fkt.-Schar (Ortskurve, Transformation) |
-| 2023 | ln-Funktion, gebr.-rat. Fkt., Graphentransformation, Stammfunktion, Wurzel-/Umkehrfunktion | e-Funktion (Extremwertproblem, Umkehrfunktion), Sachkontext (Stau: Änderungsrate, Integral), Funktionenschar |
-| 2024 | Sinusfunktion, e-Fkt.-Schar, gebr.-rat. Fkt., Graphentransformation, Umkehrfunktion | Gebr.-rat. Fkt. (Polynomdivision, Schar, Integralfunktion), e-Funktion (Sachkontext Seeadler, Schar) |
-| 2025 | Gebr.-rat. Fkt., e-Funktion, Kosinusfunktion, Umkehrfunktion, Graphentransformation | Wurzelfunktion (Sachkontext Badminton, Extremwertproblem), e-Fkt.-Schar (Umkehrfunktion, Fläche, Symmetrie) |
+| Gesamtdauer | 270 Min | **300 Min** (+30 Min) |
+| Gesamt-BE | 80 BE | **100 BE** (+20 BE) |
+| Teil A | 40 BE, max. 90 Min | **30 BE, max. 110 Min** |
+| Teil A Struktur | Aufgaben ohne Wahl | **Pflicht (20 BE) + Wahl (10 BE)** |
+| Teil B | 40 BE | **70 BE** |
+| Formelhilfe | Merkhilfe (Bayern) | **IQB-Formeldokument** (bundesweit) |
+| Wahlmöglichkeit | Mathe immer schriftlich | **Deutsch ODER Mathe schriftlich** |
 
-**IQB-Aufgabenpool (gA) -- Kernthemen:**
-- Ableitung + Tangente, Nullstellen, Integral/Flächenberechnung, Symmetrie, Graphentransformationen
-- Teil B: Funktionenschar, Sachkontext (Änderungsrate), Wendepunkte, Streckung/Verschiebung
+### Themen, die im G9 sichtbarer oder neu sind
 
-## Heruntergeladene Prüfungen (`pruefungen/`)
+- **Rotationsvolumen** -- bereits im Musterabitur 2026 (Aufgabe A6), in den ausgewerteten G8-Abiturs so nicht vertreten
+- **Uneigentliche Integrale** -- im G9-Stoff neu relevant
+- **sin/cos** deutlich stärker betont (Trend schon in G8 2024/2025 erkennbar)
+- **Newton-Verfahren** -- im G9-Stoff neu relevant
+- **Graphentransformationen** wirken im neuen Format präsenter, auch wenn sie in G8 bereits vorkamen
+- **Durchschnittlicher Funktionswert** via Integral -- im Musterabitur 2026 explizit sichtbar
 
-### `isb_illupa/` -- Offizielles Musterabitur 2026 (11 PDFs, 4.4 MB) **[PRIORITÄT 1]**
-Beispielaufgaben im neuen G9-Format inkl. Lösungen:
-- Teil A (hilfsmittelfrei), Teil B (WTR), Teil B (MMS)
-- Erläuterungen und Lösungsvorschläge
-- Hinweise zur mündlichen Prüfung & Kolloquium-Beispiele
-- Übersicht über das neue Prüfungsformat
-- KMS: Mathematik Abitur ab 2026
+### Übertragbarkeit der alten G8-Aufgaben
 
-### `isb_abitur/` -- Offizielle Abiturprüfungen 2020--2025 (24 PDFs, 10 MB) **[PRIORITÄT 2]**
-Vollständige Prüfungen (G8), je Teil A + Teil B, Standard- und CAS-Variante:
-- `2020/` bis `2025/` (je 4 PDFs)
+**~80% Überschneidung** bei den Analysis-Inhalten. Kurvendiskussion, e-Funktion, Scharen, Integrale, Extremwertprobleme, gebrochen-rationale Funktionen sind identisch. Die G8-Teil-B-Aufgaben (Analysis) eignen sich gut zum Üben. Die G8-Teil-A-Aufgaben passen weniger gut (anderes BE-Schema, kein Wahlteil).
 
-### `iqb/sammlung/` -- IQB-Aufgabenpool Analysis 2017--2025 (24 PDFs, ~6 MB) **[PRIORITÄT 3]**
-Einzelaufgaben grundlegendes Anforderungsniveau:
-- Teil A (hilfsmittelfrei): je 2 Aufgaben/Jahr (2017--2025)
-- Teil B (WTR/CAS): verfügbar für 2017--2021
+## Vorbereitungsstrategie
 
-### `iqb/` -- Sammlungen (2 PDFs, ~7 MB)
-- IQB-Aufgaben Mathematik 2015--2020 (Sammlung)
-- Abitur Mathematik Beispielaufgaben 2025
+Da es sich um den **ersten G9-Jahrgang** handelt, gibt es nur **eine einzige offizielle Musterklausur** (ISB IlluPA). Dass Erstjahrgangs-Prüfungen eher moderat ausfallen, ist eine plausible Arbeitshypothese, aber keine verlässliche Zusage und sollte nicht die Vorbereitung ersetzen.
 
-## Nicht heruntergeladen (bewusst)
+### Empfohlene Reihenfolge
 
-| Quelle | Grund |
-|---|---|
-| **mathelike.de** | 403 Forbidden (Zugriff gesperrt) |
-| **abiturloesung.de** | Lösungen im Browser, PDFs hinter Login |
-| **abiturma.de** | Lösungen nur im Browser, kein Bulk-Download |
-| **serlo.org** | Aufgaben+Lösungen im Browser, kein PDF-Export |
-| **STARK Verlag** | Kostenpflichtig (Paywall) |
-| **IQB Pools 2023--2025 (Einzelwebseiten)** | JavaScript-basiert, kein wget-Zugriff |
+1. **ISB-Musterabitur intensiv durcharbeiten** (`pruefungen/isb_illupa/`) -- definiert den Maßstab
+2. **Alte G8-Abiturs für Kernthemen** (`pruefungen/isb_abitur/`) -- Teil B Analysis zu ~80% übertragbar
+3. **Neue G9-Themen gezielt üben** -- Rotationsvolumen, uneigentliche Integrale, sin/cos (IQB-Aufgaben, Schulbuch)
+4. **IQB-Aufgabenpool** (`pruefungen/iqb/`) -- zum gezielten Üben einzelner Aufgabentypen
+5. **Formeldokument früh kennenlernen** -- andere Notation als die alte Merkhilfe
 
-**Tipp:** Für kostenlose Lösungen zu den ISB-Aufgaben: [abiturloesung.de](https://abiturloesung.de/), [abiturma.de](https://abiturma.de/mathe-abituraufgaben/bayern), [serlo.org](https://de.serlo.org/mathe/20852/abiturpruefungen-bayern-mathematik-mit-loesungen)
+### Zusätzliche Materialien
+
+| Quelle | Inhalt | Kosten |
+|---|---|---|
+| **STARK Prüfungsvorbereitung** (ISBN 978-3-8490-6212-5) | Eigene Musterprüfungen im G9-Format + Lösungen | ~17 EUR |
+| **STARK Komplettpaket** (ISBN 978-3-8490-6476-1) | 3 Musterprüfungen, 400+ Aufgaben, 200+ Erklärvideos | kostenpflichtig |
+| [mathelike.de](https://www.mathelike.de/abiturloesungen-mathematik-bayern/mathematik-beispiel-abitur-bayern-2026/) | Ausführliche Lösungen zum ISB-Musterabitur 2026 + alle G8-Abiturs | kostenlos |
+| [serlo.org](https://de.serlo.org/mathe/20852/abiturpruefungen-bayern-mathematik-mit-loesungen) | Aufgaben + Lösungen G8-Abiturs | kostenlos |
+| [abiturma.de](https://abiturma.de/mathe-abituraufgaben/bayern) | Aufgaben + Lösungen im Browser | kostenlos |
+| [IQB eA-Aufgaben 2025](https://www2.iqb.hu-berlin.de/abitur/pools2025/mathematik/erhoeht) | Erhöhtes Niveau (relevanter als gA) | kostenlos |
+
+> **Prüfungsmaterial:** Übersicht über alle heruntergeladenen PDFs siehe `pruefungen/README.md`
 
 ## Quellen
 
