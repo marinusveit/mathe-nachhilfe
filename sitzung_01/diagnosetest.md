@@ -23,11 +23,15 @@ a) f(x) = (2x + 3)⁵
 
 b) f(x) = e^(−2x)
 
+c) f(x) = sin(2x)
+
 ---
 
-**A3)** Leite ab (Produktregel).
+**A3)** Leite ab (Produkt- und Quotientenregel).
 
-f(x) = x² · eˣ
+a) f(x) = x² · eˣ
+
+b) f(x) = x / (x² + 1)
 
 ---
 
@@ -68,17 +72,9 @@ Was für einen Punkt hat f an der Stelle x = 2?
 
 ---
 
-**B3)** Der Graph zeigt f'(x) (nicht f!). Entscheide:
+**B3)** Der folgende Graph zeigt f'(x) (nicht f!).
 
-```
-      f'(x)
-       |     /\
-       |    /  \
-       |   /    \
-  -----+--/------\-------→ x
-       | /   2    \  4
-       |/          \___
-```
+![Graph von f'(x)](b3_graph.png)
 
 a) In welchem Bereich ist f monoton steigend?
 
@@ -109,8 +105,10 @@ b) f(x) = e^(2x)
 | Bereich | Aufgaben | Ergebnis | Einschätzung |
 |---------|----------|----------|--------------|
 | Grundableitungen | A1 | ☐ sicher  ☐ unsicher  ☐ nicht gekonnt | |
-| Kettenregel | A2 | ☐ sicher  ☐ unsicher  ☐ nicht gekonnt | |
-| Produktregel | A3 | ☐ sicher  ☐ unsicher  ☐ nicht gekonnt | |
+| Kettenregel | A2a, A2b | ☐ sicher  ☐ unsicher  ☐ nicht gekonnt | |
+| sin/cos-Ableitung | A2c | ☐ sicher  ☐ unsicher  ☐ nicht gekonnt | |
+| Produktregel | A3a | ☐ sicher  ☐ unsicher  ☐ nicht gekonnt | |
+| Quotientenregel | A3b | ☐ sicher  ☐ unsicher  ☐ nicht gekonnt | |
 | ln-Ableitung | A4 | ☐ sicher  ☐ unsicher  ☐ nicht gekonnt | |
 | Höhere Ableitungen | A5 | ☐ sicher  ☐ unsicher  ☐ nicht gekonnt | |
 | Geometrische Bedeutung | A6 | ☐ sicher  ☐ unsicher  ☐ nicht gekonnt | |
@@ -122,7 +120,6 @@ b) f(x) = e^(2x)
 | Bestimmtes Integral | C2 | ☐ sicher  ☐ unsicher  ☐ nicht gekonnt | |
 
 **Gesamteindruck / Anpassung Stundenplan:**
-
 _________________________________________________________
 
 _________________________________________________________
