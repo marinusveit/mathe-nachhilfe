@@ -68,20 +68,25 @@ Bestimme f(x).
 
 ---
 
-**B3)** Eine ganzrationale Funktion vierten Grades ist achsensymmetrisch zur y-Achse.
-Es gilt:
+## Teil C: Rotationsvolumen
 
-- f(0) = 1
-- f(2) = 5
-- f'(2) = 8
+**C1)** Der Graph von f(x) = √x wird im Intervall [0; 4] um die x-Achse rotiert.
 
-Bestimme f(x). *(Tipp: Achsensymmetrie → welche Koeffizienten fallen weg?)*
+a) Skizziere den Rotationskörper.
+
+b) Berechne das Volumen des entstehenden Rotationskörpers.
+
+*(Formel: V = π · ∫ₐᵇ [f(x)]² dx)*
 
 ---
 
-**B4)** Ein Kurvenstück soll durch eine ganzrationale Funktion **höchstens** dritten Grades beschrieben werden. Der Graph geht durch den Ursprung, hat dort die Steigung 3 und besitzt bei x = 2 einen Wendepunkt mit dem Funktionswert 6.
+**C2)** Der Graph von f(x) = x² wird im Intervall [0; 2] um die y-Achse rotiert.
 
-Bestimme f(x).
+a) Bestimme die Umkehrfunktion f⁻¹(y) und die y-Grenzen.
+
+b) Berechne das Rotationsvolumen.
+
+*(Hinweis: Bei Rotation um die y-Achse: V = π · ∫ [f⁻¹(y)]² dy)*
 
 ---
 
@@ -92,9 +97,10 @@ Bestimme f(x).
 | Nebenbedingung aufstellen | A1–A3 | ☐ sicher  ☐ unsicher  ☐ nicht gekonnt | |
 | Zielfunktion ableiten & optimieren | A1–A4 | ☐ sicher  ☐ unsicher  ☐ nicht gekonnt | |
 | Ränder/Definitionsbereich beachten | A4 | ☐ sicher  ☐ unsicher  ☐ nicht gekonnt | |
-| LGS aus Bedingungen aufstellen | B1–B4 | ☐ sicher  ☐ unsicher  ☐ nicht gekonnt | |
-| LGS lösen | B1–B4 | ☐ sicher  ☐ unsicher  ☐ nicht gekonnt | |
-| Symmetrie-Argument nutzen | B3 | ☐ sicher  ☐ unsicher  ☐ nicht gekonnt | |
+| LGS aus Bedingungen aufstellen | B1–B2 | ☐ sicher  ☐ unsicher  ☐ nicht gekonnt | |
+| LGS lösen | B1–B2 | ☐ sicher  ☐ unsicher  ☐ nicht gekonnt | |
+| Rotationsvolumen um x-Achse | C1 | ☐ sicher  ☐ unsicher  ☐ nicht gekonnt | |
+| Rotationsvolumen um y-Achse | C2 | ☐ sicher  ☐ unsicher  ☐ nicht gekonnt | |
 
 **Gesamteindruck / Anpassung Stundenplan:**
 

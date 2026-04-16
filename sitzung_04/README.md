@@ -1,16 +1,18 @@
-# Sitzung 4: Extremwertprobleme & Steckbriefaufgaben
+# Sitzung 4: Extremwertprobleme, Steckbriefaufgaben & Rotationsvolumen
 
 ## Ziel
-Sachprobleme sauber in Zielfunktion plus Nebenbedingung übersetzen und Steckbriefaufgaben systematisch über Gleichungssysteme lösen.
+Sachprobleme sauber in Zielfunktion plus Nebenbedingung übersetzen, Steckbriefaufgaben kennenlernen und Rotationsvolumen berechnen (neu im G9, war im Musterabitur 2026).
 
 ## Ablauf (90 Min)
 
 | Zeit | Was | Material |
 |------|-----|----------|
-| 0–20 Min | Wiederholung: notwendige Schritte bei Optimierungsaufgaben | Tafel + Heft |
-| 20–50 Min | Notebook: Dose, Zaun, allgemeiner Löser, Steckbrief-Fahrplan | `extremwert_steckbrief.ipynb` |
-| 50–80 Min | Aufgabenblatt bearbeiten | `diagnosetest.md` |
-| 80–90 Min | Lösungen vergleichen und typische Fehler sammeln | `loesungen.md` |
+| 0–20 Min | Diagnosetest (A1–A4, B1–B2, C1–C2) | `diagnosetest.md` |
+| 20–45 Min | Notebook: Dose, Zaun, Blech — Slider + Aufgaben lösen | `extremwert_steckbrief.ipynb` |
+| 45–50 Min | Manim: Dose-Animation | `manim/dose_optimierung.py` |
+| 50–60 Min | Steckbriefaufgaben: Methode + Beispiel B1 | Notebook |
+| 60–75 Min | Rotationsvolumen: Rezept + Aufgaben C1/C2 | `rezepte/14_rotationsvolumen.md` |
+| 75–90 Min | Lösungen vergleichen und typische Fehler | `loesungen.md` |
 
 ## Dateien
 

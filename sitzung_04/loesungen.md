@@ -73,54 +73,20 @@ Lösung:
 
 - `f(x) = -x^2 + 2x + 3`
 
-**B3)** Achsensymmetrische Funktion 4. Grades
+## Teil C: Rotationsvolumen
 
-Ansatz wegen Achsensymmetrie:
+**C1)** f(x) = √x auf [0; 4], Rotation um x-Achse
 
-- `f(x) = ax^4 + bx^2 + c`
+- Formel: V = π · ∫₀⁴ [√x]² dx = π · ∫₀⁴ x dx
+- Stammfunktion: F(x) = x²/2
+- Einsetzen: V = π · [x²/2]₀⁴ = π · (16/2 − 0) = **8π ≈ 25,13**
+- Der Rotationskörper ist ein Paraboloid (bauchige Schale)
 
-Bedingungen:
+**C2)** f(x) = x² auf [0; 2], Rotation um y-Achse
 
-- `f(0) = 1`, also `c = 1`
-- `f(2) = 5`, also `16a + 4b + 1 = 5`
-- `f'(2) = 8`, also `32a + 4b = 8`
-
-Lösung:
-
-- `a = 1/4`
-- `b = 0`
-- `c = 1`
-
-Also:
-
-- `f(x) = 1/4 x^4 + 1`
-
-**B4)** Funktion höchstens 3. Grades
-
-Ansatz: `f(x) = ax^3 + bx^2 + cx + d`
-
-Bedingungen:
-
-- `f(0) = 0`, also `d = 0`
-- `f'(0) = 3`, also `c = 3`
-- Wendepunkt bei `x = 2`, also `f''(2) = 0`
-- `f(2) = 6`
-
-Rechnung:
-
-- `f''(x) = 6ax + 2b`
-- `f''(2) = 12a + 2b = 0`, also `b = -6a`
-- `f(2) = 8a + 4b + 6 = 6`, also `2a + b = 0`
-
-Zusammen mit `b = -6a` folgt:
-
-- `a = 0`
-- `b = 0`
-
-Also:
-
-- `f(x) = 3x`
-
-Hinweis:
-
-- Die Bedingungen erzwingen hier keine echte kubische Funktion. Deshalb ist die Formulierung im Aufgabenblatt bewusst auf "höchstens dritten Grades" angepasst.
+- Umkehrfunktion: y = x² → x = √y, also f⁻¹(y) = √y
+- y-Grenzen: c = f(0) = 0, d = f(2) = 4
+- V = π · ∫₀⁴ [√y]² dy = π · ∫₀⁴ y dy
+- Stammfunktion: F(y) = y²/2
+- Einsetzen: V = π · [y²/2]₀⁴ = π · (16/2 − 0) = **8π ≈ 25,13**
+- Bemerkung: Dass beide Ergebnisse gleich sind, ist hier Zufall — bei anderen Funktionen ergeben sich unterschiedliche Volumina!

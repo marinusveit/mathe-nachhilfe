@@ -1,4 +1,4 @@
-# Leitfaden — Sitzung 4: Extremwertprobleme & Steckbriefaufgaben
+# Leitfaden — Sitzung 4: Extremwertprobleme, Steckbriefaufgaben & Rotationsvolumen
 
 **Dauer:** 90 Minuten
 
@@ -8,10 +8,11 @@
 
 | Phase | Dauer | Inhalt | Material |
 |-------|-------|--------|----------|
-| 1. Diagnosetest | ~25 Min | 8 Aufgaben (A1–A4, B1–B4) | `diagnosetest.md`, `loesungen.md` |
+| 1. Diagnosetest | ~20 Min | 8 Aufgaben (A1–A4, B1–B2, C1–C2) | `diagnosetest.md`, `loesungen.md` |
 | 2. Extremwertprobleme interaktiv | ~25 Min | Dose, Zaun, Blech — Slider + symbolisch | Notebook Abschnitte 1–3, Aufgaben A1/A3 |
 | 3. Manim: Dose-Animation | ~5 Min | Zylinder-Optimierung visuell | Manim `DoseOptimierung` |
-| 4. Steckbriefaufgaben | ~20 Min | LGS aufstellen und lösen | Notebook Abschnitte B1, B2, eigene Aufgabe |
+| 4. Steckbriefaufgaben (Kurzversion) | ~10 Min | Methode + 1 Beispiel B1 | Notebook Abschnitt B1 |
+| 4b. Rotationsvolumen | ~15 Min | Rezept besprechen, C1/C2 rechnen | `rezepte/14_rotationsvolumen.md`, Diagnosetest Teil C |
 | 5. Methodenüberblick & freies Üben | ~15 Min | Fahrplan + eigene Aufgaben | Notebook Abschnitte 5 + "Eigene Steckbriefaufgabe" |
 
 ---
@@ -101,7 +102,7 @@ Guter Moment, um die Formel nochmal an der Tafel zusammenzufassen:
 
 ---
 
-## Phase 4: Steckbriefaufgaben (~20 Min)
+## Phase 4: Steckbriefaufgaben — Kurzversion (~10 Min)
 
 ### 4a) Methode erklären (2–3 Min, mündlich)
 Kurzversion des Fahrplans:
@@ -109,22 +110,40 @@ Kurzversion des Fahrplans:
 2. **Bedingungen übersetzen:** f(x₀) = y, f'(x₀) = y, f''(x₀) = y in Gleichungen
 3. **LGS lösen:** Koeffizienten bestimmen
 
-Tipp für Achsensymmetrie (B3): Nur gerade Potenzen im Ansatz — spart Gleichungen!
-
 ### 4b) Beispiel B1 durchrechnen (Notebook Cell 17)
 - f(x) = ax^3 + bx^2 + cx + d
 - 4 Bedingungen ergeben 4 Gleichungen
 - Ergebnis: f(x) = 1/2*x^3 - 3/2*x^2 + 2
 - Das Notebook zeigt den vollständigen Rechenweg mit LGS
+- B2 nur besprechen, wenn Zeit bleibt
 
-### 4c) Beispiel B2 (Notebook Cell 19)
-- Quadratische Funktion, Extremum-Bedingung f'(1) = 0
-- Ergebnis: f(x) = -x^2 + 2x + 3
+> **Hinweis:** Steckbriefaufgaben kommen im aktuellen Abitur selten vor. Ein Beispiel reicht zum Verständnis der Methode.
 
-### 4d) B4 als Überraschung
-- "Höchstens dritten Grades" mit Wendepunkt-Bedingung
-- Ergebnis: f(x) = 3x — die Bedingungen erzwingen eine Gerade!
-- Gute Diskussion: Warum ist das so? (Alle kubischen und quadratischen Koeffizienten werden null.)
+---
+
+## Phase 4b: Rotationsvolumen (~15 Min)
+
+**Warum:** Rotationsvolumen war im ISB-Musterabitur 2026 (Aufgabe A6) — neu im G9-Stoff!
+
+### Rezept besprechen (~5 Min)
+Das Rezept `rezepte/14_rotationsvolumen.md` gemeinsam durchgehen:
+- **Formel um x-Achse:** V = π · ∫ₐᵇ [f(x)]² dx
+- **Formel um y-Achse:** Umkehrfunktion nötig → V = π · ∫ [f⁻¹(y)]² dy
+- **Kernbotschaft:** „Quadrieren, integrieren, π dran — fertig."
+
+### Aufgaben C1 und C2 rechnen (~10 Min)
+Die Schülerin rechnet C1 (x-Achse) und C2 (y-Achse) aus dem Diagnosetest.
+
+**C1:** f(x) = √x auf [0; 4] um x-Achse → V = 8π
+- Schlüsselschritt: (√x)² = x — das Quadrieren vereinfacht!
+
+**C2:** f(x) = x² auf [0; 2] um y-Achse → Umkehrfunktion f⁻¹(y) = √y, y-Grenzen [0; 4]
+- Schlüsselschritt: Grenzen umrechnen (x-Werte → y-Werte)
+
+**Häufige Fehler ansprechen:**
+- π vergessen
+- [f(x)]² vergessen (nur f(x) integriert)
+- Bei y-Achse: x-Grenzen statt y-Grenzen verwendet
 
 ---
 
@@ -143,10 +162,9 @@ Die Schülerin kann eigene Steckbriefaufgaben eingeben — gut zur Kontrolle eig
 
 ## Tipps für die Durchführung
 
-- **Wenn der Diagnosetest gut läuft:** Phase 2 straffen (nur Dose + eine Aufgabe), mehr Zeit für Steckbriefaufgaben
-- **Wenn Nebenbedingungen/Zielfunktion schwach:** Phase 2 ausbauen, Steckbrief nur B1 + B2 als Demo
-- **Wenn LGS-Lösen schwach:** Langsam durch B1 rechnen, Gauss-Verfahren auffrischen
+- **Wenn der Diagnosetest gut läuft:** Phase 2 straffen (nur Dose + eine Aufgabe), mehr Zeit für Rotationsvolumen
+- **Wenn Nebenbedingungen/Zielfunktion schwach:** Phase 2 ausbauen, Steckbrief nur als Demo
+- **Wenn Rotationsvolumen Probleme macht:** Mehr einfache Beispiele rechnen (z.B. f(x) = 2 auf [0; 3] → Zylinder)
 - **Schlüsselkonzept Extremwertprobleme:** Nebenbedingung eliminieren, dann wie Kurvendiskussion weiter
 - **Schlüsselkonzept Steckbriefaufgaben:** Anzahl Bedingungen = Anzahl Unbekannte = Grad + 1
-- **Häufiger Fehler:** Bei Achsensymmetrie trotzdem alle Koeffizienten ansetzen (statt nur gerade Potenzen)
-- **B4 ist ein guter Gesprächsanlass:** Nicht jede Steckbriefaufgabe liefert den erwarteten Grad
+- **Schlüsselkonzept Rotationsvolumen:** Quadrieren → Integrieren → π multiplizieren
