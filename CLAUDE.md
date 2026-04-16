@@ -16,6 +16,18 @@ sitzung_XX/             # Material pro Sitzung
 - **Jupyter:** `plt.rcParams['mathtext.fontset'] = 'cm'`, LaTeX in Legenden (`r'$...$'`), `loc='upper left'`
 - **Sprache:** Deutsch (Aufgaben, Labels, Erklärungen)
 
+## Anonymität / Privatsphäre (WICHTIG)
+Im Git-Repo **nur anonyme, allgemein wiederverwendbare** Dateien. Alles, was sich auf
+eine konkrete Schülerin bezieht (Namen, Noten, ausgefüllte Diagnosen, Fortschritt,
+Problem-Aufgaben, private Notizen), bleibt **lokal** und ist via `.gitignore` ausgeschlossen.
+
+**Konvention für schülerspezifische Inhalte:**
+- Ordner `privat/` → gitignored, hier kommt alles Persönliche rein
+- Dateinamen-Muster: `*_ausgefuellt.md`, `notizen_*.md`, `*_privat.md` → gitignored
+- Personen niemals namentlich nennen — „die Schülerin" genügt
+- Vor `git add` prüfen: enthält die Datei etwas, das nur für **diese eine** Schülerin gilt?
+  Wenn ja → nach `privat/` verschieben oder umbenennen mit `_privat.md`-Suffix.
+
 ## Befehle
 ```bash
 source .venv/bin/activate

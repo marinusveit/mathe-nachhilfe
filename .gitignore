@@ -24,6 +24,10 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Private tutoring notes / filled worksheets
-sitzung_01/diagnosetest_ausgefuellt.md
-sitzung_01/notizen_schuelerin.md
+# Private tutoring notes / filled worksheets / student-specific content
+# Alles Schülerspezifische (ausgefüllte Diagnosen, private Notizen, Fortschritt)
+# bleibt lokal. Im Git-Repo nur anonyme, allgemein wiederverwendbare Dateien.
+privat/
+**/*_ausgefuellt.md
+**/notizen_*.md
+**/*_privat.md
