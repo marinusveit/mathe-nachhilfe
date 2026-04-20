@@ -120,7 +120,7 @@ Jeweils $f'(x)$ bestimmen. Lösungen unten.
 4. $8(2x-7)^3$
 5. $e^{-x} - x\cdot e^{-x} = (1-x)\,e^{-x}$
 6. $2x\ln(x) + x$
-7. $\sqrt{x-2} + \dfrac{x+1}{2\sqrt{x-2}} = \dfrac{3x}{2\sqrt{x-2}}$
+7. $\sqrt{x-2} + \dfrac{x+1}{2\sqrt{x-2}} = \dfrac{3x-3}{2\sqrt{x-2}} = \dfrac{3(x-1)}{2\sqrt{x-2}}$
 8. $\dfrac{1}{2x\sqrt{\ln(x)}}$
 9. $\dfrac{e^{\sqrt{x}}}{2\sqrt{x}}$
 10. $\dfrac{2e^{2x}}{e^{2x} + 1}$
