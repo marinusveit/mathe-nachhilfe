@@ -12,7 +12,7 @@ Für die komplette Kurvendiskussion siehe das separate
 |----------|----------|
 | **Berechnen / Bestimmen / Ermitteln** | Rechenweg + Ergebnis |
 | **Zeigen / Nachweisen** | Von der Funktion starten, **nicht** vom Ergebnis rückwärts |
-| **Begründen** | 1–3 Sätze mit mathematischem Argument |
+| **Begründen** | 1–3 Sätze, warum das mathematisch stimmt |
 | **Beschreiben** | Sachverhalt in Worten, keine Rechnung |
 | **Deuten** | Ergebnis im Sachkontext erklären |
 | **Skizzieren** | Freihand, wichtige Punkte eintragen |
@@ -63,7 +63,8 @@ Für die komplette Kurvendiskussion siehe das separate
 | $\sin(x)$ | $-\cos(x)$ |
 | $\cos(x)$ | $\sin(x)$ |
 
-- Linearität: $\displaystyle\int (a f + b g)\,dx = a \int f\,dx + b \int g\,dx$
+- Summen und feste Faktoren darf man einzeln integrieren:
+  $\displaystyle\int (a f + b g)\,dx = a \int f\,dx + b \int g\,dx$
 - Unbestimmtes Integral: **$+ C$** nicht vergessen
 - Bestimmtes Integral: $\bigl[F(x)\bigr]_a^b = F(b) - F(a)$
 
@@ -82,7 +83,7 @@ $$\frac{a}{n} + \frac{b}{n} = \frac{a+b}{n}$$
 Nur Zähler addieren — **der Nenner bleibt gleich**.
 
 ### Muster 3: Hauptnenner bilden (Wurzeltrick!)
-Zentrale Idee: $\sqrt{u} \cdot \sqrt{u} = u$
+Alle Terme auf den gleichen Nenner bringen. Der Trick bei Wurzeln im Nenner: beim Erweitern mit $\sqrt{u}$ nutzt man $\sqrt{u} \cdot \sqrt{u} = u$ — so verschwindet die Wurzel im Zähler.
 
 Beispiel:
 $$\sqrt{6-x} - \frac{x+6}{2\sqrt{6-x}}$$
@@ -112,16 +113,18 @@ $$\frac{a/b}{c} = \frac{a}{bc} \qquad \frac{a}{b/c} = \frac{ac}{b}$$
 
 ## 4. Definitions- und Wertebereich
 
-### Definitionsbereich $D$
+Welche $x$ darf man einsetzen, welche $y$-Werte kommen heraus?
+
+### Definitionsbereich $\mathbb{D}$ — wo $x$ eingesetzt werden darf
 
 | Funktionstyp | Bedingung |
 |---|---|
-| Ganzrational | $D = \mathbb{R}$ |
+| Ganzrational | $\mathbb{D} = \mathbb{R}$ |
 | Bruch | Nenner $\neq 0$ |
-| Wurzel $\sqrt{\cdot}$ | Radikand $\geq 0$ |
-| $\ln(\cdot)$ | Argument $> 0$ |
+| Wurzel $\sqrt{Radikand}$ | Radikand $\geq 0$ |
+| $\ln(Argument)$ | Argument $> 0$ |
 
-### Wertebereich $W$ — auswendig!
+### Wertebereich $\mathbb{W}$ — welche $y$-Werte vorkommen
 
 | Funktion | $W$ |
 |---|---|
@@ -131,28 +134,94 @@ $$\frac{a/b}{c} = \frac{a}{bc} \qquad \frac{a}{b/c} = \frac{ac}{b}$$
 | $e^x$ | $\,]0;\infty[\,$ — **nicht $0$!** |
 | $\ln(x)$ | $\mathbb{R}$ |
 
-**Wertebereich einer Funktion bestimmen:** globale Extrema + Randverhalten + Monotonie.
-- **$[$** eckige Klammer → Wert wird angenommen (Extremum)
-- **$]$** runde Klammer → nur Grenzwert, wird nicht angenommen
+**Wertebereich bestimmen:** schauen, welche $y$-Werte der Graph insgesamt annimmt.
+
+Hilfsmittel:
+- **Extrema** (Hoch-/Tiefpunkte): liefern kleinsten/größten Wert
+- **Monotonie** (Vorzeichen von $f'$): wo steigt/fällt der Graph
+- **Randverhalten**: Funktionswert oder Grenzwert am Rand von $\mathbb{D}$ — und **an jeder Definitionslücke** (Polstelle → §6)
+
+**Welche Grenzen per Limes untersuchen?** Hängt vom Definitionsbereich ab:
+
+| $\mathbb{D}$ | Zu untersuchen |
+|---|---|
+| $[a;b]$ (geschlossen) | $f(a)$, $f(b)$ direkt einsetzen — kein Limes nötig |
+| $[a;b[$ bzw. $]a;b]$ | geschlossenen Rand einsetzen, offenen per $\displaystyle\lim_{x \to b^-}$ bzw. $\displaystyle\lim_{x \to a^+}$ |
+| $]a;b[$ (offen) | beide Ränder per Limes |
+| $\mathbb{R} = {]-\infty;+\infty[}$ | $\displaystyle\lim_{x \to \pm\infty} f(x)$ — $\mathbb{R}$ ist beidseitig offen |
+| Definitionslücke bei $x_0$ | beidseitig $\displaystyle\lim_{x \to x_0^\pm} f(x)$ (Polstelle → $\pm\infty$) |
+
+> **Beispiel** $f(x) = \tfrac{1}{x}$ mit $\mathbb{D} = \mathbb{R}\setminus\{0\}$ → **4 Stellen** zu prüfen:
+> $\displaystyle\lim_{x \to -\infty} f$, $\displaystyle\lim_{x \to 0^-} f$, $\displaystyle\lim_{x \to 0^+} f$, $\displaystyle\lim_{x \to +\infty} f$
+
+- **$[$** eckige Klammer → Wert wird angenommen (Extremum oder geschlossener Rand)
+- **$]$** runde Klammer → nur Grenzwert, wird **nicht** angenommen (offener Rand, $\pm\infty$, Polstelle)
 
 → [Rezept 05: Verkettung/Definitionsbereich](rezepte/05_verkettung_definitionsbereich.md) · [Rezept 18: Wertebereich](rezepte/18_wertebereich.md)
 
 ---
 
-## 5. Kurvendiskussion (Kurzfassung)
+## 5. Grenzwerte & Asymptoten
+
+Was passiert für sehr große $x$ oder an kritischen Stellen?
+
+Eine **Asymptote** ist eine Gerade, an die sich der Graph beliebig nah annähert, ohne sie je zu erreichen.
+
+**Wachstumshierarchie:** $e^x$ wächst schneller als jedes $x^n$, und $x^n$ wächst schneller als $\ln(x)$. Kurz: $e^x \gg x^n \gg \ln(x)$.
+
+Wichtig: $e^{-x} \to 0$ für $x \to \infty$ (nicht $\infty$!)
+
+| Asymptote | Bedingung |
+|---|---|
+| waagrechte Asymptote $y = c$ | $\displaystyle\lim_{x \to \pm\infty} f(x) = c$ |
+| senkrechte Asymptote $x = a$ | Polstelle, Nenner $\to 0$ |
+| schräge Asymptote | Zählergrad $=$ Nennergrad $+1$ → Polynomdivision |
+
+> Merksatz: Derselbe Limes liefert sowohl den Rand des Wertebereichs (§4) als auch die Asymptote.
+
+→ [Rezept 09: Grenzwerte](rezepte/09_grenzwerte.md)
+
+---
+
+## 6. Gebrochen-rationale Funktionen
+
+Funktionen der Form „Polynom durch Polynom".
+
+$$f(x) = \frac{Z(x)}{N(x)}$$
+
+Eine **Polstelle** ist eine Definitionslücke, an der $f$ gegen $\pm\infty$ geht — dort liegt eine senkrechte Asymptote.
+
+- **$\mathbb{D}$:** $\mathbb{R}$ ohne die Nennernullstellen (also ohne alle $x$, für die $N(x) = 0$ ist)
+- **Hebbare Lücke:** Zähler und Nenner lassen sich durch denselben Faktor kürzen → Loch im Graphen, **keine** Polstelle
+- **Polstelle:** Nennernullstelle bleibt auch nach dem Kürzen stehen → senkrechte Asymptote
+
+**Waagrechte Asymptote aus Gradvergleich** (Zähler- vs. Nennergrad):
+- Zählergrad $<$ Nennergrad → $y = 0$
+- Zählergrad $=$ Nennergrad → $y =$ Verhältnis der Leitkoeffizienten (Zahlen vor den höchsten Potenzen)
+- Zählergrad $=$ Nennergrad $+1$ → schräge Asymptote (Polynomdivision)
+
+→ [Rezept 12: Gebrochen-rationale Funktionen](rezepte/12_gebrochen_rational.md)
+
+---
+
+## 7. Kurvendiskussion (Kurzfassung)
+
+Einen Graphen systematisch untersuchen.
 
 1. Definitionsbereich
-2. Symmetrie: $f(-x) = f(x)$ achs- / $f(-x) = -f(x)$ punktsymmetrisch
+2. Spiegelung prüfen (Symmetrie):
+   - $f(-x) = f(x)$ → gespiegelt an der $y$-Achse (achsensymmetrisch)
+   - $f(-x) = -f(x)$ → gespiegelt am Ursprung (punktsymmetrisch)
 3. Nullstellen: $f(x) = 0$
 4. $y$-Achsenabschnitt: $f(0)$
 5. Ableitungen $f'$, $f''$
-6. **Extrema:** $f'(x) = 0$ **und** $f''(x) \neq 0$
-   - $f'' < 0$ → Hochpunkt
-   - $f'' > 0$ → Tiefpunkt
-   - $f'' = 0$ → VZW von $f'$ prüfen
-7. **Wendepunkte:** $f''(x) = 0$ **und** $f'''(x) \neq 0$
-8. Monotonie (Vorzeichen von $f'$)
-9. Krümmung (Vorzeichen von $f''$)
+6. **Extrema (Hoch-/Tiefpunkte):** $f'(x) = 0$ **und** $f''(x) \neq 0$
+   - $f'' < 0$ → Hochpunkt (lokales Maximum)
+   - $f'' > 0$ → Tiefpunkt (lokales Minimum)
+   - $f'' = 0$ → Vorzeichenwechsel von $f'$ prüfen
+7. **Wendepunkte:** $f''(x) = 0$ **und** $f'''(x) \neq 0$ (oder Vorzeichenwechsel von $f''$)
+8. Wo der Graph steigt oder fällt (Monotonie; Vorzeichen von $f'$)
+9. Wie der Graph gekrümmt ist (Krümmung; Vorzeichen von $f''$)
 10. Verhalten für $x \to \pm\infty$
 11. Graph skizzieren
 
@@ -160,12 +229,12 @@ $$\frac{a/b}{c} = \frac{a}{bc} \qquad \frac{a}{b/c} = \frac{ac}{b}$$
 
 ---
 
-## 6. Tangente und Normale
+## 8. Tangente und Normale
 
-**Tangente an Stelle $a$:**
+**Tangente an Stelle $a$** (Gerade, die den Graphen dort berührt):
 $$t(x) = f'(a) \cdot (x - a) + f(a)$$
 
-**Normale (senkrecht dazu):**
+**Normale** (steht senkrecht auf der Tangente):
 $$n(x) = -\frac{1}{f'(a)} \cdot (x - a) + f(a)$$
 
 **Externe Tangente** (Punkt $P$ liegt **nicht** auf dem Graphen):
@@ -178,15 +247,15 @@ $$n(x) = -\frac{1}{f'(a)} \cdot (x - a) + f(a)$$
 
 ---
 
-## 7. Graphen zuordnen — $f \leftrightarrow f' \leftrightarrow F$
+## 9. Graphen zuordnen — $f \leftrightarrow f' \leftrightarrow F$
 
 | Beobachtung in $f$ | in $f'$ | in $F$ |
 |---|---|---|
-| Extremum | Nullstelle mit VZW | Wendepunkt |
-| Wendepunkt | Extremum | — |
-| steigt ↗ | $f' > 0$ | linksgekrümmt |
-| fällt ↘ | $f' < 0$ | rechtsgekrümmt |
-| Nullstelle mit VZW | — | Extremum in $F$ |
+| Hoch- oder Tiefpunkt (Extremum) | Nullstelle mit Vorzeichenwechsel | Wendepunkt |
+| Wendepunkt | Hoch- oder Tiefpunkt (Extremum) | — |
+| steigt ↗ | $f' > 0$ | $F$ ist nach oben gekrümmt |
+| fällt ↘ | $f' < 0$ | $F$ ist nach unten gekrümmt |
+| Nullstelle mit Vorzeichenwechsel | — | Hoch- oder Tiefpunkt (Extremum) in $F$ |
 
 > Merksatz: **Eine Stufe hoch = Steigung ablesen. Eine Stufe runter = Fläche integrieren.**
 
@@ -194,7 +263,7 @@ $$n(x) = -\frac{1}{f'(a)} \cdot (x - a) + f(a)$$
 
 ---
 
-## 8. Graphentransformationen
+## 10. Graphentransformationen
 
 $$g(x) = a \cdot f\bigl(b(x - c)\bigr) + d$$
 
@@ -211,9 +280,11 @@ $$g(x) = a \cdot f\bigl(b(x - c)\bigr) + d$$
 
 ---
 
-## 9. Funktionenschar & Ortskurve
+## 11. Funktionenschar & Ortskurve
 
-Parameter $k$ als **Konstante** behandeln — nicht mit ableiten!
+Funktionen mit Parameter $k$; die Ortskurve ist die Kurve, auf der alle Extrempunkte der Schar liegen.
+
+Den Parameter $k$ als **Konstante** behandeln — nicht nach $x$ mit ableiten!
 
 **Ortskurve der Extrempunkte:**
 1. Extremstelle in Abhängigkeit von $k$: $x_E(k)$, $y_E(k)$
@@ -224,13 +295,15 @@ Parameter $k$ als **Konstante** behandeln — nicht mit ableiten!
 
 ---
 
-## 10. Extremwertprobleme (Optimierung)
+## 12. Extremwertprobleme (Optimierung)
+
+Größten oder kleinsten Wert einer Größe finden.
 
 1. Skizze + Variablen benennen
-2. **Zielfunktion** aufstellen ($A$, $V$, Kosten, …)
+2. **Zielfunktion** aufstellen (was maximal/minimal werden soll: $A$, $V$, Kosten, …)
 3. **Nebenbedingung** finden (steht im Text!)
 4. Nebenbedingung auflösen, einsetzen → Zielfunktion mit **einer** Variablen
-5. $f'(x) = 0$ → Extremstelle, mit $f''$ oder Rand prüfen
+5. $f'(x) = 0$ → Extremstelle, mit $f''$ oder am Rand prüfen
 6. **Randwerte** des Definitionsbereichs nicht vergessen!
 7. Antwort im Sachkontext **mit Einheiten**
 
@@ -240,7 +313,7 @@ Parameter $k$ als **Konstante** behandeln — nicht mit ableiten!
 
 ---
 
-## 11. Integrale & Flächen
+## 13. Integrale & Flächen
 
 **Fläche = Betrag des Integrals.** Vorzeichen beachten!
 
@@ -254,7 +327,9 @@ $$A = \left\lvert \int_a^b f(x)\,dx \right\rvert$$
 
 ---
 
-## 12. Integrale im Sachkontext
+## 14. Integrale im Sachkontext
+
+Integrale in Textaufgaben — was bedeutet das Integral inhaltlich?
 
 | Was? | Formel |
 |---|---|
@@ -271,42 +346,11 @@ $$A = \left\lvert \int_a^b f(x)\,dx \right\rvert$$
 
 ---
 
-## 13. Grenzwerte & Asymptoten
-
-**Hierarchie:** $e^x \gg x^n \gg \ln(x)$ — das schnellere gewinnt.
-
-Wichtig: $e^{-x} \to 0$ für $x \to \infty$ (nicht $\infty$!)
-
-| Asymptote | Bedingung |
-|---|---|
-| waagrecht $y = c$ | $\displaystyle\lim_{x \to \pm\infty} f(x) = c$ |
-| senkrecht $x = a$ | Polstelle, Nenner $\to 0$ |
-| schräg | Zählergrad $=$ Nennergrad $+1$ → Polynomdivision |
-
-→ [Rezept 09: Grenzwerte](rezepte/09_grenzwerte.md)
-
----
-
-## 14. Gebrochen-rationale Funktionen
-
-$$f(x) = \frac{Z(x)}{N(x)}$$
-
-- **$D$:** $\mathbb{R}$ ohne die Nennernullstellen
-- **Hebbare Lücke:** Zähler und Nenner lassen sich durch denselben Faktor kürzen → Loch im Graphen, keine Polstelle
-- **Polstelle:** Nennernullstelle bleibt nach Kürzen stehen → senkrechte Asymptote
-
-**Waagrechte Asymptote aus Gradvergleich:**
-- Zählergrad $<$ Nennergrad → $y = 0$
-- Zählergrad $=$ Nennergrad → $y =$ Verhältnis der Leitkoeffizienten
-- Zählergrad $=$ Nennergrad $+1$ → schräge Asymptote (Polynomdivision)
-
-→ [Rezept 12: Gebrochen-rationale Funktionen](rezepte/12_gebrochen_rational.md)
-
----
-
 ## 15. Umkehrfunktion
 
-**Voraussetzung:** $f$ streng monoton auf $D$ — also $f'(x) > 0$ überall (oder $< 0$ überall).
+Macht die Funktion rückwärts: aus $y$ wird wieder $x$.
+
+**Voraussetzung:** $f$ streng monoton auf $D$ (also im ganzen Definitionsbereich immer nur steigend oder immer nur fallend) — formal: $f'(x) > 0$ überall oder $f'(x) < 0$ überall.
 
 **Bestimmen:**
 1. $y = f(x)$ nach $x$ auflösen
@@ -322,6 +366,8 @@ $$f(x) = \frac{Z(x)}{N(x)}$$
 ---
 
 ## 16. Rotationsvolumen
+
+Volumen eines Körpers, der entsteht, wenn man den Graphen um eine Achse dreht.
 
 **Um $x$-Achse:**
 $$V = \pi \int_a^b \bigl[f(x)\bigr]^2\,dx$$
@@ -340,12 +386,14 @@ $$V = \pi \int_a^b \Bigl(\bigl[f(x)\bigr]^2 - \bigl[g(x)\bigr]^2\Bigr)\,dx$$
 
 ## 17. Uneigentliche Integrale
 
+Integrale mit unendlicher Grenze oder an einer Polstelle.
+
 Bei unendlicher Grenze oder Polstelle: **Grenzwert bilden**, niemals $\infty$ direkt einsetzen.
 
 $$\int_a^\infty f(x)\,dx = \lim_{b \to \infty} \int_a^b f(x)\,dx$$
 
-- **Konvergent** = endliches Ergebnis
-- **Divergent** = $\infty$ oder kein Grenzwert
+- **Konvergent** = das Integral hat einen endlichen Wert
+- **Divergent** = das Integral hat keinen endlichen Wert
 - **Merkregel:** $\displaystyle\int_1^\infty \frac{1}{x^p}\,dx$ konvergiert nur für $p > 1$
 
 > Falle: „$f(x) \to 0 \Rightarrow$ Integral konvergiert" ist **falsch** (Gegenbeispiel: $\tfrac{1}{x}$).
@@ -355,6 +403,8 @@ $$\int_a^\infty f(x)\,dx = \lim_{b \to \infty} \int_a^b f(x)\,dx$$
 ---
 
 ## 18. Sekanten- und Tangentensteigung
+
+Steigung zwischen zwei Punkten (Sekante) vs. Steigung an einem einzelnen Punkt (Tangente).
 
 Zwischen $P(p \mid f(p))$ und $Q(q \mid f(q))$:
 $$m(q) = \frac{f(q) - f(p)}{q - p}$$
