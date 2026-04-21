@@ -2,6 +2,8 @@
 
 > Integrale mit unendlicher Grenze ($\int_1^\infty$) oder über eine Polstelle — wann ergibt die „unendliche Fläche" dennoch eine endliche Zahl?
 
+**Voraussetzung:** [Rezept 08: Integrale & Fläche](08_integrale_flaeche.md) (Stammfunktionen), [Rezept 09: Grenzwerte und Asymptoten](09_grenzwerte.md) (denn ein uneigentliches Integral ist buchstäblich ein Grenzwert eines Integrals).
+
 ## Typische Aufgabenstellung
 > „Untersuchen Sie, ob das Integral $\int_1^{\infty} f(x)\,dx$ konvergiert, und berechnen Sie ggf. seinen Wert."
 > „Bestimmen Sie den Flächeninhalt zwischen dem Graphen von $f$ und der $x$-Achse für $x \geq 1$."

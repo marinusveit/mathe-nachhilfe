@@ -1,8 +1,10 @@
 # Übungsaufgaben: Kettenregel im Abiturstil
 
-> Ergänzung zu `16_kettenregel_verschachtelt.md`.
+> Ergänzung zu [Rezept 16: Verschachtelte Kettenregel](16_kettenregel_verschachtelt.md).
 > Fünf Aufgaben im echten bayerischen Teil-A-Stil (hilfsmittelfrei, 2–5 BE).
 > Gesamtumfang: **17 BE**, etwa 25–30 Minuten Bearbeitungszeit.
+
+**Voraussetzung:** [Rezept 16: Verschachtelte Kettenregel](16_kettenregel_verschachtelt.md) (Muster 1–3).
 
 ## Aufgaben
 
@@ -56,7 +58,7 @@ beschrieben. Dabei ist $t \geq 0$ die Zeit in Stunden nach der Einnahme und $k(t
 
 **Operator „Zeigen Sie":** Ausgangsfunktion nehmen, Rechenweg bis zum vorgegebenen Term.
 
-Muster 1 (Rezept 16): $\bigl[\ln(f(x))\bigr]' = \dfrac{f'(x)}{f(x)}$.
+Muster 1 (siehe [Rezept 16](16_kettenregel_verschachtelt.md)): $\bigl[\ln(f(x))\bigr]' = \dfrac{f'(x)}{f(x)}$.
 
 Mit $f(x) = x^2 + 1$ folgt $f'(x) = 2x$, also
 

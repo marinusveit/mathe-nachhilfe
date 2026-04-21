@@ -9,7 +9,7 @@
 ## Schritt-für-Schritt: Funktionenschar untersuchen
 
 1. **Parameter als Konstante** behandeln — ableiten, Nullstellen etc. ganz normal, $k$ steht einfach da
-2. **Kurvendiskussion wie gewohnt** (Rezept 01), nur dass Ergebnisse von $k$ abhängen
+2. **Kurvendiskussion wie gewohnt** ([Rezept 01: Kurvendiskussion](01_kurvendiskussion.md)), nur dass Ergebnisse von $k$ abhängen
 3. **Besondere Parameterwerte** untersuchen:
    - Für welches $k$ hat $f$ keine Extrema / genau ein Extremum / etc.?
    - Bedingung aufstellen und nach $k$ lösen

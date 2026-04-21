@@ -2,6 +2,8 @@
 
 > Die Umkehrfunktion $f^{-1}$ macht aus $y$ wieder $x$. Ihr Graph entsteht durch Spiegelung des Graphen von $f$ an der Geraden $y = x$. Voraussetzung: $f$ ist streng monoton.
 
+**Voraussetzung:** [Rezept 18: Wertebereich bestimmen](18_wertebereich.md) — $D_{f^{-1}} = W_f$ und $W_{f^{-1}} = D_f$, ohne sicheren Wertebereich geht Schritt 4+5 unten schief.
+
 ![Umkehrfunktion am Beispiel $e^x$ und $\ln(x)$ als Spiegelung an $y = x$](assets/umkehrfunktion.png)
 
 ## Typische Aufgabenstellung
