@@ -1,8 +1,10 @@
 # Cheatsheet: Analysis (Bayern Abitur, eA)
 
 Überblick über alle Themen. Für Details → jeweiliges Rezept.
-Für die komplette Kurvendiskussion siehe das separate
-[Cheatsheet Kurvendiskussion](sitzung_02/cheatsheet_kurvendiskussion.md).
+Separate Cheatsheets:
+- [Cheatsheet Grundfunktionen](cheatsheet_grundfunktionen.md) — Skizzen, $\mathbb{D}$/$\mathbb{W}$, Ableitungen und wichtige Werte aller Standardfunktionen
+- [Cheatsheet Kurvendiskussion](sitzung_02/cheatsheet_kurvendiskussion.md) — komplettes Rezept
+- [Cheatsheet Stochastik](cheatsheet_stochastik.md) — Vierfeldertafel, Binomial, Hypothesentest, Normalverteilung
 
 ---
 
@@ -119,10 +121,12 @@ Welche $x$ darf man einsetzen, welche $y$-Werte kommen heraus?
 
 | Funktionstyp | Bedingung |
 |---|---|
-| Ganzrational | $\mathbb{D} = \mathbb{R}$ |
+| Ganzrational (Polynome: $3x+1$, $x^2-4$, $x^3-2x+7$, …) | $\mathbb{D} = \mathbb{R}$ |
 | Bruch | Nenner $\neq 0$ |
 | Wurzel $\sqrt{Radikand}$ | Radikand $\geq 0$ |
 | $\ln(Argument)$ | Argument $> 0$ |
+
+> **Ganzrational** = nur $x$, $x^2$, $x^3$, … mit Zahlen kombiniert (also Polynome). Kein Bruch mit $x$ im Nenner, keine Wurzel mit $x$ drunter, kein $\ln(x)$. → immer $\mathbb{D} = \mathbb{R}$, weil man jedes $x$ einsetzen darf.
 
 ### Wertebereich $\mathbb{W}$ — welche $y$-Werte vorkommen
 
@@ -136,10 +140,11 @@ Welche $x$ darf man einsetzen, welche $y$-Werte kommen heraus?
 
 **Wertebereich bestimmen:** schauen, welche $y$-Werte der Graph insgesamt annimmt.
 
-Hilfsmittel:
-- **Extrema** (Hoch-/Tiefpunkte): liefern kleinsten/größten Wert
-- **Monotonie** (Vorzeichen von $f'$): wo steigt/fällt der Graph
-- **Randverhalten**: Funktionswert oder Grenzwert am Rand von $\mathbb{D}$ — und **an jeder Definitionslücke** (Polstelle → §6)
+In der Praxis reicht **Extrema + Randverhalten per Limes** fast immer:
+
+- **Extrema** (Hoch-/Tiefpunkte): kleinster/größter Wert
+- **Randverhalten per Limes**: am Rand von $\mathbb{D}$ und an jeder Definitionslücke (Polstelle → §6)
+- Zwischen diesen Stützstellen ist $f$ stetig → alle $y$-Werte dazwischen werden lückenlos angenommen (Monotonie zwischen Extrema ist automatisch)
 
 **Welche Grenzen per Limes untersuchen?** Hängt vom Definitionsbereich ab:
 
@@ -177,6 +182,8 @@ Wichtig: $e^{-x} \to 0$ für $x \to \infty$ (nicht $\infty$!)
 | senkrechte Asymptote $x = a$ | Polstelle, Nenner $\to 0$ |
 | schräge Asymptote | Zählergrad $=$ Nennergrad $+1$ → Polynomdivision |
 
+> **Beispiel:** $f(x) = \dfrac{1}{x-1} + 2$ hat die senkrechte Asymptote $x = 1$ (dort ist der Nenner $0$) und die waagrechte Asymptote $y = 2$ (für $x \to \pm\infty$ geht $\tfrac{1}{x-1} \to 0$).
+
 > Merksatz: Derselbe Limes liefert sowohl den Rand des Wertebereichs (§4) als auch die Asymptote.
 
 → [Rezept 09: Grenzwerte](rezepte/09_grenzwerte.md)
@@ -194,6 +201,10 @@ Eine **Polstelle** ist eine Definitionslücke, an der $f$ gegen $\pm\infty$ geht
 - **$\mathbb{D}$:** $\mathbb{R}$ ohne die Nennernullstellen (also ohne alle $x$, für die $N(x) = 0$ ist)
 - **Hebbare Lücke:** Zähler und Nenner lassen sich durch denselben Faktor kürzen → Loch im Graphen, **keine** Polstelle
 - **Polstelle:** Nennernullstelle bleibt auch nach dem Kürzen stehen → senkrechte Asymptote
+
+> **Beispiele:**
+> - $f(x) = \dfrac{1}{x}$ → Polstelle bei $x = 0$ (Nenner wird $0$, kürzen geht nicht).
+> - $g(x) = \dfrac{x^2 - 1}{x - 1} = \dfrac{(x-1)(x+1)}{x-1} = x + 1$ (für $x \neq 1$) → bei $x = 1$ nur **hebbare Lücke**, keine Polstelle.
 
 **Waagrechte Asymptote aus Gradvergleich** (Zähler- vs. Nennergrad):
 - Zählergrad $<$ Nennergrad → $y = 0$
