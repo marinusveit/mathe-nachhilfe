@@ -12,8 +12,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 
-ROOT = pathlib.Path(__file__).resolve().parents[1]
-NOTEBOOK_PATH = ROOT / "sitzung_01" / "ableitungen_interaktiv.ipynb"
+NOTEBOOK_PATH = pathlib.Path(__file__).resolve().parent / "ableitungen_interaktiv.ipynb"
 
 
 def _strip_magics_and_interact_calls(source):

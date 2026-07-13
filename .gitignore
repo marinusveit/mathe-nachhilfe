@@ -1,6 +1,7 @@
 # Python
 __pycache__/
 *.py[cod]
+.pytest_cache/
 *.egg-info/
 .eggs/
 dist/
@@ -32,4 +33,5 @@ privat/
 **/notizen_*.md
 **/*_privat.md
 
-schlussspurt
+# Laufende Nachhilfe-Phase (noch nicht anonymisiert/aufbereitet)
+schlussspurt/
