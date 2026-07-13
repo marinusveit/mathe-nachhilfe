@@ -33,7 +33,7 @@ $$\frac{a}{n_1} + \frac{b}{n_2} = \frac{a \cdot n_2 + b \cdot n_1}{n_1 \cdot n_2
 
 $$\frac{a}{n_1} + \frac{b}{2 n_1} = \frac{2a}{2 n_1} + \frac{b}{2 n_1} = \frac{2a + b}{2 n_1}$$
 
-**Beispiel aus Abitur 2025 B1 1c:** Man hat $\sqrt{6-x} - \dfrac{x+6}{2\sqrt{6-x}}$.
+**Beispiel aus Abitur 2025 B1 1c** (wie der Term durch Ableiten entsteht, zeigt [Rezept 16: Verschachtelte Kettenregel](16_kettenregel_verschachtelt.md)): Man hat $\sqrt{6-x} - \dfrac{x+6}{2\sqrt{6-x}}$.
 
 Der erste Summand hat „unsichtbaren Nenner" $1$. Erweitern auf Hauptnenner $2\sqrt{6-x}$:
 
@@ -56,7 +56,7 @@ $$\frac{\dfrac{a}{b}}{c} = \frac{a}{b \cdot c} \qquad \frac{a}{\dfrac{b}{c}} = \
 
 **Faustregel:** „Bruch im Nenner → multiplizieren mit Kehrwert."
 
-**Typisches Beispiel:** $\dfrac{f'(x)}{f(x)^2}$ nach Quotientenregel — passt oft schon, aber bei verketteten Termen wie $\dfrac{1/u}{v}$ unbedingt auflösen.
+**Typisches Beispiel:** $\left[\dfrac{1}{f(x)}\right]' = -\dfrac{f'(x)}{f(x)^2}$ nach Quotientenregel — passt oft schon, aber bei verketteten Termen wie $\dfrac{1/u}{v}$ unbedingt auflösen.
 
 ## Drill: 10 kurze Umformungen
 

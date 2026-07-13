@@ -190,4 +190,4 @@ $$\cfrac{\;\dfrac{1}{\sqrt{x}}\;}{\sqrt{x}}$$
 - **Teile 1–2** sind reine Schreibweisen-Übung — sollten nach einigen Durchgängen automatisch laufen.
 - **Teil 7** ist der anspruchsvollste Abschnitt und spiegelt echte Abiturschritte wider (z.B. 2025 B1 1c). Hier hängt es sich am häufigsten auf: **bei „Zeigen Sie"-Aufgaben zählt die exakte Form**.
 - **Nicht alle auf einmal** — 3–5 Aufgaben aus einem oder zwei Teilen pro Sitzung reichen. Wechseln, sobald ein Muster sitzt.
-- Wenn ein Muster systematisch hakt, zurück ins [Rezept 17](../rezepte/17_termumformung_analysis.md) springen und gemeinsam die Regel nachlesen.
+- Wenn ein Muster systematisch hakt, zurück ins [Rezept 17: Termumformung in der Analysis](../rezepte/17_termumformung_analysis.md) springen und gemeinsam die Regel nachlesen.

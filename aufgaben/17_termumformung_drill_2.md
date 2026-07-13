@@ -87,7 +87,7 @@
 
 ## Hinweise für den Unterricht
 
-- Aufgaben 1–4 trainieren den Reflex **„erst Kehrbruch, dann Hauptnenner"**. Wenn das hakt, kurz zurück in [Rezept 17](../rezepte/17_termumformung_analysis.md), Abschnitt zu negativen Exponenten.
+- Aufgaben 1–4 trainieren den Reflex **„erst Kehrbruch, dann Hauptnenner"**. Wenn das hakt, kurz zurück in [Rezept 17: Termumformung in der Analysis](../rezepte/17_termumformung_analysis.md), Abschnitt zu negativen Exponenten.
 - Aufgaben 5–6 imitieren typische Quotienten-/Produktregel-Ausgaben — der Schritt, an dem Schüler:innen oft aufhören, obwohl die eigentliche Vereinfachung noch fehlt.
 - Aufgabe 7 ist die Vorstufe zu Aufgabe 8: erst den Zähler ordnen, dann den Doppelbruch.
 - Aufgabe 8 ist die **Abi-Endform** (vergleichbar zu 2025 B1 1c). Wenn diese sitzt, ist das Muster im Griff.

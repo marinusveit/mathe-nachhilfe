@@ -11,7 +11,7 @@
 1. **Nullstellen** von $f$ bestimmen → Integrationsgrenzen
 2. **Vorzeichen prüfen**: Wo ist $f$ positiv, wo negativ?
 3. **Betragsmäßig integrieren**: Fläche unter $x$-Achse wird negativ → Betrag nehmen
-4. $$A = \left| \int_a^b f(x)\,dx \right| \quad\text{oder intervallweise:}\quad A = \int_a^c f(x)\,dx \;-\; \int_c^b f(x)\,dx \quad\text{(wenn VZW bei $c$)}$$
+4. $$A = \left| \int_a^b f(x)\,dx \right| \quad\text{(nur ohne VZW!)} \quad\text{oder intervallweise:}\quad A = \left| \int_a^c f(x)\,dx \right| + \left| \int_c^b f(x)\,dx \right| \quad\text{(VZW bei $c$)}$$
 
 ## Schritt-für-Schritt: Fläche zwischen zwei Graphen
 

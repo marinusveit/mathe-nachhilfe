@@ -1,6 +1,6 @@
 # Rezept: Graphentransformationen
 
-> Wie aus einem Grundgraphen durch Streckung, Spiegelung und Verschiebung ein neuer Graph entsteht — allgemein $g(x) = a \cdot f\bigl(b(x - c)\bigr) + d$.
+> Wie aus einem Grundgraphen durch Streckung, Spiegelung und Verschiebung ein neuer Graph entsteht — allgemein $g(x) = a \cdot f(bx + c) + d$.
 
 ### 🔗 Interaktiv in Desmos
 
@@ -14,10 +14,10 @@
 
 | Transformation | Gleichung | Wirkung |
 |---|---|---|
-| Verschiebung rechts um $a$ | $g(x) = f(x - a)$ | alle $x$-Werte $+\,a$ |
-| Verschiebung links um $a$ | $g(x) = f(x + a)$ | alle $x$-Werte $-\,a$ |
-| Verschiebung hoch um $b$ | $g(x) = f(x) + b$ | alle $y$-Werte $+\,b$ |
-| Verschiebung runter um $b$ | $g(x) = f(x) - b$ | alle $y$-Werte $-\,b$ |
+| Verschiebung rechts um $e$ | $g(x) = f(x - e)$ | alle $x$-Werte $+\,e$ |
+| Verschiebung links um $e$ | $g(x) = f(x + e)$ | alle $x$-Werte $-\,e$ |
+| Verschiebung hoch um $d$ | $g(x) = f(x) + d$ | alle $y$-Werte $+\,d$ |
+| Verschiebung runter um $d$ | $g(x) = f(x) - d$ | alle $y$-Werte $-\,d$ |
 | Streckung in $y$-Richtung (Faktor $k$) | $g(x) = k \cdot f(x)$ | alle $y$-Werte $\cdot\,k$ |
 | Stauchung in $x$-Richtung (Faktor $\tfrac{1}{k}$) | $g(x) = f(k \cdot x)$ | alle $x$-Werte $\div\,k$ |
 | Spiegelung an $x$-Achse | $g(x) = -f(x)$ | alle $y$-Werte $\cdot\,(-1)$ |

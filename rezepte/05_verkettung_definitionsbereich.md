@@ -41,3 +41,7 @@ $$g(x) = h(f(x)) \quad\Longrightarrow\quad g'(x) = h'(f(x)) \cdot f'(x)$$
 - Definitionsbereich der inneren Funktion vergessen
 - Bei $\ln(f(x))$: $f(x) = 0$ gehört NICHT zum Definitionsbereich
 - Ableitung von $\ln(f(x)) = \dfrac{f'(x)}{f(x)}$: den Nenner $f(x)$ vergessen
+
+## Siehe auch
+
+- [Rezept 16: Verschachtelte Kettenregel](16_kettenregel_verschachtelt.md) — dieselben Muster mit Herleitungen, Kombination mit Produktregel und Drill

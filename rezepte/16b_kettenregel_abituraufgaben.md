@@ -58,11 +58,11 @@ beschrieben. Dabei ist $t \geq 0$ die Zeit in Stunden nach der Einnahme und $k(t
 
 **Operator „Zeigen Sie":** Ausgangsfunktion nehmen, Rechenweg bis zum vorgegebenen Term.
 
-Muster 1 (siehe [Rezept 16](16_kettenregel_verschachtelt.md)): $\bigl[\ln(f(x))\bigr]' = \dfrac{f'(x)}{f(x)}$.
+Muster 1 (siehe [Rezept 16: Verschachtelte Kettenregel](16_kettenregel_verschachtelt.md)): $\bigl[\ln(u(x))\bigr]' = \dfrac{u'(x)}{u(x)}$.
 
-Mit $f(x) = x^2 + 1$ folgt $f'(x) = 2x$, also
+Mit der inneren Funktion $u(x) = x^2 + 1$ und $u'(x) = 2x$ folgt
 
-$$f'(x) = \frac{2x}{x^2 + 1} \quad\checkmark$$
+$$f'(x) = \frac{u'(x)}{u(x)} = \frac{2x}{x^2 + 1} \quad\checkmark$$
 
 ---
 
@@ -123,7 +123,7 @@ $\Rightarrow$ $f$ besitzt keine Extremstelle. $\checkmark$
 
 Die Gleichung $k'(t) = -0{,}4 \cdot k(t)$ besagt: Die momentane **Änderungsrate der Konzentration** ist zu jedem Zeitpunkt proportional zur **aktuellen Konzentration** selbst, mit Proportionalitätsfaktor $-0{,}4\,\mathrm{h^{-1}}$.
 
-Das negative Vorzeichen bedeutet, dass die Konzentration **abnimmt**. Je höher die aktuelle Konzentration, desto schneller der Abbau — pro Stunde verringert sich die Konzentration um $40\,\%$ ihres momentanen Werts. Das ist das typische Verhalten eines **exponentiellen Zerfalls**.
+Das negative Vorzeichen bedeutet, dass die Konzentration **abnimmt**. Je höher die aktuelle Konzentration, desto schneller der Abbau — die **momentane Abnahmerate** beträgt zu jedem Zeitpunkt $40\,\%$ des aktuellen Werts pro Stunde. Das ist das typische Verhalten eines **exponentiellen Zerfalls**. *(Achtung: Das heißt nicht, dass die Konzentration pro Stunde um $40\,\%$ sinkt — tatsächlich sind es $1 - e^{-0{,}4} \approx 33\,\%$ pro Stunde.)*
 
 ## Hinweise zur Bewertung
 

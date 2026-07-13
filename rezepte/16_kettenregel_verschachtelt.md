@@ -42,7 +42,7 @@ $$\bigl[\sqrt{f(x)}\bigr]' = \frac{f'(x)}{2\sqrt{f(x)}}$$
 **Beispiel:** $g(x) = \sqrt{6 - x}$
 $$g'(x) = \frac{-1}{2\sqrt{6-x}}$$
 
-$\leftarrow$ Achtung: innere Ableitung von $6-x$ ist $-1$, nicht $1$!
+**Achtung:** innere Ableitung von $6-x$ ist $-1$, nicht $1$!
 
 ### Muster 3: $e^{f(x)}$
 
@@ -132,3 +132,9 @@ Jeweils $f'(x)$ bestimmen. Lösungen unten.
 3. **$\ln$-Ableitung halb** — $[\ln(f)]' = f'/f$, nicht nur $1/f$.
 4. **Produkt- und Kettenregel vermischt** — erst Produktregel-Struktur $u'v + uv'$ aufschreiben, **dann** innerhalb von $v'$ die Kettenregel anwenden.
 5. **Ergebnis nicht vereinfachen** — bei „Zeigen Sie"-Aufgaben muss die vorgegebene Form dastehen; Hauptnenner bilden, kürzen.
+
+## Siehe auch
+
+- [Rezept 05: Verkettung und Definitionsbereich](05_verkettung_definitionsbereich.md) — dieselben Muster als Spezialfall-Tabelle, plus Definitionsbereich
+- [Rezept 17: Termumformung in der Analysis](17_termumformung_analysis.md) — Hauptnenner-Technik für den Vereinfachungsschritt
+- [Rezept 16b: Kettenregel im Abiturstil](16b_kettenregel_abituraufgaben.md) — Übungsaufgaben mit BE und Musterlösungen

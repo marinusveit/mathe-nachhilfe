@@ -7,7 +7,7 @@
 
 ## Schritt-für-Schritt
 
-1. **Definitionsbereich** bestimmen (Nenner $\neq 0$, Wurzel $\geq 0$, $\ln > 0$)
+1. **Definitionsbereich** bestimmen (Nenner $\neq 0$, Radikand $\geq 0$, $\ln$-Argument $> 0$)
 2. **Symmetrie** prüfen: $f(-x) = f(x)$ → achsensymmetrisch, $f(-x) = -f(x)$ → punktsymmetrisch
 3. **Nullstellen**: $f(x) = 0$ lösen
 4. **$y$-Achsenabschnitt**: $f(0)$ berechnen

@@ -5,8 +5,8 @@
 ![Graph von $\sqrt{x}$ (links) und zugehöriger Rotationskörper um die $x$-Achse (rechts)](assets/rotationsvolumen.png)
 
 ## Typische Aufgabenstellung
-> „Berechnen Sie das Volumen des Rotationskörpers, der durch Rotation des Graphen von f um die x-Achse entsteht."
-> „Der Graph von f wird im Intervall [a; b] um die y-Achse rotiert. Bestimmen Sie das Volumen."
+> „Berechnen Sie das Volumen des Rotationskörpers, der durch Rotation des Graphen von $f$ um die $x$-Achse entsteht."
+> „Der Graph von $f$ wird im Intervall $[a;\,b]$ um die $y$-Achse rotiert. Bestimmen Sie das Volumen."
 
 ## Rotation um die x-Achse
 
@@ -27,7 +27,7 @@ $$V = \pi \cdot \int_0^4 (\sqrt{x})^2\,dx = \pi \cdot \int_0^4 x\,dx = \pi \cdot
 
 ## Rotation um die y-Achse
 
-Hier muss die Funktion nach x aufgelöst werden (= Umkehrfunktion).
+Hier muss die Funktion nach $x$ aufgelöst werden (= Umkehrfunktion).
 
 $$V = \pi \cdot \int_c^d [f^{-1}(y)]^2 \, dy$$
 
@@ -60,4 +60,4 @@ $$V = \pi \cdot \int_a^b \left([f(x)]^2 - [g(x)]^2\right) dx$$
 - **Falsche Achse**: Bei Rotation um die $y$-Achse braucht man die Umkehrfunktion und $y$-Grenzen
 - **$(f - g)^2$ statt $f^2 - g^2$**: Beim Hohlkörper werden die Quadrate EINZELN gebildet
 - **Negative Funktionswerte**: Kein Problem! Durch das Quadrieren wird alles positiv
-- **Einheiten im Sachkontext**: Wenn $f$ in cm und $x$ in cm, dann ist $V$ in cm³
+- **Einheiten im Sachkontext**: Wenn $f$ in cm und $x$ in cm, dann ist $V$ in $\mathrm{cm}^3$

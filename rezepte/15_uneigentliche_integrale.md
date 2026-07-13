@@ -2,13 +2,13 @@
 
 > Integrale mit unendlicher Grenze ($\int_1^\infty$) oder über eine Polstelle — wann ergibt die „unendliche Fläche" dennoch eine endliche Zahl?
 
-**Voraussetzung:** [Rezept 08: Integrale & Fläche](08_integrale_flaeche.md) (Stammfunktionen), [Rezept 09: Grenzwerte und Asymptoten](09_grenzwerte.md) (denn ein uneigentliches Integral ist buchstäblich ein Grenzwert eines Integrals).
+**Voraussetzung:** [Rezept 08: Integrale und Flächenberechnung](08_integrale_flaeche.md) (Stammfunktionen), [Rezept 09: Grenzwerte und Asymptoten](09_grenzwerte.md) (denn ein uneigentliches Integral ist buchstäblich ein Grenzwert eines Integrals).
 
 ## Typische Aufgabenstellung
 > „Untersuchen Sie, ob das Integral $\int_1^{\infty} f(x)\,dx$ konvergiert, und berechnen Sie ggf. seinen Wert."
 > „Bestimmen Sie den Flächeninhalt zwischen dem Graphen von $f$ und der $x$-Achse für $x \geq 1$."
 
-## Typ 1: Grenze geht gegen ±∞
+## Typ 1: Grenze geht gegen $\pm\infty$
 
 $$\int_a^{\infty} f(x)\,dx = \lim_{b \to \infty} \int_a^b f(x)\,dx$$
 
@@ -37,7 +37,7 @@ $$\int_a^{\infty} f(x)\,dx = \lim_{b \to \infty} \int_a^b f(x)\,dx$$
 
 ## Typ 2: Integrand hat Polstelle
 
-$$\int_a^b f(x)\,dx \quad \text{wobei } \lim_{x \to c} f(x) = \pm\infty \text{ für ein } c \in [a,b]$$
+$$\int_a^b f(x)\,dx \quad \text{wobei } \lim_{x \to c} f(x) = \pm\infty \text{ für ein } c \in [a;b]$$
 
 ### Schritt-für-Schritt
 
