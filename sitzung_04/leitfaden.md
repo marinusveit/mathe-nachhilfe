@@ -35,7 +35,7 @@ jupyter lab sitzung_04/extremwert_steckbrief.ipynb
 
 ---
 
-## Phase 1: Diagnosetest (~25 Min)
+## Phase 1: Diagnosetest (~20 Min)
 
 Der Test in `diagnosetest.md` deckt beide Themenblöcke ab:
 
@@ -43,11 +43,9 @@ Der Test in `diagnosetest.md` deckt beide Themenblöcke ab:
   - A1/A3: Nebenbedingung aufstellen, Zielfunktion ableiten
   - A2: Volumen-Nebenbedingung eliminieren (anspruchsvoller)
   - A4: Definitionsbereich beachten, kubische Ableitung
-- **Teil B (B1–B4):** Steckbriefaufgaben — LGS aus Funktionsbedingungen
+- **Teil B (B1–B2):** Steckbriefaufgaben — LGS aus Funktionsbedingungen
   - B1: Kubisch, 4 Bedingungen
   - B2: Quadratisch mit Extremum-Bedingung
-  - B3: Achsensymmetrie reduziert den Ansatz
-  - B4: "Höchstens" dritten Grades — degenerierter Fall (f(x) = 3x)
 
 Nutze das **Auswertungsraster** am Ende des Diagnosetests, um Schwächen zu identifizieren. Danach gezielt die schwachen Bereiche vertiefen.
 
@@ -61,7 +59,7 @@ Im Notebook gibt es drei Slider-Explorationen:
 
 ### 2a) Dose optimieren (Notebook Cell 3)
 - Slider für Radius r: Schülerin sieht, wie sich Zylinder-Form und Oberfläche ändern
-- **Kernbeobachtung:** Bei kleinem r ist die Dose hoch (viel Mantel), bei grossem r sind die Deckel riesig
+- **Kernbeobachtung:** Bei kleinem r ist die Dose hoch (viel Mantel), bei großem r sind die Deckel riesig
 - **Ergebnis:** Optimum bei h = 2r (Höhe = Durchmesser)
 
 ### 2b) Zaun an der Mauer (Notebook Cell 5)
@@ -69,7 +67,7 @@ Im Notebook gibt es drei Slider-Explorationen:
 - **Beobachtung:** Bei x = 0 und x = 20 wird die Fläche 0, Maximum bei x = 10
 
 ### 2c) Blech-Quader (Notebook Cell 7)
-- Slider für Ausschnittgrösse x: Volumen als kubische Funktion
+- Slider für Ausschnittgröße x: Volumen als kubische Funktion
 - **Beobachtung:** Optimum bei x = 10/3, nicht in der Mitte
 
 ### 2d) Aufgaben selbst lösen (Notebook Cells 9–12)
@@ -96,7 +94,7 @@ Die Animation zeigt:
 5. Zurück zum Optimum — Erkenntnis: **h = 2r**
 
 Guter Moment, um die Formel nochmal an der Tafel zusammenzufassen:
-- Nebenbedingung: V = pi*r^2*h = 500, also h = 500/(pi*r^2)
+- Nebenbedingung: $V = \pi r^2 h = 500$, also $h = \dfrac{500}{\pi r^2}$
 - Einsetzen in Oberfläche
 - Ableiten, Nullsetzen, optimaler Radius
 
@@ -107,13 +105,13 @@ Guter Moment, um die Formel nochmal an der Tafel zusammenzufassen:
 ### 4a) Methode erklären (2–3 Min, mündlich)
 Kurzversion des Fahrplans:
 1. **Ansatz:** Allgemeines Polynom n-ten Grades aufschreiben
-2. **Bedingungen übersetzen:** f(x₀) = y, f'(x₀) = y, f''(x₀) = y in Gleichungen
+2. **Bedingungen übersetzen:** $f(x_0) = y$, $f'(x_0) = y$, $f''(x_0) = y$ in Gleichungen
 3. **LGS lösen:** Koeffizienten bestimmen
 
 ### 4b) Beispiel B1 durchrechnen (Notebook Cell 17)
-- f(x) = ax^3 + bx^2 + cx + d
+- $f(x) = ax^3 + bx^2 + cx + d$
 - 4 Bedingungen ergeben 4 Gleichungen
-- Ergebnis: f(x) = 1/2*x^3 - 3/2*x^2 + 2
+- Ergebnis: $f(x) = \tfrac{1}{2}x^3 - \tfrac{3}{2}x^2 + 2$
 - Das Notebook zeigt den vollständigen Rechenweg mit LGS
 - B2 nur besprechen, wenn Zeit bleibt
 
@@ -127,23 +125,23 @@ Kurzversion des Fahrplans:
 
 ### Rezept besprechen (~5 Min)
 Das Rezept `rezepte/14_rotationsvolumen.md` gemeinsam durchgehen:
-- **Formel um x-Achse:** V = π · ∫ₐᵇ [f(x)]² dx
-- **Formel um y-Achse:** Umkehrfunktion nötig → V = π · ∫ [f⁻¹(y)]² dy
-- **Kernbotschaft:** „Quadrieren, integrieren, π dran — fertig."
+- **Formel um $x$-Achse:** $V = \pi \cdot \int_a^b [f(x)]^2 \, dx$
+- **Formel um $y$-Achse:** Umkehrfunktion nötig → $V = \pi \cdot \int [f^{-1}(y)]^2 \, dy$
+- **Kernbotschaft:** „Quadrieren, integrieren, $\pi$ dran — fertig."
 
 ### Aufgaben C1 und C2 rechnen (~10 Min)
 Die Schülerin rechnet C1 (x-Achse) und C2 (y-Achse) aus dem Diagnosetest.
 
-**C1:** f(x) = √x auf [0; 4] um x-Achse → V = 8π
-- Schlüsselschritt: (√x)² = x — das Quadrieren vereinfacht!
+**C1:** $f(x) = \sqrt{x}$ auf $[0;\,4]$ um $x$-Achse → $V = 8\pi$
+- Schlüsselschritt: $(\sqrt{x})^2 = x$ — das Quadrieren vereinfacht!
 
-**C2:** f(x) = x² auf [0; 2] um y-Achse → Umkehrfunktion f⁻¹(y) = √y, y-Grenzen [0; 4]
-- Schlüsselschritt: Grenzen umrechnen (x-Werte → y-Werte)
+**C2:** $f(x) = x^2$ auf $[0;\,2]$ um $y$-Achse → Umkehrfunktion $f^{-1}(y) = \sqrt{y}$, $y$-Grenzen $[0;\,4]$
+- Schlüsselschritt: Grenzen umrechnen ($x$-Werte → $y$-Werte)
 
 **Häufige Fehler ansprechen:**
-- π vergessen
-- [f(x)]² vergessen (nur f(x) integriert)
-- Bei y-Achse: x-Grenzen statt y-Grenzen verwendet
+- $\pi$ vergessen
+- $[f(x)]^2$ vergessen (nur $f(x)$ integriert)
+- Bei $y$-Achse: $x$-Grenzen statt $y$-Grenzen verwendet
 
 ---
 

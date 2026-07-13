@@ -26,21 +26,21 @@ manim -pql sitzung_06/manim/flaeche_zwischen_kurven.py VorzeichenwechselFlaeche
 ```
 
 ### Animation 1: `FlaecheZwischenKurven`
-Zeigt f(x) = x und g(x) = x² auf [0, 1]:
-1. Graphen + Schnittpunkte (x = 0, x = 1) erscheinen
-2. Riemann-Summe mit n = 5 Streifen wird eingeblendet
-3. Streifen verfeinern sich: n = 10 → 30 → 100
-4. Exakte Fläche mit Formel: A = 1/6
+Zeigt $f(x) = x$ und $g(x) = x^2$ auf $[0, 1]$:
+1. Graphen + Schnittpunkte ($x = 0$, $x = 1$) erscheinen
+2. Riemann-Summe mit $n = 5$ Streifen wird eingeblendet
+3. Streifen verfeinern sich: $n = 10 \to 30 \to 100$
+4. Exakte Fläche mit Formel: $A = \tfrac{1}{6}$
 
 **Gesprächspunkte:**
 - "Was passiert, wenn wir die Streifen immer feiner machen?" → Grenzwert = Integral
-- Formel: A = Integral von (obere minus untere Funktion)
+- Formel: $A$ = Integral von (obere minus untere Funktion)
 
 ### Animation 2: `VorzeichenwechselFlaeche`
-Zeigt f(x) = x³ und g(x) = x auf [-1, 1]:
-1. Naives Integral ergibt 0 → "Falsch! Die Flächen heben sich auf."
-2. Korrekte Aufteilung in zwei Teilflächen: je 1/4
-3. Gesamtfläche: A = 1/4 + 1/4 = 1/2
+Zeigt $f(x) = x^3$ und $g(x) = x$ auf $[-1, 1]$:
+1. Naives Integral ergibt $0$ → "Falsch! Die Flächen heben sich auf."
+2. Korrekte Aufteilung in zwei Teilflächen: je $\tfrac{1}{4}$
+3. Gesamtfläche: $A = \tfrac{1}{4} + \tfrac{1}{4} = \tfrac{1}{2}$
 
 **Kernbotschaft:** "Betrag nicht vergessen! Immer an Schnittpunkten aufteilen."
 
@@ -55,17 +55,17 @@ jupyter lab sitzung_06/flaechen_anwendungen.ipynb
 ```
 
 ### Abschnitt 1 — Fläche zwischen zwei Kurven
-- Dropdown mit vier Funktionenpaaren: x/x², x²-1/-x²+3, x³/x, sin/cos
-- Slider a und b für die Integrationsgrenzen
-- Schnittpunkte werden automatisch markiert, Teilflächen annotiert (A₁, A₂)
+- Dropdown mit vier Funktionenpaaren: $x$/$x^2$, $x^2-1$/$-x^2+3$, $x^3$/$x$, $\sin$/$\cos$
+- Slider $a$ und $b$ für die Integrationsgrenzen
+- Schnittpunkte werden automatisch markiert, Teilflächen annotiert ($A_1$, $A_2$)
 - **Aufgabe:** Verschiedene Paare durchprobieren, Slider bewegen, Flächenwerte beobachten
 
 ### Abschnitt 2 — Schnittpunkte mit SymPy
 - Symbolische Berechnung der Schnittpunkte (exakte Werte)
 - **Zusammen besprechen:** Vorgehen bei Flächenaufgaben:
-  1. Schnittpunkte bestimmen: f(x) = g(x) lösen
+  1. Schnittpunkte bestimmen: $f(x) = g(x)$ lösen
   2. Skizze: Welche Funktion liegt oben?
-  3. Integral aufteilen bei Vorzeichenwechsel von f - g
+  3. Integral aufteilen bei Vorzeichenwechsel von $f - g$
   4. Teilflächen addieren (Beträge!)
 
 ### Abschnitt 3 — Übungsaufgaben mit Lösungsaufdeckung
@@ -77,29 +77,29 @@ jupyter lab sitzung_06/flaechen_anwendungen.ipynb
 ## Phase 3: Notebook — Sachkontexte (~20 Min)
 
 ### Abschnitt 4 — Füllproblem (Bestandsrekonstruktion)
-- Zuflussrate z(t) = 6t - t² (Liter/Min), Anfangsbestand 10 Liter
-- Slider für den Zeitpunkt t: zeigt gleichzeitig die Fläche unter z(t) und den Bestandsverlauf W(t)
+- Zuflussrate $z(t) = 6t - t^2$ (Liter/Min), Anfangsbestand 10 Liter
+- Slider für den Zeitpunkt $t$: zeigt gleichzeitig die Fläche unter $z(t)$ und den Bestandsverlauf $W(t)$
 - **Gesprächspunkte:**
   - Blaue Fläche links = zugeflossene Wassermenge
-  - Bei t = 3 ist z(t) maximal → Bestand steigt am steilsten (W'(t) = z(t))
-  - Bestandsfunktion: W(t) = W₀ + Integral von z(s) ds
+  - Bei $t = 3$ ist $z(t)$ maximal → Bestand steigt am steilsten ($W'(t) = z(t)$)
+  - Bestandsfunktion: $W(t) = W_0 + \int_0^t z(s)\,ds$
 
 ### Abschnitt 5 — Momentan vs. Gesamtänderung (Bevölkerungswachstum)
-- r(t) = 500 * e^(0.02t) Personen/Jahr
-- Interaktiver Vergleich: momentane Rate r(t₀) vs. Gesamtänderung (Integral)
+- $r(t) = 500 \cdot e^{0{,}02t}$ Personen/Jahr
+- Interaktiver Vergleich: momentane Rate $r(t_0)$ vs. Gesamtänderung (Integral)
 - **Schlüsseltabelle besprechen:**
 
 | | Momentane Änderungsrate | Gesamtänderung | Mittlere Änderungsrate |
 |---|---|---|---|
-| Was? | f'(t₀) — ein Wert | Integral von f'(t) dt = f(b) - f(a) | (f(b) - f(a)) / (b - a) |
+| Was? | $f'(t_0)$ — ein Wert | $\int_a^b f'(t)\,dt = f(b) - f(a)$ | $\dfrac{f(b) - f(a)}{b - a}$ |
 | Einheit | Personen **pro** Jahr | Personen | Personen **pro** Jahr |
 
 ### Abschnitt 6 — Mittelwert einer Funktion
-- Verschiedene Funktionen: x², sin(x), e^x, Temperaturmodell
-- Slider für Intervall [a, b]
+- Verschiedene Funktionen: $x^2$, $\sin(x)$, $e^x$, Temperaturmodell
+- Slider für Intervall $[a, b]$
 - Rote Linie = Mittelwert, rotes Rechteck hat gleiche Fläche wie Kurve
-- **Aufgabe:** Temperatur T(t) = 15 + 8 sin(pi/12 * (t-6)) auf [0, 24] → Durchschnittstemperatur ablesen
-- Formel: f-quer = 1/(b-a) * Integral von f(x) dx
+- **Aufgabe:** Temperatur $T(t) = 15 + 8 \sin\!\left(\frac{\pi}{12}(t-6)\right)$ auf $[0, 24]$ → Durchschnittstemperatur ablesen
+- Formel: $\bar{f} = \dfrac{1}{b-a} \cdot \int_a^b f(x)\,dx$
 
 ---
 
@@ -110,7 +110,7 @@ Die Schülerin bearbeitet das Aufgabenblatt `diagnosetest.md` selbstständig.
 ### Aufbau des Tests
 - **Teil A (4 Aufgaben):** Fläche zwischen Kurven — Schnittpunkte, Berechnung, Vorzeichenwechsel, e-Funktion
 - **Teil B (3 Aufgaben):** Sachkontexte — Wassertank (Zuflussrate → Bestand), Bevölkerungswachstum (momentan vs. gesamt), Auto (Geschwindigkeit → Weg)
-- **Teil C (2 Aufgaben):** Mittelwert — x² auf [0, 3], Durchschnittstemperatur
+- **Teil C (2 Aufgaben):** Mittelwert — $x^2$ auf $[0, 3]$, Durchschnittstemperatur
 
 ### Priorisierung bei Zeitmangel
 Falls die Zeit knapp wird:
@@ -125,18 +125,18 @@ Auswertungsraster in `diagnosetest.md` ausfüllen und typische Fehler besprechen
 
 ### Häufige Fehler
 
-1. **Betrag vergessen:** Integral von -1 bis 1 über (x³ - x) dx = 0, aber Fläche = 1/2
+1. **Betrag vergessen:** $\int_{-1}^{1} (x^3 - x)\,dx = 0$, aber Fläche $= \tfrac{1}{2}$
    → Immer an Schnittpunkten aufteilen, Teilflächen im Betrag nehmen
 2. **Einheiten im Sachkontext verwechseln:** Rate (Liter/Min) vs. Bestand (Liter)
    → "Integral einer Rate = Gesamtmenge"
 3. **Mittlere Änderungsrate vs. Mittelwert:** Sind verschiedene Konzepte!
-   → Mittlere Änderungsrate = Sekantensteigung, Mittelwert = 1/(b-a) * Integral
+   → Mittlere Änderungsrate = Sekantensteigung, Mittelwert $= \dfrac{1}{b-a} \cdot \int_a^b f(x)\,dx$
 
 ### Merksätze zum Mitnehmen
 
-- **Fläche zwischen Kurven:** Schnittpunkte bestimmen → aufteilen → |Integral| addieren
+- **Fläche zwischen Kurven:** Schnittpunkte bestimmen → aufteilen → Beträge der Teilintegrale addieren
 - **Integral einer Rate** = Gesamtänderung (HDI!)
-- **Mittelwert** = "gleich verteilte Fläche" → 1/(b-a) * Integral
+- **Mittelwert** = "gleich verteilte Fläche" → $\bar{f} = \dfrac{1}{b-a} \cdot \int_a^b f(x)\,dx$
 
 ---
 

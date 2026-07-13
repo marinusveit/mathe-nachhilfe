@@ -60,7 +60,7 @@
 
 ## Hinweise für den Unterricht
 
-- **Aufgabe A3** zielt auf „Eigenschaften interpretieren + Aussage beurteilen" — eine der identifizierten Schwachstellen aus der Diagnose. Die beschriebene Funktion ist $p(x) = -\tfrac{1}{4}x^3 + 3x$ (zur Kontrolle). Zu b): $W_p = [-3;3]$ ist **falsch**, weil $p$ als ganzrationale Funktion ungeraden Grades für $x \to \pm\infty$ gegen $\pm\infty$ strebt. Richtig: $W_p = \mathbb{R}$. Die Extrema sind nur **lokale**, keine globalen.
+- **Aufgabe A3** zielt auf „Eigenschaften interpretieren + Aussage beurteilen" — eine der identifizierten Schwachstellen aus der Diagnose. Die beschriebene Funktion ist $p(x) = -\tfrac{3}{16}x^3 + \tfrac{9}{4}x$ (zur Kontrolle; Probe: $p'(x) = -\tfrac{9}{16}x^2 + \tfrac{9}{4} = 0$ bei $x = \pm 2$, $p(2) = 3$). Zu b): $W_p = [-3;3]$ ist **falsch**, weil $p$ als ganzrationale Funktion ungeraden Grades für $x \to \pm\infty$ gegen $\pm\infty$ strebt. Richtig: $W_p = \mathbb{R}$. Die Extrema sind nur **lokale**, keine globalen.
 - **Aufgabe A4b** ist ein Kettenregel-Warm-up ($\mathrm{e}^{-x^2}$) — genau der Aufgabentyp aus 2022 A2 3b und 2025 B1 1c.
 - **Aufgabe B1d** verknüpft Kurvendiskussion und Wertemenge. Lösung: globales Min bei $\pm 2$ mit $f(\pm 2) = -\tfrac{9}{4}$, für $x \to \pm\infty$ gilt $f \to \infty$ → $W_f = [-\tfrac{9}{4};\infty[$. Die Begründung „jeder Wert wird angenommen" läuft über Stetigkeit + Zwischenwertsatz.
 - **Aufgabe B2** (gebrochen + $\ln$) ist anspruchsvoll — nur einsetzen, wenn Zeit bleibt. Lösung: Hochpunkt $(\mathrm{e}\,\vert\,\tfrac{1}{\mathrm{e}})$, $W_k = \,]-\infty;\,\tfrac{1}{\mathrm{e}}]$.

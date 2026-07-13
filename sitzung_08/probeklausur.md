@@ -1,4 +1,4 @@
-# Probeklausur — Analysis (Abitur Bayern GK)
+# Probeklausur — Analysis (Abitur Bayern eA)
 
 **Gesamtdauer:** ca. 80 Minuten
 **Teil A:** hilfsmittelfrei (30 Min, 20 BE)
@@ -60,7 +60,7 @@ a) Wenn $f'(x_0) = 0$ gilt, dann hat $f$ an der Stelle $x_0$ ein Extremum. **(1 
 
 b) Wenn $f''(x_0) = 0$ und $f'''(x_0) \neq 0$ gilt, dann hat $f$ an der Stelle $x_0$ einen Wendepunkt. **(1 BE)**
 
-c) $\displaystyle\int_a^b f(x)\, dx$ gibt immer den Flächeninhalt zwischen dem Graphen von $f$ und der x-Achse an. **(1 BE)**
+c) $\displaystyle\int_a^b f(x)\, dx$ gibt immer den Flächeninhalt zwischen dem Graphen von $f$ und der $x$-Achse an. **(1 BE)**
 
 ---
 
@@ -76,9 +76,9 @@ $$f(x) = (2x - x^2) \cdot e^x, \quad x \in \mathbb{R}.$$
 
 **b)** Berechne die Koordinaten der Extrempunkte von $f$ und bestimme deren Art. **(7 BE)** — *ca. 12 Min*
 
-**c)** Bestimme die Gleichung der Tangente $t$ an den Graphen von $f$ im Punkt $P(-1 \mid f(-1))$. Für welchen Wert von $x$ schneidet die Tangente die x-Achse? **(5 BE)** — *ca. 8 Min*
+**c)** Bestimme die Gleichung der Tangente $t$ an den Graphen von $f$ im Punkt $P(-1 \mid f(-1))$. Für welchen Wert von $x$ schneidet die Tangente die $x$-Achse? **(5 BE)** — *ca. 8 Min*
 
-**d)** Der Graph von $f$, die x-Achse und die Gerade $x = 0$ begrenzen im Intervall $[0; 2]$ eine Fläche. Berechne deren Inhalt. **(6 BE)** — *ca. 10 Min*
+**d)** Der Graph von $f$, die $x$-Achse und die Gerade $x = 0$ begrenzen im Intervall $[0; 2]$ eine Fläche. Berechne deren Inhalt. **(6 BE)** — *ca. 10 Min*
 
 **e)** Gegeben ist die Funktionenschar $f_a$ mit
 
@@ -110,9 +110,9 @@ Zeige, dass alle Funktionen der Schar eine gemeinsame Nullstelle haben. Bestimme
 
 | Note | BE |
 |------|---:|
-| 1    | ≥ 43 |
-| 2    | ≥ 35 |
-| 3    | ≥ 27 |
-| 4    | ≥ 19 |
-| 5    | ≥ 10 |
-| 6    | < 10 |
+| 1    | $\geq 43$ |
+| 2    | $\geq 35$ |
+| 3    | $\geq 27$ |
+| 4    | $\geq 19$ |
+| 5    | $\geq 10$ |
+| 6    | $< 10$ |

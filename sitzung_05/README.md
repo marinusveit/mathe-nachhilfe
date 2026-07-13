@@ -7,17 +7,23 @@ Stammfunktionen sicher bestimmen, den Hauptsatz anwenden und zwischen Integralwe
 
 | Zeit | Was | Material |
 |------|-----|----------|
-| 0–20 Min | Grundintegrale wiederholen | Tafel + Heft |
-| 20–55 Min | Notebook: Riemann-Summen, HDI, Vorzeichenwechsel | `integrale_interaktiv.ipynb` |
-| 55–80 Min | Übungsblatt bearbeiten | `diagnosetest.md` |
-| 80–90 Min | Fehleranalyse und Merksätze | — |
+| 0–25 Min | Diagnosetest | `diagnosetest.md` |
+| 25–35 Min | Riemann-Summen: Intuition | Notebook Abschnitt 1 |
+| 35–50 Min | Hauptsatz (HDI): Animation + Notebook | `manim/hauptsatz.py` + Notebook Abschnitt 2 |
+| 50–65 Min | Stammfunktionen & Integralregeln | Notebook Abschnitte 3 + 6 |
+| 65–75 Min | Bestimmtes Integral berechnen | Notebook Abschnitt 4 |
+| 75–90 Min | Fläche bei Vorzeichenwechsel | Notebook Abschnitt 5 |
+
+Details siehe `leitfaden.md`.
 
 ## Dateien
 
 | Datei | Beschreibung |
 |-------|-------------|
+| `leitfaden.md` | Detaillierter Sitzungsablauf |
 | `diagnosetest.md` | Aufgaben zu Stammfunktionen, HDI und Flächen |
 | `integrale_interaktiv.ipynb` | Interaktive Visualisierungen zum Integralbegriff |
+| `manim/hauptsatz.py` | Animation zum Hauptsatz (`HauptsatzAnimation`) |
 | `test_integrale.py` | Fachliche Tests zu Integralen und Flächen |
 
 ## Ausführen

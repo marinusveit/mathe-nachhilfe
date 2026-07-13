@@ -7,53 +7,53 @@
 
 ## Teil A: Tangente aufstellen (4 Aufgaben)
 
-**A1)** Gegeben ist f(x) = x³ − 2x + 1.
+**A1)** Gegeben ist $f(x) = x^3 - 2x + 1$.
 
-Bestimme die Gleichung der Tangente an den Graphen von f an der Stelle x₀ = 1.
-
----
-
-**A2)** Gegeben ist f(x) = eˣ.
-
-Bestimme die Gleichung der Tangente an der Stelle x₀ = 0.
+Bestimme die Gleichung der Tangente an den Graphen von $f$ an der Stelle $x_0 = 1$.
 
 ---
 
-**A3)** Gegeben ist f(x) = x² − 4x + 3.
+**A2)** Gegeben ist $f(x) = e^x$.
 
-An welcher Stelle hat die Tangente an den Graphen von f die Steigung 2?
+Bestimme die Gleichung der Tangente an der Stelle $x_0 = 0$.
 
 ---
 
-**A4)** Gegeben ist f(x) = x² + 1.
+**A3)** Gegeben ist $f(x) = x^2 - 4x + 3$.
 
-Der Punkt P(3 | 4) liegt **nicht** auf dem Graphen von f. Bestimme die Gleichungen aller Tangenten an den Graphen von f, die durch P verlaufen.
+An welcher Stelle hat die Tangente an den Graphen von $f$ die Steigung $2$?
 
-*(Hinweis: Setze die allgemeine Tangentengleichung bei x₀ auf und fordere, dass P darauf liegt.)*
+---
+
+**A4)** Gegeben ist $f(x) = x^2 + 1$.
+
+Der Punkt $P(3 \mid 4)$ liegt **nicht** auf dem Graphen von $f$. Bestimme die Gleichungen aller Tangenten an den Graphen von $f$, die durch $P$ verlaufen.
+
+*(Hinweis: Setze die allgemeine Tangentengleichung bei $x_0$ auf und fordere, dass $P$ darauf liegt.)*
 
 ---
 
 ## Teil B: Berührpunkte und gemeinsame Tangenten (2 Aufgaben)
 
-**B1)** Gegeben sind f(x) = x² und g(x) = −x² + 4x.
+**B1)** Gegeben sind $f(x) = x^2$ und $g(x) = -x^2 + 4x - 2$.
 
-a) Zeige, dass sich die beiden Graphen im Punkt (2 | 4) berühren (d.h. sie haben dort denselben Funktionswert **und** dieselbe Steigung).
+a) Zeige, dass sich die beiden Graphen im Punkt $(1 \mid 1)$ berühren (d.h. sie haben dort denselben Funktionswert **und** dieselbe Steigung).
 
 b) Bestimme die gemeinsame Tangente in diesem Punkt.
 
 ---
 
-**B2)** Gegeben ist f(x) = x³ − 3x.
+**B2)** Gegeben ist $f(x) = x^3 - 3x$.
 
-Bestimme alle Stellen, an denen die Tangente an f waagrecht (also horizontal) verläuft, und gib die zugehörigen Tangentengleichungen an.
+Bestimme alle Stellen, an denen die Tangente an $f$ waagrecht (also horizontal) verläuft, und gib die zugehörigen Tangentengleichungen an.
 
 ---
 
 ## Teil C: Normale (1 Aufgabe)
 
-**C1)** Gegeben ist f(x) = ¼ x² − 1.
+**C1)** Gegeben ist $f(x) = \tfrac{1}{4} x^2 + 1$.
 
-a) Bestimme die Gleichung der Tangente und der Normale an der Stelle x₀ = 2.
+a) Bestimme die Gleichung der Tangente und der Normale an der Stelle $x_0 = 2$.
 
 b) Die Tangente und die Normale schneiden die x-Achse. Berechne die Schnittpunkte und die Fläche des Dreiecks, das von Tangente, Normale und x-Achse eingeschlossen wird.
 
@@ -61,27 +61,27 @@ b) Die Tangente und die Normale schneiden die x-Achse. Berechne die Schnittpunkt
 
 ## Teil D: Funktionsscharen & Ortskurven (3 Aufgaben)
 
-**D1)** Gegeben ist die Funktionsschar fₐ(x) = x² − 2ax + a² mit a ∈ ℝ.
+**D1)** Gegeben ist die Funktionsschar $f_a(x) = x^2 - 2ax + a^2$ mit $a \in \mathbb{R}$.
 
 a) Vereinfache den Funktionsterm.
 
-b) Bestimme die Nullstellen in Abhängigkeit von a.
+b) Bestimme die Nullstellen in Abhängigkeit von $a$.
 
 c) Bestimme die Extremstelle(n) und deren Art.
 
 ---
 
-**D2)** Gegeben ist die Funktionsschar fₜ(x) = x³ − 3t²x mit t > 0.
+**D2)** Gegeben ist die Funktionsschar $f_t(x) = x^3 - 3t^2x$ mit $t > 0$.
 
-a) Bestimme die Extrempunkte in Abhängigkeit von t.
+a) Bestimme die Extrempunkte in Abhängigkeit von $t$.
 
-b) Bestimme die Ortskurve der Hochpunkte, indem du t eliminierst.
+b) Bestimme die Ortskurve der Hochpunkte, indem du $t$ eliminierst.
 
 ---
 
-**D3)** Gegeben ist fₐ(x) = x · e^(−ax) mit a > 0.
+**D3)** Gegeben ist $f_a(x) = x \cdot e^{-ax}$ mit $a > 0$.
 
-a) Zeige, dass fₐ genau ein lokales Maximum hat, und bestimme dessen Koordinaten in Abhängigkeit von a.
+a) Zeige, dass $f_a$ genau ein lokales Maximum hat, und bestimme dessen Koordinaten in Abhängigkeit von $a$.
 
 b) Bestimme die Tangentengleichung im Hochpunkt.
 
