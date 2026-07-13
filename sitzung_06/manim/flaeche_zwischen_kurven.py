@@ -50,7 +50,7 @@ class FlaecheZwischenKurven(Scene):
             return x ** 2
 
         graph_f = axes.plot(f, x_range=[0, 1.4], color=BLUE_3B1B, stroke_width=3)
-        graph_g = axes.plot(g, x_range=[0, 1.25], color=RED_3B1B, stroke_width=3)
+        graph_g = axes.plot(g, x_range=[0, 1.2], color=RED_3B1B, stroke_width=3)
 
         label_f = MathTex(
             r"f(x) = x", font_size=28, color=BLUE_3B1B
@@ -210,7 +210,7 @@ class VorzeichenwechselFlaeche(Scene):
         def g(x):
             return x
 
-        graph_f = axes.plot(f, x_range=[-1.3, 1.3], color=BLUE_3B1B, stroke_width=3)
+        graph_f = axes.plot(f, x_range=[-1.14, 1.14], color=BLUE_3B1B, stroke_width=3)
         graph_g = axes.plot(g, x_range=[-1.4, 1.4], color=RED_3B1B, stroke_width=3)
 
         label_f = MathTex(

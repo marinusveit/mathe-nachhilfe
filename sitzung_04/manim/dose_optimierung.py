@@ -1,5 +1,5 @@
 """
-Manim-Animation: Zylindrische Dose — Minimale Oberflaече
+Manim-Animation: Zylindrische Dose — Minimale Oberflaeche
 Zeigt, wie sich Radius und Hoehe bei konstantem Volumen aendern
 und wo die Oberflaeche minimal wird.
 

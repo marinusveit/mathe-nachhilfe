@@ -73,7 +73,7 @@ class ZusammenhangFFpFpp(Scene):
         func_bg = BackgroundRectangle(func_name, fill_opacity=0.7, buff=0.15)
 
         # --- Phase 1: f(x) zeichnen ---
-        graph_f = axes_f.plot(f, x_range=[-2.2, 2.2], color=BLUE_3B1B, stroke_width=3)
+        graph_f = axes_f.plot(f, x_range=[-2.05, 2.05], color=BLUE_3B1B, stroke_width=3)
 
         self.play(
             Create(axes_f),
@@ -87,7 +87,7 @@ class ZusammenhangFFpFpp(Scene):
 
         # --- Phase 2: f'(x) zeichnen ---
         graph_fp = axes_fp.plot(
-            fp, x_range=[-2.2, 2.2], color=RED_3B1B, stroke_width=3
+            fp, x_range=[-2.05, 2.05], color=RED_3B1B, stroke_width=3
         )
 
         fp_eq = MathTex(
@@ -106,7 +106,7 @@ class ZusammenhangFFpFpp(Scene):
 
         # --- Phase 3: f''(x) zeichnen ---
         graph_fpp = axes_fpp.plot(
-            fpp, x_range=[-2.2, 2.2], color=ORANGE_3B1B, stroke_width=3
+            fpp, x_range=[-2.05, 2.05], color=ORANGE_3B1B, stroke_width=3
         )
 
         fpp_eq = MathTex(
@@ -190,13 +190,13 @@ class ZusammenhangFFpFpp(Scene):
 
         # --- Phase 5: Vorzeichen-Bereiche von f' ---
         area_pos_l = axes_fp.get_area(
-            graph_fp, x_range=[-2.2, -1], color=GREEN_3B1B, opacity=0.2
+            graph_fp, x_range=[-2.05, -1], color=GREEN_3B1B, opacity=0.2
         )
         area_neg = axes_fp.get_area(
             graph_fp, x_range=[-1, 1], color=RED_3B1B, opacity=0.2
         )
         area_pos_r = axes_fp.get_area(
-            graph_fp, x_range=[1, 2.2], color=GREEN_3B1B, opacity=0.2
+            graph_fp, x_range=[1, 2.05], color=GREEN_3B1B, opacity=0.2
         )
 
         mono_text = VGroup(
@@ -285,8 +285,8 @@ class ZusammenhangFFpFpp(Scene):
         )
 
         summary_1 = MathTex(
-            r"f'(x_0) = 0",
-            r"\;\Leftrightarrow\;",
+            r"f'(x_0) = 0 \text{ mit VZW von } f'",
+            r"\;\Rightarrow\;",
             r"\text{Extremstelle bei } x_0",
             font_size=22,
         )
@@ -294,8 +294,8 @@ class ZusammenhangFFpFpp(Scene):
         summary_1[2].set_color(GREEN_3B1B)
 
         summary_2 = MathTex(
-            r"f''(x_0) = 0",
-            r"\;\Leftrightarrow\;",
+            r"f''(x_0) = 0 \text{ mit VZW von } f''",
+            r"\;\Rightarrow\;",
             r"\text{Wendepunkt bei } x_0",
             font_size=22,
         )

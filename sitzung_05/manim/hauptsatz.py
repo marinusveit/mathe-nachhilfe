@@ -3,6 +3,12 @@
 
 from manim import *
 
+# 3b1b-Farbpalette
+BLUE_3B1B = "#58C4DD"
+YELLOW_3B1B = "#FFFF00"
+GREEN_3B1B = "#83C167"
+RED_3B1B = "#FC6255"
+
 
 class HauptsatzAnimation(Scene):
     """Visualisiert den Hauptsatz der Differential- und Integralrechnung.
@@ -32,7 +38,7 @@ class HauptsatzAnimation(Scene):
             x_label=MathTex("x"),
             y_label=MathTex("f(x)"),
         )
-        titel_links = MathTex("f(x) = x^2", font_size=32, color=YELLOW)
+        titel_links = MathTex("f(x) = x^2", font_size=32, color=YELLOW_3B1B)
 
         ax_rechts = Axes(
             x_range=[0, 2.5, 0.5],
@@ -46,7 +52,7 @@ class HauptsatzAnimation(Scene):
             x_label=MathTex("x"),
             y_label=MathTex("F(x)"),
         )
-        titel_rechts = MathTex(r"F(x) = \tfrac{x^3}{3}", font_size=32, color=GREEN)
+        titel_rechts = MathTex(r"F(x) = \tfrac{x^3}{3}", font_size=32, color=GREEN_3B1B)
 
         # Gruppen bilden und positionieren
         gruppe_links = VGroup(ax_links, labels_links).shift(LEFT * 3.5)
@@ -62,8 +68,8 @@ class HauptsatzAnimation(Scene):
         )
 
         # ── Graphen zeichnen ───────────────────────────────────────
-        graph_f = ax_links.plot(lambda x: x ** 2, x_range=[0, 2.3], color=YELLOW)
-        graph_F = ax_rechts.plot(lambda x: x ** 3 / 3, x_range=[0, 2.3], color=GREEN)
+        graph_f = ax_links.plot(lambda x: x ** 2, x_range=[0, 2.15], color=YELLOW_3B1B)
+        graph_F = ax_rechts.plot(lambda x: x ** 3 / 3, x_range=[0, 2.15], color=GREEN_3B1B)
 
         self.play(Create(graph_f), Create(graph_F), run_time=2)
         self.wait(0.5)
@@ -76,7 +82,7 @@ class HauptsatzAnimation(Scene):
             lambda: ax_links.get_area(
                 graph_f,
                 x_range=[0, b_tracker.get_value()],
-                color=BLUE,
+                color=BLUE_3B1B,
                 opacity=0.5,
             )
         )
@@ -97,7 +103,7 @@ class HauptsatzAnimation(Scene):
                     b_tracker.get_value(),
                     b_tracker.get_value() ** 3 / 3,
                 ),
-                color=RED,
+                color=RED_3B1B,
                 radius=0.08,
             )
         )
@@ -107,7 +113,7 @@ class HauptsatzAnimation(Scene):
             lambda: MathTex(
                 rf"A = {b_tracker.get_value() ** 3 / 3:.2f}",
                 font_size=28,
-                color=BLUE,
+                color=BLUE_3B1B,
             ).add_background_rectangle(color=BLACK, opacity=0.7, buff=0.1)
             .next_to(ax_links, DOWN, buff=0.3)
         )
@@ -117,7 +123,7 @@ class HauptsatzAnimation(Scene):
             lambda: MathTex(
                 rf"F(b) = {b_tracker.get_value() ** 3 / 3:.2f}",
                 font_size=28,
-                color=GREEN,
+                color=GREEN_3B1B,
             ).add_background_rectangle(color=BLACK, opacity=0.7, buff=0.1)
             .next_to(ax_rechts, DOWN, buff=0.3)
         )
@@ -144,9 +150,9 @@ class HauptsatzAnimation(Scene):
             r"= \frac{8}{3}",
             font_size=40,
         )
-        formel[0].set_color(BLUE)
-        formel[1].set_color(GREEN)
-        formel[3].set_color(YELLOW)
+        formel[0].set_color(BLUE_3B1B)
+        formel[1].set_color(GREEN_3B1B)
+        formel[3].set_color(YELLOW_3B1B)
 
         formel.add_background_rectangle(color=BLACK, opacity=0.8, buff=0.2)
         formel.to_edge(DOWN, buff=0.5)

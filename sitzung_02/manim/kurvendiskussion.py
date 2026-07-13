@@ -66,7 +66,7 @@ class KurvendiskussionAnimation(Scene):
         func_bg = BackgroundRectangle(func_name, fill_opacity=0.7, buff=0.15)
 
         # --- Phase 1: f(x) zeichnen ---
-        graph_f = axes_f.plot(f, x_range=[-2.3, 2.3], color=BLUE_3B1B, stroke_width=3)
+        graph_f = axes_f.plot(f, x_range=[-2.05, 2.05], color=BLUE_3B1B, stroke_width=3)
 
         self.play(Create(axes_f), Write(f_label), FadeIn(func_bg), Write(func_name))
         self.play(Create(graph_f), run_time=1.5)
@@ -83,7 +83,7 @@ class KurvendiskussionAnimation(Scene):
         wp_label = MathTex(r"\text{WP}", font_size=18, color=ORANGE_3B1B).next_to(dot_wp, UR, buff=0.1)
 
         # --- Phase 2: f'(x) zeichnen ---
-        graph_fp = axes_fp.plot(f_prime, x_range=[-2.3, 2.3], color=RED_3B1B, stroke_width=3)
+        graph_fp = axes_fp.plot(f_prime, x_range=[-2.05, 2.05], color=RED_3B1B, stroke_width=3)
 
         self.play(Create(axes_fp), Write(fp_label))
         self.play(Create(graph_fp), run_time=1.5)
@@ -105,7 +105,7 @@ class KurvendiskussionAnimation(Scene):
 
         # Erklärungstext
         erkl_1 = MathTex(
-            r"f'(x) = 0 \;\Rightarrow\; \text{Extremstelle}",
+            r"f'(x) = 0 \;\Rightarrow\; \text{Kandidat für Extremstelle}",
             font_size=24, color=GREEN_3B1B,
         ).to_corner(UL, buff=0.4)
         erkl_1_bg = BackgroundRectangle(erkl_1, fill_opacity=0.7, buff=0.1)
@@ -123,13 +123,13 @@ class KurvendiskussionAnimation(Scene):
         # f' > 0: x < -1 und x > 1 (steigend)
         # f' < 0: -1 < x < 1 (fallend)
         area_pos_left = axes_fp.get_area(
-            graph_fp, x_range=[-2.3, -1], color=GREEN_3B1B, opacity=0.2,
+            graph_fp, x_range=[-2.05, -1], color=GREEN_3B1B, opacity=0.2,
         )
         area_neg = axes_fp.get_area(
             graph_fp, x_range=[-1, 1], color=RED_3B1B, opacity=0.2,
         )
         area_pos_right = axes_fp.get_area(
-            graph_fp, x_range=[1, 2.3], color=GREEN_3B1B, opacity=0.2,
+            graph_fp, x_range=[1, 2.05], color=GREEN_3B1B, opacity=0.2,
         )
 
         mono_text = VGroup(
@@ -145,7 +145,7 @@ class KurvendiskussionAnimation(Scene):
         self.wait(2)
 
         # --- Phase 3: f''(x) zeichnen ---
-        graph_fpp = axes_fpp.plot(f_double_prime, x_range=[-2.3, 2.3], color=ORANGE_3B1B, stroke_width=3)
+        graph_fpp = axes_fpp.plot(f_double_prime, x_range=[-2.05, 2.05], color=ORANGE_3B1B, stroke_width=3)
 
         self.play(Create(axes_fpp), Write(fpp_label))
         self.play(Create(graph_fpp), run_time=1.5)
@@ -161,7 +161,7 @@ class KurvendiskussionAnimation(Scene):
         self.play(FadeOut(erkl_1_bg), FadeOut(erkl_1), FadeOut(mono_bg), FadeOut(mono_text))
 
         erkl_2 = MathTex(
-            r"f''(x) = 0 \;\Rightarrow\; \text{Wendepunkt}",
+            r"f''(x) = 0 \;\Rightarrow\; \text{Kandidat für Wendepunkt}",
             font_size=24, color=ORANGE_3B1B,
         ).to_corner(UL, buff=0.4)
         erkl_2_bg = BackgroundRectangle(erkl_2, fill_opacity=0.7, buff=0.1)
@@ -188,13 +188,13 @@ class KurvendiskussionAnimation(Scene):
         summary = VGroup(
             MathTex(r"f'(x) = 0", font_size=22, color=GREEN_3B1B),
             MathTex(r"\Rightarrow", font_size=22),
-            MathTex(r"\text{Extremstelle}", font_size=22, color=GREEN_3B1B),
+            MathTex(r"\text{Kandidat für Extremstelle}", font_size=22, color=GREEN_3B1B),
         ).arrange(RIGHT, buff=0.15)
 
         summary2 = VGroup(
             MathTex(r"f''(x) = 0", font_size=22, color=ORANGE_3B1B),
             MathTex(r"\Rightarrow", font_size=22),
-            MathTex(r"\text{Wendepunkt}", font_size=22, color=ORANGE_3B1B),
+            MathTex(r"\text{Kandidat für Wendepunkt}", font_size=22, color=ORANGE_3B1B),
         ).arrange(RIGHT, buff=0.15)
 
         summary3 = VGroup(
@@ -280,9 +280,9 @@ class WandernderPunkt(Scene):
         ).next_to(axes_fpp, RIGHT, buff=0.3)
 
         # --- Graphen ---
-        graph_f = axes_f.plot(f, x_range=[-2.3, 2.3], color=BLUE_3B1B, stroke_width=3)
-        graph_fp = axes_fp.plot(f_prime, x_range=[-2.3, 2.3], color=RED_3B1B, stroke_width=3)
-        graph_fpp = axes_fpp.plot(f_double_prime, x_range=[-2.3, 2.3], color=ORANGE_3B1B, stroke_width=3)
+        graph_f = axes_f.plot(f, x_range=[-2.05, 2.05], color=BLUE_3B1B, stroke_width=3)
+        graph_fp = axes_fp.plot(f_prime, x_range=[-2.05, 2.05], color=RED_3B1B, stroke_width=3)
+        graph_fpp = axes_fpp.plot(f_double_prime, x_range=[-2.05, 2.05], color=ORANGE_3B1B, stroke_width=3)
 
         # Alles einblenden
         self.play(
