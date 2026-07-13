@@ -2,8 +2,8 @@
 
 ## Projektstruktur
 ```
-stundenplan.md          # Gesamtplan (8 Sitzungen à 90 Min)
 abitur_info.md          # Prüfungsformat, Lehrplan, Themenhäufigkeit
+privat/stundenplan.md   # Gesamtplan (8 Sitzungen à 90 Min) — schülerspezifisch, gitignored
 rezepte/                # Schritt-für-Schritt-Rezepte (00–18), assets/ mit Plots
 cheatsheets/            # Kompakte Übersichten (analysis, grundfunktionen, stochastik)
 aufgaben/               # Drill-Aufgabenblätter (Nummer = zugehöriges Rezept)

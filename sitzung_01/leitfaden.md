@@ -204,4 +204,4 @@ jupyter lab sitzung_01/ableitungen_interaktiv.ipynb
 **Allgemein:**
 - Immer erst die Schülerin rechnen lassen, dann mit dem Notebook überprüfen — nicht umgekehrt.
 - Den Plot nutzen, um Rechenfehler zu finden: *„Die Ableitung müsste hier null sein — stimmt das mit deinem Ergebnis überein?"*
-- Stundenplan nach dieser Sitzung ggf. anpassen (siehe Notiz in `stundenplan.md`).
+- Stundenplan nach dieser Sitzung ggf. anpassen (siehe Notiz in `privat/stundenplan.md`).

@@ -8,7 +8,6 @@ Stochastik-Grundlagen.
 
 | Ordner / Datei | Inhalt |
 |--------|--------|
-| `stundenplan.md` | Gesamtplan (8 Sitzungen à 90 Min, 4 Wochen) |
 | `abitur_info.md` | Prüfungsformat, LehrplanPLUS-Inhalte, Themenhäufigkeit |
 | `rezepte/` | Schritt-für-Schritt-Rezepte (00–18) zu allen Analysis-Aufgabentypen |
 | `cheatsheets/` | Kompakte Übersichten: Analysis, Grundfunktionen, Stochastik |

@@ -209,5 +209,5 @@ Diese Notizen helfen dir **nach der Stunde** den Stundenplan anzupassen und beim
 
 ### Nach der Stunde
 
-- Notizen kurz in `sitzung_01/notizen_schuelerin.md` (neu anlegen) oder direkt im `stundenplan.md` ergänzen.
-- Falls Schwerpunkt-Verschiebung nötig: `stundenplan.md` anpassen, bevor du Sitzung 2 vorbereitest.
+- Notizen kurz in `sitzung_01/notizen_schuelerin.md` (neu anlegen) oder direkt im `privat/stundenplan.md` ergänzen.
+- Falls Schwerpunkt-Verschiebung nötig: `privat/stundenplan.md` anpassen, bevor du Sitzung 2 vorbereitest.
