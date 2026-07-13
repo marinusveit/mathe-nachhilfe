@@ -2,9 +2,9 @@
 
 Überblick über alle Themen. Für Details → jeweiliges Rezept.
 Separate Cheatsheets:
-- [Cheatsheet Grundfunktionen](cheatsheet_grundfunktionen.md) — Skizzen, $\mathbb{D}$/$\mathbb{W}$, Ableitungen und wichtige Werte aller Standardfunktionen
-- [Cheatsheet Kurvendiskussion](sitzung_02/cheatsheet_kurvendiskussion.md) — komplettes Rezept
-- [Cheatsheet Stochastik](cheatsheet_stochastik.md) — Vierfeldertafel, Binomial, Hypothesentest, Normalverteilung
+- [Cheatsheet Grundfunktionen](grundfunktionen.md) — Skizzen, $\mathbb{D}$/$\mathbb{W}$, Ableitungen und wichtige Werte aller Standardfunktionen
+- [Cheatsheet Kurvendiskussion](../sitzung_02/cheatsheet_kurvendiskussion.md) — komplettes Rezept
+- [Cheatsheet Stochastik](stochastik.md) — Vierfeldertafel, Binomial, Hypothesentest, Normalverteilung
 
 ---
 
@@ -21,7 +21,7 @@ Separate Cheatsheets:
 
 > Goldene Regel bei „Zeigen Sie": **nie mit dem Ergebnis anfangen** → sonst 0 Punkte.
 
-→ [Rezept 00: Operatoren Abitur](rezepte/00_operatoren_abitur.md)
+→ [Rezept 00: Operatoren Abitur](../rezepte/00_operatoren_abitur.md)
 
 ---
 
@@ -50,7 +50,7 @@ Separate Cheatsheets:
 - $\sqrt{6-x}$ → innere Ableitung $-1$: $(\sqrt{6-x})' = -\dfrac{1}{2\sqrt{6-x}}$
 - $\ln(f)$ → Ableitung $\dfrac{f'}{f}$, nicht nur $\dfrac{1}{f}$
 
-→ [Rezept 16: Kettenregel verschachtelt](rezepte/16_kettenregel_verschachtelt.md)
+→ [Rezept 16: Kettenregel verschachtelt](../rezepte/16_kettenregel_verschachtelt.md)
 
 ---
 
@@ -109,7 +109,7 @@ $$\frac{a/b}{c} = \frac{a}{bc} \qquad \frac{a}{b/c} = \frac{ac}{b}$$
 3. $a^{-2} = -a^2$ ← **FALSCH!** Das ist $\dfrac{1}{a^2}$.
 4. „Zeigen Sie" heißt **exakt die Zielform** — nicht nur eine äquivalente Form.
 
-→ [Rezept 17: Termumformung Analysis](rezepte/17_termumformung_analysis.md)
+→ [Rezept 17: Termumformung Analysis](../rezepte/17_termumformung_analysis.md)
 
 ---
 
@@ -160,9 +160,9 @@ In der Praxis reicht **Extrema + Randverhalten per Limes** fast immer:
 > $\displaystyle\lim_{x \to -\infty} f$, $\displaystyle\lim_{x \to 0^-} f$, $\displaystyle\lim_{x \to 0^+} f$, $\displaystyle\lim_{x \to +\infty} f$
 
 - **$[$** eckige Klammer → Wert wird angenommen (Extremum oder geschlossener Rand)
-- **$]$** runde Klammer → nur Grenzwert, wird **nicht** angenommen (offener Rand, $\pm\infty$, Polstelle)
+- **$]$** nach außen gedrehte eckige Klammer (= offenes Intervall) → nur Grenzwert, wird **nicht** angenommen (offener Rand, $\pm\infty$, Polstelle)
 
-→ [Rezept 05: Verkettung/Definitionsbereich](rezepte/05_verkettung_definitionsbereich.md) · [Rezept 18: Wertebereich](rezepte/18_wertebereich.md)
+→ [Rezept 05: Verkettung/Definitionsbereich](../rezepte/05_verkettung_definitionsbereich.md) · [Rezept 18: Wertebereich](../rezepte/18_wertebereich.md)
 
 ---
 
@@ -186,7 +186,7 @@ Wichtig: $e^{-x} \to 0$ für $x \to \infty$ (nicht $\infty$!)
 
 > Merksatz: Derselbe Limes liefert sowohl den Rand des Wertebereichs (§4) als auch die Asymptote.
 
-→ [Rezept 09: Grenzwerte](rezepte/09_grenzwerte.md)
+→ [Rezept 09: Grenzwerte](../rezepte/09_grenzwerte.md)
 
 ---
 
@@ -211,7 +211,7 @@ Eine **Polstelle** ist eine Definitionslücke, an der $f$ gegen $\pm\infty$ geht
 - Zählergrad $=$ Nennergrad → $y =$ Verhältnis der Leitkoeffizienten (Zahlen vor den höchsten Potenzen)
 - Zählergrad $=$ Nennergrad $+1$ → schräge Asymptote (Polynomdivision)
 
-→ [Rezept 12: Gebrochen-rationale Funktionen](rezepte/12_gebrochen_rational.md)
+→ [Rezept 12: Gebrochen-rationale Funktionen](../rezepte/12_gebrochen_rational.md)
 
 ---
 
@@ -236,7 +236,7 @@ Einen Graphen systematisch untersuchen.
 10. Verhalten für $x \to \pm\infty$
 11. Graph skizzieren
 
-→ Komplett: [Cheatsheet Kurvendiskussion](sitzung_02/cheatsheet_kurvendiskussion.md) · [Rezept 01](rezepte/01_kurvendiskussion.md)
+→ Komplett: [Cheatsheet Kurvendiskussion](../sitzung_02/cheatsheet_kurvendiskussion.md) · [Rezept 01](../rezepte/01_kurvendiskussion.md)
 
 ---
 
@@ -254,7 +254,7 @@ $$n(x) = -\frac{1}{f'(a)} \cdot (x - a) + f(a)$$
 
 > Falle: $(x - a)$ vergessen! Nicht einfach nur $f'(a) \cdot x$ schreiben.
 
-→ [Rezept 02: Tangente und Normale](rezepte/02_tangente_normale.md)
+→ [Rezept 02: Tangente und Normale](../rezepte/02_tangente_normale.md)
 
 ---
 
@@ -270,7 +270,7 @@ $$n(x) = -\frac{1}{f'(a)} \cdot (x - a) + f(a)$$
 
 > Merksatz: **Eine Stufe hoch = Steigung ablesen. Eine Stufe runter = Fläche integrieren.**
 
-→ [Rezept 03: Graphen zuordnen](rezepte/03_graphen_zuordnen.md)
+→ [Rezept 03: Graphen zuordnen](../rezepte/03_graphen_zuordnen.md)
 
 ---
 
@@ -287,7 +287,7 @@ $$g(x) = a \cdot f\bigl(b(x - c)\bigr) + d$$
 
 > Falle: $f(x - 3)$ verschiebt **nach rechts**, nicht nach links.
 
-→ [Rezept 04: Graphentransformationen](rezepte/04_graphentransformationen.md)
+→ [Rezept 04: Graphentransformationen](../rezepte/04_graphentransformationen.md)
 
 ---
 
@@ -302,7 +302,7 @@ Den Parameter $k$ als **Konstante** behandeln — nicht nach $x$ mit ableiten!
 2. $k$ aus $x_E = \dots$ nach $k$ umformen
 3. In $y_E$ einsetzen → Ortskurve $y(x)$
 
-→ [Rezept 06: Funktionenschar](rezepte/06_funktionenschar.md)
+→ [Rezept 06: Funktionenschar](../rezepte/06_funktionenschar.md)
 
 ---
 
@@ -320,7 +320,7 @@ Größten oder kleinsten Wert einer Größe finden.
 
 > Fallen: negative Längen, Randwerte ignoriert, Nebenbedingung übersehen.
 
-→ [Rezept 07: Extremwertprobleme](rezepte/07_extremwertprobleme.md)
+→ [Rezept 07: Extremwertprobleme](../rezepte/07_extremwertprobleme.md)
 
 ---
 
@@ -334,7 +334,7 @@ $$A = \left\lvert \int_a^b f(x)\,dx \right\rvert$$
 - **Fläche zwischen zwei Kurven:**
   $$A = \int_a^b \lvert f_\text{oben}(x) - f_\text{unten}(x) \rvert \,dx$$
 
-→ [Rezept 08: Integrale & Fläche](rezepte/08_integrale_flaeche.md)
+→ [Rezept 08: Integrale & Fläche](../rezepte/08_integrale_flaeche.md)
 
 ---
 
@@ -353,7 +353,7 @@ Integrale in Textaufgaben — was bedeutet das Integral inhaltlich?
 > Falle: **Durchschnittswert** $\neq$ **mittlere Änderungsrate**.
 > Die mittlere Änderungsrate ist $\dfrac{f(b) - f(a)}{b - a}$.
 
-→ [Rezept 11: Sachkontext Integral](rezepte/11_sachkontext_integral.md)
+→ [Rezept 11: Sachkontext Integral](../rezepte/11_sachkontext_integral.md)
 
 ---
 
@@ -361,7 +361,7 @@ Integrale in Textaufgaben — was bedeutet das Integral inhaltlich?
 
 Macht die Funktion rückwärts: aus $y$ wird wieder $x$.
 
-**Voraussetzung:** $f$ streng monoton auf $D$ (also im ganzen Definitionsbereich immer nur steigend oder immer nur fallend) — formal: $f'(x) > 0$ überall oder $f'(x) < 0$ überall.
+**Voraussetzung:** $f$ streng monoton auf $D$ (also im ganzen Definitionsbereich immer nur steigend oder immer nur fallend) — hinreichend dafür: $f'(x) > 0$ überall oder $f'(x) < 0$ überall. (Einzelne Nullstellen von $f'$ ohne Vorzeichenwechsel sind erlaubt: $x^3$ ist streng monoton steigend, obwohl die Ableitung bei $x = 0$ null ist.)
 
 **Bestimmen:**
 1. $y = f(x)$ nach $x$ auflösen
@@ -372,7 +372,7 @@ Macht die Funktion rückwärts: aus $y$ wird wieder $x$.
 
 **Graph:** Spiegelung an der Geraden $y = x$.
 
-→ [Rezept 13: Umkehrfunktion](rezepte/13_umkehrfunktion.md)
+→ [Rezept 13: Umkehrfunktion](../rezepte/13_umkehrfunktion.md)
 
 ---
 
@@ -391,7 +391,7 @@ $$V = \pi \int_a^b \Bigl(\bigl[f(x)\bigr]^2 - \bigl[g(x)\bigr]^2\Bigr)\,dx$$
 
 > Fallen: $\pi$ vergessen. Quadrate **einzeln** bilden, nicht $(f - g)^2$. Falsche Grenzen bei $y$-Achse.
 
-→ [Rezept 14: Rotationsvolumen](rezepte/14_rotationsvolumen.md)
+→ [Rezept 14: Rotationsvolumen](../rezepte/14_rotationsvolumen.md)
 
 ---
 
@@ -409,7 +409,7 @@ $$\int_a^\infty f(x)\,dx = \lim_{b \to \infty} \int_a^b f(x)\,dx$$
 
 > Falle: „$f(x) \to 0 \Rightarrow$ Integral konvergiert" ist **falsch** (Gegenbeispiel: $\tfrac{1}{x}$).
 
-→ [Rezept 15: Uneigentliche Integrale](rezepte/15_uneigentliche_integrale.md)
+→ [Rezept 15: Uneigentliche Integrale](../rezepte/15_uneigentliche_integrale.md)
 
 ---
 
@@ -426,7 +426,7 @@ Aufgaben vom Typ „welche Steigungen sind möglich?" → $m(q)$ als Funktion vo
 
 > Falle: Grenzwert wird meist **nicht angenommen** → runde Klammer, nicht eckig.
 
-→ [Rezept 10: Sekanten/Tangenten Vergleich](rezepte/10_sekanten_tangenten_vergleich.md)
+→ [Rezept 10: Sekanten/Tangenten Vergleich](../rezepte/10_sekanten_tangenten_vergleich.md)
 
 ---
 

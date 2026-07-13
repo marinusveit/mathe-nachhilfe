@@ -3,17 +3,17 @@
 Schnellnachschlagewerk für die Standardtypen: Skizze, Definitions- und
 Wertebereich, Symmetrie, Ableitung, Stammfunktion, Limes, Umkehrfunktion,
 wichtige Werte. Für die Theorie dahinter →
-[Cheatsheet Analysis](cheatsheet_analysis.md).
+[Cheatsheet Analysis](analysis.md).
 
 > Notation in den Tabellen: $\mathbb{D}$ = Definitionsbereich, $\mathbb{W}$ =
 > Wertebereich, $f^{-1}$ = Umkehrfunktion. Eckige Klammern $[\,]$ = Wert wird
-> angenommen, runde Klammern $]\,[$ = nur Grenzwert.
+> angenommen, nach außen gedrehte eckige Klammern $]\,[$ (= offenes Intervall) = nur Grenzwert.
 
 ---
 
 ## 1. Polynome (ganzrationale Funktionen)
 
-![Lineare, quadratische und kubische Funktion im Vergleich](rezepte/assets/grund_polynome.png)
+![Lineare, quadratische und kubische Funktion im Vergleich](../rezepte/assets/grund_polynome.png)
 
 Polynome sind Funktionen der Form $f(x) = a_n x^n + \ldots + a_1 x + a_0$.
 Wichtigste Vertreter: linear, quadratisch, kubisch.
@@ -38,13 +38,13 @@ $x^3$: $f(0)=0$, $f(1)=1$, $f(2)=8$, $f(-1)=-1$, $f(-2)=-8$
 > $x^2$ ist auf ganz $\mathbb{R}$ **nicht** umkehrbar (nicht monoton). Erst auf
 > $[0;\infty[$ einschränken, dann ist $f^{-1} = \sqrt{x}$.
 
-→ [Rezept 13: Umkehrfunktion](rezepte/13_umkehrfunktion.md)
+→ [Rezept 13: Umkehrfunktion](../rezepte/13_umkehrfunktion.md)
 
 ---
 
 ## 2. Wurzelfunktion $\sqrt{x}$
 
-![Wurzelfunktion mit den Werten (0,0), (1,1), (4,2), (9,3)](rezepte/assets/grund_wurzel.png)
+![Wurzelfunktion mit den Werten (0,0), (1,1), (4,2), (9,3)](../rezepte/assets/grund_wurzel.png)
 
 | Eigenschaft | Wert |
 |---|---|
@@ -68,7 +68,7 @@ $\sqrt{16}=4$, $\sqrt{25}=5$.
 
 ## 3. Exponentialfunktion $e^x$
 
-![Exponentialfunktion mit Asymptote y=0 und Punkten (0,1), (1,e)](rezepte/assets/grund_exp.png)
+![Exponentialfunktion mit Asymptote y=0 und Punkten (0,1), (1,e)](../rezepte/assets/grund_exp.png)
 
 | Eigenschaft | Wert |
 |---|---|
@@ -96,7 +96,7 @@ Polynom für $x \to \infty$.
 
 ## 4. Natürlicher Logarithmus $\ln(x)$
 
-![Logarithmus mit Asymptote x=0 und Punkten (1,0), (e,1)](rezepte/assets/grund_ln.png)
+![Logarithmus mit Asymptote x=0 und Punkten (1,0), (e,1)](../rezepte/assets/grund_ln.png)
 
 | Eigenschaft | Wert |
 |---|---|
@@ -127,7 +127,7 @@ $\ln\!\left(\frac{1}{e}\right) = -1$.
 
 ## 5. Hyperbel $\dfrac{1}{x}$
 
-![Hyperbel mit zwei Ästen und Asymptoten an x=0 und y=0](rezepte/assets/grund_hyperbel.png)
+![Hyperbel mit zwei Ästen und Asymptoten an x=0 und y=0](../rezepte/assets/grund_hyperbel.png)
 
 | Eigenschaft | Wert |
 |---|---|
@@ -146,13 +146,13 @@ $\ln\!\left(\frac{1}{e}\right) = -1$.
 **Wichtige Werte:** $f(1) = 1$, $f(2) = 0{,}5$, $f\!\left(\frac{1}{2}\right) = 2$,
 $f(-1) = -1$, $f(10) = 0{,}1$.
 
-→ [Rezept 12: Gebrochen-rationale Funktionen](rezepte/12_gebrochen_rational.md)
+→ [Rezept 12: Gebrochen-rationale Funktionen](../rezepte/12_gebrochen_rational.md)
 
 ---
 
 ## 6. Quadratischer Kehrwert $\dfrac{1}{x^2}$
 
-![1 durch x-Quadrat, achsensymmetrisch, Asymptoten x=0 und y=0](rezepte/assets/grund_quadrat_kehrwert.png)
+![1 durch x-Quadrat, achsensymmetrisch, Asymptoten x=0 und y=0](../rezepte/assets/grund_quadrat_kehrwert.png)
 
 | Eigenschaft | Wert |
 |---|---|
@@ -176,7 +176,7 @@ $f(-1) = -1$, $f(10) = 0{,}1$.
 
 ## 7. Sinus $\sin(x)$
 
-![Sinus auf -2pi bis 2pi, Wertebereich -1 bis 1](rezepte/assets/grund_sin.png)
+![Sinus auf -2pi bis 2pi, Wertebereich -1 bis 1](../rezepte/assets/grund_sin.png)
 
 | Eigenschaft | Wert |
 |---|---|
@@ -202,7 +202,7 @@ $f(-1) = -1$, $f(10) = 0{,}1$.
 
 ## 8. Kosinus $\cos(x)$
 
-![Kosinus auf -2pi bis 2pi, Wertebereich -1 bis 1](rezepte/assets/grund_cos.png)
+![Kosinus auf -2pi bis 2pi, Wertebereich -1 bis 1](../rezepte/assets/grund_cos.png)
 
 | Eigenschaft | Wert |
 |---|---|
@@ -227,15 +227,15 @@ $f(-1) = -1$, $f(10) = 0{,}1$.
 **Verbindung:** $\cos(x) = \sin\!\left(x + \dfrac{\pi}{2}\right)$ — Kosinus ist
 um $\frac{\pi}{2}$ nach links verschobener Sinus.
 
-> Sin/Cos sind in Bayern eA (Analysis) selten Hauptthema, tauchen aber bei
-> Aufgaben wie „Tangentensteigung der Funktion $\sin(2x) + \dots$" auf. Man
+> Sin/Cos waren in Bayern (Analysis) bisher selten Hauptthema, werden im G9
+> aber stärker betont (Musterabitur 2026 B2, Trend schon 2024/2025). Man
 > braucht die Ableitungen und die wichtigsten Werte sicher.
 
 ---
 
 ## 9. Umkehrfunktions-Pärchen
 
-![Umkehrfunktionspaare: x^2 zu sqrt(x) und e^x zu ln(x), gespiegelt an y=x](rezepte/assets/grund_umkehrpaare.png)
+![Umkehrfunktionspaare: x^2 zu sqrt(x) und e^x zu ln(x), gespiegelt an y=x](../rezepte/assets/grund_umkehrpaare.png)
 
 Graph von $f^{-1}$ entsteht durch **Spiegelung an $y = x$**.
 
@@ -254,7 +254,7 @@ Graph von $f^{-1}$ entsteht durch **Spiegelung an $y = x$**.
 **Beim Bestimmen immer angeben:** $\mathbb{D}_{f^{-1}} = \mathbb{W}_f$ und
 $\mathbb{W}_{f^{-1}} = \mathbb{D}_f$.
 
-→ [Rezept 13: Umkehrfunktion](rezepte/13_umkehrfunktion.md)
+→ [Rezept 13: Umkehrfunktion](../rezepte/13_umkehrfunktion.md)
 
 ---
 
@@ -262,7 +262,7 @@ $\mathbb{W}_{f^{-1}} = \mathbb{D}_f$.
 
 | Funktion | $\mathbb{D}$ | $\mathbb{W}$ | $f'(x)$ | $F(x)$ | Asymptote / Pol |
 |---|---|---|---|---|---|
-| $x^n$ | $\mathbb{R}$ | siehe Polynome | $nx^{n-1}$ | $\dfrac{x^{n+1}}{n+1}$ | — |
+| $x^n$ ($n \neq -1$) | $\mathbb{R}$ | siehe Polynome | $nx^{n-1}$ | $\dfrac{x^{n+1}}{n+1}$ | — |
 | $\sqrt{x}$ | $[0;\infty[$ | $[0;\infty[$ | $\dfrac{1}{2\sqrt{x}}$ | $\dfrac{2}{3}x^{3/2}$ | — |
 | $e^x$ | $\mathbb{R}$ | $\,]0;\infty[\,$ | $e^x$ | $e^x$ | $y = 0$ für $x \to -\infty$ |
 | $\ln(x)$ | $\,]0;\infty[\,$ | $\mathbb{R}$ | $\dfrac{1}{x}$ | $x\ln(x) - x$ | $x = 0$ (für $x \to 0^+$) |
@@ -285,9 +285,9 @@ $\mathbb{W}_{f^{-1}} = \mathbb{D}_f$.
 8. **Sin/Cos haben keinen Limes für $x \to \pm\infty$** — sie oszillieren ewig.
 
 ## Siehe auch
-- [Cheatsheet Analysis](cheatsheet_analysis.md) — die volle Theorie
-- [Rezept 05: Verkettung & Definitionsbereich](rezepte/05_verkettung_definitionsbereich.md)
-- [Rezept 09: Grenzwerte](rezepte/09_grenzwerte.md)
-- [Rezept 12: Gebrochen-rationale Funktionen](rezepte/12_gebrochen_rational.md)
-- [Rezept 13: Umkehrfunktion](rezepte/13_umkehrfunktion.md)
-- [Rezept 18: Wertebereich bestimmen](rezepte/18_wertebereich.md)
+- [Cheatsheet Analysis](analysis.md) — die volle Theorie
+- [Rezept 05: Verkettung & Definitionsbereich](../rezepte/05_verkettung_definitionsbereich.md)
+- [Rezept 09: Grenzwerte](../rezepte/09_grenzwerte.md)
+- [Rezept 12: Gebrochen-rationale Funktionen](../rezepte/12_gebrochen_rational.md)
+- [Rezept 13: Umkehrfunktion](../rezepte/13_umkehrfunktion.md)
+- [Rezept 18: Wertebereich bestimmen](../rezepte/18_wertebereich.md)

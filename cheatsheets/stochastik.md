@@ -2,8 +2,8 @@
 
 Überblick über alle Themen. Reihenfolge nach Prüfungs-Häufigkeit.
 Separate Cheatsheets:
-- [Cheatsheet Analysis](cheatsheet_analysis.md)
-- [Cheatsheet Grundfunktionen](cheatsheet_grundfunktionen.md)
+- [Cheatsheet Analysis](analysis.md)
+- [Cheatsheet Grundfunktionen](grundfunktionen.md)
 
 Hilfsmittel im Teil B: **Formeldokument**, **stochastische Tabellen** (kumulierte Binomialverteilung) und Taschenrechner (WTR oder MMS).
 Im Teil A: **nichts** — alle Wahrscheinlichkeiten als Bruch oder Term stehen lassen.
@@ -12,7 +12,7 @@ Im Teil A: **nichts** — alle Wahrscheinlichkeiten als Bruch oder Term stehen l
 
 ## 0. Operatoren — was verlangt die Aufgabe?
 
-Identisch zu Analysis (siehe [Cheatsheet Analysis §0](cheatsheet_analysis.md#0-operatoren--was-verlangt-die-aufgabe)).
+Identisch zu Analysis (siehe [Cheatsheet Analysis §0](analysis.md#0-operatoren--was-verlangt-die-aufgabe)).
 
 Stochastik-spezifisch:
 
@@ -54,7 +54,7 @@ $$\binom{n}{k} = \frac{n!}{k!\,(n-k)!} \qquad \binom{n}{0}=1, \quad \binom{n}{n}
 
 > **Beispiel:** Aus 10 Gummibärchen 3 ziehen: $\binom{10}{3} = 120$ Möglichkeiten.
 
-### Welches Modell passt? — Zwei Fragen genügen
+### Welches Modell passt? — Fragebaum
 
 ```
 Frage 1: Spielt die Reihenfolge eine Rolle?
