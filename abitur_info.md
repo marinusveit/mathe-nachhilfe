@@ -117,7 +117,7 @@ Ausgewertet wurden alle verfügbaren Prüfungen: Bayern-Abitur 2020--2025 (je Te
 | **Grenzwertverhalten / Asymptoten** | fast jede Prüfung | 2020--2025 |
 | **sin/cos** | gelegentlich, Trend steigend | 2020, 2024, 2025, 2026 |
 | **Rotationsvolumen** | Musterabitur 2026 | 2026 (neu im G9) |
-| **Integralfunktion** J(x) = ∫f(t)dt | gelegentlich | 2020, 2024 |
+| **Integralfunktion** $J(x) = \int_0^x f(t)\,dt$ | gelegentlich | 2020, 2024 |
 | **Mittlere Änderungsrate** | gelegentlich | 2022, 2023, 2024 |
 | **Durchschnittlicher Funktionswert** (via Integral) | selten | 2026 |
 
@@ -125,14 +125,14 @@ Ausgewertet wurden alle verfügbaren Prüfungen: Bayern-Abitur 2020--2025 (je Te
 
 **Teil A (hilfsmittelfrei, 30 BE):**
 - Ableitungen per Hand (e, ln, sin/cos, Wurzel, Ketten-/Produktregel)
-- Graphen zuordnen (f ↔ f' ↔ f'' ↔ F)
+- Graphen zuordnen ($f \leftrightarrow f' \leftrightarrow f'' \leftrightarrow F$)
 - Aus Graph von f' ablesen: Monotonie, Extrema, Wendepunkte von f
 - Tangentengleichung aufstellen
 - Sekanten- und Tangentensteigungen vergleichen / geometrisch argumentieren
 - Symmetrie begründen
 - Einfache Integrale berechnen
 - Graphentransformationen: beschreiben UND Koordinaten besonderer Punkte unter Transformation berechnen
-- Verkettung und Definitionsbereich zusammengesetzter Funktionen (z.B. ln(f(x)), √(f(x)))
+- Verkettung und Definitionsbereich zusammengesetzter Funktionen (z.B. $\ln(f(x))$, $\sqrt{f(x)}$)
 - Umkehrfunktion bestimmen
 - Gebrochen-rationale Funktionen: Asymptoten, Definitionsbereich
 - Grenzwerte berechnen und im Kontext deuten
@@ -153,7 +153,7 @@ Ausgewertet wurden alle verfügbaren Prüfungen: Bayern-Abitur 2020--2025 (je Te
 | Aufgabe | Teil | BE | Themen |
 |---|---|---|---|
 | A1 | A (Pflicht) | 5 | ln-Funktion, Kettenregel, Wendepunkt, Tangente |
-| A2 | A (Pflicht) | 5 | Funktionenschar x⁴−kx², Ableitung, Extremstellen |
+| A2 | A (Pflicht) | 5 | Funktionenschar $x^4 - kx^2$, Ableitung, Extremstellen |
 | A5 | A (Wahl) | 5 | Symmetrie (Achsen-/Punkt-), Extrempunkte, Produktfunktion |
 | A6 | A (Wahl) | 5 | **Rotationsvolumen** (um y-Achse), Umkehrfunktion, Integral |
 | B1 | B | 30 | Ganzrational, Krümmung, mittl./lok. Änderungsrate, e-Funktion, Funktionenschar, Ortskurve, Sachkontext (Modellierung), Integral als Gesamtänderung |

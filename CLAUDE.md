@@ -3,9 +3,17 @@
 ## Projektstruktur
 ```
 stundenplan.md          # Gesamtplan (8 Sitzungen à 90 Min)
+abitur_info.md          # Prüfungsformat, Lehrplan, Themenhäufigkeit
+rezepte/                # Schritt-für-Schritt-Rezepte (00–18), assets/ mit Plots
+cheatsheets/            # Kompakte Übersichten (analysis, grundfunktionen, stochastik)
+aufgaben/               # Drill-Aufgabenblätter (Nummer = zugehöriges Rezept)
+pruefungen/             # Altprüfungen (ISB/IQB/IlluPA) + Musterlösungen
+utils/                  # Gemeinsamer Python-Code (z.B. Manim-Mixins)
 sitzung_XX/             # Material pro Sitzung
+  leitfaden.md          # Ablauf der Sitzung
   diagnosetest.md       # Aufgabenblätter (Markdown)
   *.ipynb               # Interaktive Jupyter-Notebooks
+  test_*.py             # pytest-Tests zu den Notebook-Rechnungen
   manim/                # Manim-Animationen (3b1b-Style)
     *.py                # Scene-Klassen
     media/              # Gerenderte Videos (gitignored)
@@ -13,7 +21,7 @@ sitzung_XX/             # Material pro Sitzung
 
 ## Konventionen
 - **Manim:** 3b1b-Farbpalette, LaTeX-Labels (`MathTex`), `BackgroundRectangle` für Text über Graphen
-- **Jupyter:** `plt.rcParams['mathtext.fontset'] = 'cm'`, LaTeX in Legenden (`r'$...$'`), `loc='upper left'`
+- **Jupyter:** `plt.rcParams['mathtext.fontset'] = 'cm'`, LaTeX in Legenden (`r'$...$'`), `loc='upper left'` (sofern die Kurve dort nicht verdeckt wird)
 - **Sprache:** Deutsch (Aufgaben, Labels, Erklärungen)
 - **Markdown-Formeln:** Alle mathematischen Ausdrücke in LaTeX setzen — `$...$` inline,
   `$$...$$` für abgesetzte Formeln. **Keine** Unicode-Ersatzzeichen (`ℝ`, `²`, `√`, `≠`, `∞`,
